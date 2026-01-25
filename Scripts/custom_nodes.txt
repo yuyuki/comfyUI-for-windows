@@ -1,0 +1,22 @@
+# Custom nodes ComfyUI exportés le 2026-01-17 10:10
+# __pycache__
+# comfyui_controlnet_aux
+# comfyui_essentials
+# comfyui-clear-screen
+# comfyui-easy-use
+# ComfyUI-GGUF
+# comfyui-kjnodes
+# comfyui-multigpu
+# comfyui-segment-anything-2
+# ComfyUI-Show_Any_Text_in_CMD_Console-SG
+# ComfyUI-Simple-IndexTTs
+# comfyui-videohelpersuite
+# ComfyUI-WanVideoWrapper
+# derfuu_comfyui_moddednodes
+# purgevram
+# rgthree-comfy
+https://github.com/billwuhao/ComfyUI_IndexTTS
+https://github.com/chenpipi0807/ComfyUI-Index-TTS.git
+https://github.com/Comfy-Org/ComfyUI-Manager.git
+https://github.com/kael558/ComfyUI-GGUF-FantasyTalking
+https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes
