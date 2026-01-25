@@ -1,12 +1,13 @@
 Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
 
 # 📌 1. Variables d'installation
-$installDir = "$((Get-Location).Path)\ComfyUI"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 $gitUrl = "https://github.com/comfyanonymous/ComfyUI.git"
 
 # 📌 2. Création du dossier AI si nécessaire
 Write-Host "Création du dossier d'installation..."
-New-Item -ItemType Directory -Force -Path $installDir | Out-Null
+New-Item -ItemType Directory -Force -Path $ComfyUIRoot | Out-Null
 
 # 📌 3. Installer Git via winget si non installé
 Write-Host "Installation de Git s'il n'est pas présent..."
@@ -20,14 +21,14 @@ git lfs install
 
 # 📌 5. Cloner le repo ComfyUI
 Write-Host "Clonage de ComfyUI..."
-Set-Location $installDir
+Set-Location $ComfyUIRoot
 git clone $gitUrl .
-Write-Host "ComfyUI téléchargé dans $installDir"
+Write-Host "ComfyUI téléchargé dans $ComfyUIRoot"
 
 # 📌 6. Création et activation de l'environnement virtuel Python
 Write-Host "Création de l'environnement virtuel Python..."
 python -m venv venv
-$activate = "$installDir\venv\Scripts\Activate.ps1"
+$activate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 Write-Host "Activation de l'environnement virtuel..."
 . $activate
 
@@ -64,6 +65,12 @@ pip install sageattention
 pip uninstall triton-windows
 # pip install -U "triton-windows<3.5"
 pip install -U "triton-windows==3.3.1.post19"
+
+Write-Host "Nettoyage des dépendances NVIDIA..." -ForegroundColor Yellow
+python -m pip uninstall pynvml -y
+python -m pip install nvidia-ml-py
+
+Set-Location $ParentDir
 
 Write-Host ""
 Write-Host "✅ Installation terminée. 🎉" -ForegroundColor Green

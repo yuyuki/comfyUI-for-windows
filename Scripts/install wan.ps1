@@ -5,7 +5,8 @@
 Write-Host "=== Installation du modèle vidéo Wan2.2 pour ComfyUI ===" -ForegroundColor Cyan
 
 # 🔧 CONFIGURATION
-$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 
 # 📁 DOSSIERS CIBLES
 $DiffusionDir = "$ComfyUIRoot\models\diffusion_models"
@@ -72,6 +73,8 @@ foreach ($file in $FilesToDownload) {
         exit 1
     }
 }
+
+Set-Location $ParentDir
 
 Write-Host "✅ Wan2.2 installé avec succès !" -ForegroundColor Green
 Write-Host "Tu peux maintenant lancer ComfyUI et charger les workflows Wan2.2."

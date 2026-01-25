@@ -1,7 +1,10 @@
 Write-Host "=== Download and install Python 3.12.10 (64-bit) on Windows ==="
 
 $pythonInstallerUrl = "https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe"
-$installerPath = "$((Get-Location).Path)\software\python-3.12.10-amd64.exe"
+
+$ParentDir = (Get-Location).Path
+
+$installerPath = "$ParentDir\software\python-3.12.10-amd64.exe"
 
 # Check if Python 3.12.10 is already installed
 $pythonInstalled = $false
@@ -39,7 +42,6 @@ if (Get-Command aria2c -ErrorAction SilentlyContinue) {
 Write-Host "Installing Python 3.12.10 (64-bit)..."
 Start-Process -FilePath $installerPath -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0" -Wait
 
-Write-Host "Python installation complete."
+Set-Location $ParentDir
 
-# Optional: Remove installer
-Remove-Item $installerPath
+Write-Host "Python installation complete."

@@ -3,17 +3,17 @@ Clear-Host
 Write-Host "=== Mise à jour ComfyUI ===" -ForegroundColor Cyan
 
 # 📌 1. Variables
-$installDir = "$((Get-Location).Path)\ComfyUI"
+$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
 
 # 📌 2. Vérifier que ComfyUI existe
-if (!(Test-Path $installDir)) {
-    Write-Error "❌ ComfyUI non trouvé à $installDir"
+if (!(Test-Path $ComfyUIRoot)) {
+    Write-Error "❌ ComfyUI non trouvé à $ComfyUIRoot"
     exit 1
 }
 
 # 📌 3. Naviguer vers le répertoire ComfyUI
-Set-Location $installDir
-Write-Host "Navigation vers $installDir"
+Set-Location $ComfyUIRoot
+Write-Host "Navigation vers $ComfyUIRoot"
 
 # 📌 5. Mettre à jour le repo ComfyUI
 Write-Host "Mise à jour du repo ComfyUI..." -ForegroundColor Yellow
@@ -26,7 +26,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # 📌 4. Activer l'environnement virtuel
-$activate = "$installDir\venv\Scripts\Activate.ps1"
+$activate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 Write-Host "Activation de l'environnement virtuel..."
 . $activate
 

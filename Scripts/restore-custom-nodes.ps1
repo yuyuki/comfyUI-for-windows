@@ -1,8 +1,9 @@
 # ==========================
 # CONFIGURATION
 # ==========================
-$ComfyUIPath = "$((Get-Location).Path)\..\ComfyUI"
-$CustomNodesPath = Join-Path $ComfyUIPath "custom_nodes"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
+$CustomNodesPath = Join-Path $ComfyUIRoot "custom_nodes"
 $NodesFile = "custom_nodes.txt"
 
 # ==========================
@@ -54,5 +55,7 @@ foreach ($repo in $Nodes) {
         git clone $repo $targetPath
     }
 }
+
+Set-Location $ParentDir
 
 Write-Host "`n✅ Synchronisation terminée. Redémarre ComfyUI." -ForegroundColor Cyan

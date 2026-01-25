@@ -3,7 +3,8 @@ Write-Host "=== Installe : Custom Nodes Manager ===" -ForegroundColor Cyan
 # ------------------------
 # 1️⃣ Répertoire de travail
 # ------------------------
-$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
 
@@ -37,6 +38,8 @@ git clone https://github.com/Comfy-Org/ComfyUI-Manager.git $CNMDir
 if (Test-Path "$CNMDir\requirements.txt") {
     pip install -r "$CNMDir\requirements.txt"
 }
+
+Set-Location $ParentDir
 
 # ------------------------
 # Fin

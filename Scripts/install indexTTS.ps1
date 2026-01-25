@@ -5,7 +5,8 @@
 Write-Host "=== Installation de IndexTTS pour ComfyUI ===" -ForegroundColor Cyan
 
 # 🔧 CONFIGURATION
-$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
 $IndexTTSDir = "$CustomNodesDir\ComfyUI-Index-TTS"
 $RepoURL = "https://github.com/chenpipi0807/ComfyUI-Index-TTS.git"
@@ -51,6 +52,8 @@ if (Test-Path "$IndexTTSDir\requirements.txt") {
 } else {
     Write-Warning "requirements.txt non trouvé — dépendances ignorées"
 }
+
+Set-Location $ParentDir
 
 Write-Host "✅ IndexTTS installé avec succès !" -ForegroundColor Green
 Write-Host ""
