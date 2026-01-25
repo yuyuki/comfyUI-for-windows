@@ -1,0 +1,1747 @@
+{
+  "id": "ec7da562-7e21-4dac-a0d2-f4441e1efd3b",
+  "revision": 0,
+  "last_node_id": 132,
+  "last_link_id": 229,
+  "nodes": [
+    {
+      "id": 118,
+      "type": "MarkdownNote",
+      "pos": [
+        -450,
+        250
+      ],
+      "size": [
+        480,
+        240
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: how to use this workflow",
+      "properties": {},
+      "widgets_values": [
+        "**Wan2.2 Image to Video(Subgraph)** node is a subgraph, which is converted from the Wan2.2 image to video workflow.\n\nYou can find the tutorial and original workflow [here](https://docs.comfy.org/tutorials/video/wan/wan2_2).\n\n\nThis workflow requires high VRAM (More than 20GB). If you are running this workflow locally, please make sure you have enough VRAM.\n\n## For Comfy Cloud users\n\nIf you are using [cloud.comfy.org](https://cloud.comfy.org/):\n\n1. Since the workflow in the Cloud will have the input image ready, for the first run, you can just click the run button to see what happens. \n\n2. Try to upload your own image to the **Start Frame Image**, and then try to describe the video you want to generate in the **Wan2.2 Image to Video(Subgraph)**."
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 119,
+      "type": "MarkdownNote",
+      "pos": [
+        -450,
+        540
+      ],
+      "size": [
+        480,
+        580
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "For local ComfyUI users",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[Tutorial](https://docs.comfy.org/tutorials/video/wan/wan2_2\n)\n\n## VRAM Usage\n\nThe following data was tested using an RTX 4090 24GB\n\n| Model            | Size |VRAM Usage | 1st Generation | 2nd Generation |\n|---------------------|-------|-----------|---------------|-----------------|\n| fp8_scaled               |640*640| 84%               | ≈  536s              | ≈ 513s                   |\n| fp8_scaled +  4steps LoRA  | 640*640  | 83%                | ≈ 97s               | ≈ 71s                   |\n\n**Diffusion Model**\n- [wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors)\n- [wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors)\n\n**LoRA**\n- [wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors)\n- [wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors)\n\n**VAE**\n- [wan_2.1_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   ├─── wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors\n│   │   └─── wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors\n│   ├───📂 loras/\n│   │   ├─── wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors\n│   │   └─── wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan_2.1_vae.safetensors\n```\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 121,
+      "type": "MarkdownNote",
+      "pos": [
+        -450,
+        1170
+      ],
+      "size": [
+        480,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Report Template Issue",
+      "properties": {},
+      "widgets_values": [
+        "If you have any problems running this workflow, please report template-related issues via this link: [report the template issue here](https://github.com/Comfy-Org/workflow_templates/issues)"
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 132,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        770.2494518953125,
+        250.4888156383461
+      ],
+      "size": [
+        270,
+        286
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 228
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            229
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.2.4",
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "nearest-exact",
+        "stretch",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "SaveVideo",
+      "pos": [
+        1555.4666565839593,
+        247.97788791287485
+      ],
+      "size": [
+        751.137451171875,
+        483.25408935546875
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 219
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/Wan2.2_image_to_video",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 97,
+      "type": "LoadImage",
+      "pos": [
+        47.578369140625,
+        247.8372039794922
+      ],
+      "size": [
+        608.1323852539062,
+        485.1783447265625
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            228
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "title": "Start Frame Image",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "dragon knight.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 116,
+      "type": "98e3bef8-6d56-4445-94c0-7281b1cf3503",
+      "pos": [
+        1167.2066468183343,
+        249.70178012478897
+      ],
+      "size": [
+        353.6471252441406,
+        465.28741455078125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "start_image",
+          "type": "IMAGE",
+          "link": 229
+        },
+        {
+          "label": "Positive Prompt",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        },
+        {
+          "label": "frames",
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            219
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "text"
+          ],
+          [
+            "-1",
+            "width"
+          ],
+          [
+            "-1",
+            "height"
+          ],
+          [
+            "-1",
+            "length"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65"
+      },
+      "widgets_values": [
+        "A felt-style little eagle cashier greeting, waving, and smiling at the camera.",
+        1280,
+        720,
+        81
+      ]
+    }
+  ],
+  "links": [
+    [
+      219,
+      116,
+      0,
+      108,
+      0,
+      "VIDEO"
+    ],
+    [
+      228,
+      97,
+      0,
+      132,
+      0,
+      "IMAGE"
+    ],
+    [
+      229,
+      132,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "98e3bef8-6d56-4445-94c0-7281b1cf3503",
+        "version": 1,
+        "state": {
+          "lastGroupId": 18,
+          "lastNodeId": 135,
+          "lastLinkId": 240,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Wan2.2 Image to Video (Simplified)",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -157.27273559570312,
+            293.3032989501953,
+            128.7109375,
+            140
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            3549.623023007327,
+            499.1848553179319,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "f3ee8f34-39a1-45b8-8e82-a9b0540604f0",
+            "name": "start_image",
+            "type": "IMAGE",
+            "linkIds": [
+              186
+            ],
+            "localized_name": "start_image",
+            "shape": 7,
+            "pos": [
+              -48.561798095703125,
+              313.3032989501953
+            ]
+          },
+          {
+            "id": "36b247c8-bc27-43e4-813f-728898b2cb67",
+            "name": "text",
+            "type": "STRING",
+            "linkIds": [
+              218
+            ],
+            "label": "Positive Prompt",
+            "pos": [
+              -48.561798095703125,
+              333.3032989501953
+            ]
+          },
+          {
+            "id": "3573e535-20bd-45a6-a200-8be8558b2310",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              220
+            ],
+            "pos": [
+              -48.561798095703125,
+              353.3032989501953
+            ]
+          },
+          {
+            "id": "3cac5930-3dcd-42d4-9737-6c3ff1b30182",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              221
+            ],
+            "pos": [
+              -48.561798095703125,
+              373.3032989501953
+            ]
+          },
+          {
+            "id": "a12deaec-42d6-4eb2-bc63-97e6c41439f6",
+            "name": "length",
+            "type": "INT",
+            "linkIds": [
+              222
+            ],
+            "label": "frames",
+            "pos": [
+              -48.561798095703125,
+              393.3032989501953
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "3cebec04-e6b2-43c7-a57f-1acce9298c14",
+            "name": "VIDEO",
+            "type": "VIDEO",
+            "linkIds": [
+              197
+            ],
+            "localized_name": "VIDEO",
+            "pos": [
+              3569.623023007327,
+              519.1848553179319
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 93,
+            "type": "CLIPTextEncode",
+            "pos": [
+              460.4726647949218,
+              174.03630065917986
+            ],
+            "size": [
+              510,
+              160
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 181
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 218
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "slot_index": 0,
+                "links": [
+                  183
+                ]
+              }
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+              "A felt-style little eagle cashier greeting, waving, and smiling at the camera."
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 89,
+            "type": "CLIPTextEncode",
+            "pos": [
+              460.4726647949218,
+              374.03630065918
+            ],
+            "size": [
+              510,
+              130
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 178
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "slot_index": 0,
+                "links": [
+                  184
+                ]
+              }
+            ],
+            "title": "CLIP Text Encode (Negative Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+              "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+          },
+          {
+            "id": 98,
+            "type": "WanImageToVideo",
+            "pos": [
+              552.6727319335937,
+              632.7363543701169
+            ],
+            "size": [
+              342.5999755859375,
+              210
+            ],
+            "flags": {},
+            "order": 18,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 183
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 184
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 185
+              },
+              {
+                "localized_name": "clip_vision_output",
+                "name": "clip_vision_output",
+                "shape": 7,
+                "type": "CLIP_VISION_OUTPUT",
+                "link": null
+              },
+              {
+                "localized_name": "start_image",
+                "name": "start_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 186
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 220
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 221
+              },
+              {
+                "localized_name": "length",
+                "name": "length",
+                "type": "INT",
+                "widget": {
+                  "name": "length"
+                },
+                "link": 222
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "slot_index": 0,
+                "links": [
+                  168,
+                  172
+                ]
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "slot_index": 1,
+                "links": [
+                  169,
+                  173
+                ]
+              },
+              {
+                "localized_name": "latent",
+                "name": "latent",
+                "type": "LATENT",
+                "slot_index": 2,
+                "links": [
+                  174
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "WanImageToVideo"
+            },
+            "widgets_values": [
+              1280,
+              720,
+              81,
+              1
+            ]
+          },
+          {
+            "id": 118,
+            "type": "PathchSageAttentionKJ",
+            "pos": [
+              461.9481833804241,
+              -204.69989457630962
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 223
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  225
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.4",
+              "Node name for S&R": "PathchSageAttentionKJ"
+            },
+            "widgets_values": [
+              "auto",
+              false
+            ]
+          },
+          {
+            "id": 119,
+            "type": "PathchSageAttentionKJ",
+            "pos": [
+              470.28771018199785,
+              -5.744288265293431
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 224
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  226
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.4",
+              "Node name for S&R": "PathchSageAttentionKJ"
+            },
+            "widgets_values": [
+              "auto",
+              false
+            ]
+          },
+          {
+            "id": 121,
+            "type": "ModelPatchTorchSettings",
+            "pos": [
+              852.0603430953788,
+              -8.389262192236048
+            ],
+            "size": [
+              312.095703125,
+              58
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 226
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  230
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.4",
+              "Node name for S&R": "ModelPatchTorchSettings"
+            },
+            "widgets_values": [
+              false
+            ]
+          },
+          {
+            "id": 122,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              1217.9602503219442,
+              -208.18919207810023
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 227
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  228
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.8.2",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "lightx2v_I2V_14B_480p_cfg_step_distill_rank32_bf16.safetensors",
+              3
+            ]
+          },
+          {
+            "id": 125,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              1224.9602625289751,
+              -11.189256165014797
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 230
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  229
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.8.2",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "lightx2v_I2V_14B_480p_cfg_step_distill_rank32_bf16.safetensors",
+              1.5
+            ]
+          },
+          {
+            "id": 124,
+            "type": "ModelSamplingSD3",
+            "pos": [
+              1612.5203127165216,
+              -14.279230609144363
+            ],
+            "size": [
+              270,
+              58
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 229
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  232
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.8.2",
+              "Node name for S&R": "ModelSamplingSD3"
+            },
+            "widgets_values": [
+              3
+            ]
+          },
+          {
+            "id": 117,
+            "type": "UnetLoaderGGUFAdvanced",
+            "pos": [
+              62.98110190108696,
+              -32.53121762391436
+            ],
+            "size": [
+              306.97421875,
+              130
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  224
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-gguf",
+              "ver": "1.1.9",
+              "Node name for S&R": "UnetLoaderGGUFAdvanced"
+            },
+            "widgets_values": [
+              "wan2.2_i2v_low_noise_14B_Q8_0.gguf",
+              "default",
+              "default",
+              false
+            ]
+          },
+          {
+            "id": 116,
+            "type": "UnetLoaderGGUFAdvanced",
+            "pos": [
+              58.61912003999794,
+              -212.8188035658186
+            ],
+            "size": [
+              306.97421875,
+              130
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  223
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-gguf",
+              "ver": "1.1.9",
+              "Node name for S&R": "UnetLoaderGGUFAdvanced"
+            },
+            "widgets_values": [
+              "wan2.2_i2v_high_noise_14B_Q8_0.gguf",
+              "default",
+              "default",
+              false
+            ]
+          },
+          {
+            "id": 84,
+            "type": "CLIPLoader",
+            "pos": [
+              66.36355590820312,
+              148.18174743652344
+            ],
+            "size": [
+              346.391845703125,
+              106
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP",
+                "slot_index": 0,
+                "links": [
+                  178,
+                  181
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "CLIPLoader",
+              "models": [
+                {
+                  "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                  "directory": "text_encoders"
+                }
+              ]
+            },
+            "widgets_values": [
+              "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+              "hidream",
+              "default"
+            ]
+          },
+          {
+            "id": 120,
+            "type": "ModelPatchTorchSettings",
+            "pos": [
+              848.0603553024102,
+              -210.38923320053712
+            ],
+            "size": [
+              312.095703125,
+              58
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 225
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  227
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.4",
+              "Node name for S&R": "ModelPatchTorchSettings"
+            },
+            "widgets_values": [
+              false
+            ]
+          },
+          {
+            "id": 123,
+            "type": "ModelSamplingSD3",
+            "pos": [
+              1600.9603235641328,
+              -208.18925082443815
+            ],
+            "size": [
+              270,
+              58
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 228
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  231
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.8.2",
+              "Node name for S&R": "ModelSamplingSD3"
+            },
+            "widgets_values": [
+              3
+            ]
+          },
+          {
+            "id": 86,
+            "type": "KSamplerAdvanced",
+            "pos": [
+              2151.348640893556,
+              -213.64863117828392
+            ],
+            "size": [
+              304.748046875,
+              546
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 231
+              },
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 172
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 173
+              },
+              {
+                "localized_name": "latent_image",
+                "name": "latent_image",
+                "type": "LATENT",
+                "link": 174
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  170
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "KSamplerAdvanced"
+            },
+            "widgets_values": [
+              "enable",
+              446398098688952,
+              "randomize",
+              4,
+              1,
+              "euler",
+              "simple",
+              0,
+              2,
+              "enable"
+            ]
+          },
+          {
+            "id": 85,
+            "type": "KSamplerAdvanced",
+            "pos": [
+              2138.3965669189465,
+              392.45130084381054
+            ],
+            "size": [
+              304.748046875,
+              546
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 232
+              },
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 168
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 169
+              },
+              {
+                "localized_name": "latent_image",
+                "name": "latent_image",
+                "type": "LATENT",
+                "link": 170
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  175
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "KSamplerAdvanced"
+            },
+            "widgets_values": [
+              "disable",
+              0,
+              "fixed",
+              4,
+              1,
+              "euler",
+              "simple",
+              2,
+              4,
+              "disable"
+            ]
+          },
+          {
+            "id": 87,
+            "type": "VAEDecode",
+            "pos": [
+              2640.448654321288,
+              515.2513537155163
+            ],
+            "size": [
+              210,
+              46
+            ],
+            "flags": {},
+            "order": 15,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 175
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 176
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  182
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "VAEDecode"
+            },
+            "widgets_values": []
+          },
+          {
+            "id": 90,
+            "type": "VAELoader",
+            "pos": [
+              54.38849523455817,
+              535.549787624176
+            ],
+            "size": [
+              344.731689453125,
+              59.98149108886719
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "VAE",
+                "name": "VAE",
+                "type": "VAE",
+                "slot_index": 0,
+                "links": [
+                  176,
+                  185
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "VAELoader",
+              "models": [
+                {
+                  "name": "wan_2.1_vae.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+                  "directory": "vae"
+                }
+              ]
+            },
+            "widgets_values": [
+              "wan_2.1_vae.safetensors"
+            ]
+          },
+          {
+            "id": 94,
+            "type": "CreateVideo",
+            "pos": [
+              2954.885300839353,
+              504.11321915026855
+            ],
+            "size": [
+              270,
+              78
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 182
+              },
+              {
+                "localized_name": "audio",
+                "name": "audio",
+                "shape": 7,
+                "type": "AUDIO",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VIDEO",
+                "name": "VIDEO",
+                "type": "VIDEO",
+                "links": [
+                  197
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "CreateVideo"
+            },
+            "widgets_values": [
+              16
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": 15,
+            "title": "fp8_scaled +  4steps LoRA",
+            "bounding": [
+              38.61912003999794,
+              -330.8486311782841,
+              3196.266180799355,
+              1289.2999320220945
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 11,
+            "title": "Step1 - Load models",
+            "bounding": [
+              48.61912003999794,
+              -286.4188035658186,
+              375.7468407201949,
+              927.3813563426129
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 13,
+            "title": "Step4 -  Prompt",
+            "bounding": [
+              450.4726647949218,
+              104.03630065917967,
+              530,
+              420
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 14,
+            "title": "Step3 - Video size & length",
+            "bounding": [
+              452.67273193359375,
+              562.736354370117,
+              530,
+              290
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 16,
+            "title": "Lightx2v 4steps LoRA",
+            "bounding": [
+              1207.9602503219442,
+              -281.7892508244383,
+              684.5600623945775,
+              362.5999946594235
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 17,
+            "title": "Sage attention",
+            "bounding": [
+              451.9481833804241,
+              -283.9892332005371,
+              722.2078628399547,
+              370.24494493524367
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 18,
+            "title": "KSampler",
+            "bounding": [
+              2128.396566918947,
+              -287.24863117828414,
+              337.70012084960945,
+              1235.6999320220946
+            ],
+            "color": "#3f789e",
+            "font_size": 24,
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 181,
+            "origin_id": 84,
+            "origin_slot": 0,
+            "target_id": 93,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 178,
+            "origin_id": 84,
+            "origin_slot": 0,
+            "target_id": 89,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 183,
+            "origin_id": 93,
+            "origin_slot": 0,
+            "target_id": 98,
+            "target_slot": 0,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 184,
+            "origin_id": 89,
+            "origin_slot": 0,
+            "target_id": 98,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 185,
+            "origin_id": 90,
+            "origin_slot": 0,
+            "target_id": 98,
+            "target_slot": 2,
+            "type": "VAE"
+          },
+          {
+            "id": 182,
+            "origin_id": 87,
+            "origin_slot": 0,
+            "target_id": 94,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 175,
+            "origin_id": 85,
+            "origin_slot": 0,
+            "target_id": 87,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 176,
+            "origin_id": 90,
+            "origin_slot": 0,
+            "target_id": 87,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 172,
+            "origin_id": 98,
+            "origin_slot": 0,
+            "target_id": 86,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 173,
+            "origin_id": 98,
+            "origin_slot": 1,
+            "target_id": 86,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 174,
+            "origin_id": 98,
+            "origin_slot": 2,
+            "target_id": 86,
+            "target_slot": 3,
+            "type": "LATENT"
+          },
+          {
+            "id": 168,
+            "origin_id": 98,
+            "origin_slot": 0,
+            "target_id": 85,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 169,
+            "origin_id": 98,
+            "origin_slot": 1,
+            "target_id": 85,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 170,
+            "origin_id": 86,
+            "origin_slot": 0,
+            "target_id": 85,
+            "target_slot": 3,
+            "type": "LATENT"
+          },
+          {
+            "id": 186,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 98,
+            "target_slot": 4,
+            "type": "IMAGE"
+          },
+          {
+            "id": 197,
+            "origin_id": 94,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "VIDEO"
+          },
+          {
+            "id": 218,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 93,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 220,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 98,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 221,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 98,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 222,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 98,
+            "target_slot": 7,
+            "type": "INT"
+          },
+          {
+            "id": 223,
+            "origin_id": 116,
+            "origin_slot": 0,
+            "target_id": 118,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 224,
+            "origin_id": 117,
+            "origin_slot": 0,
+            "target_id": 119,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 225,
+            "origin_id": 118,
+            "origin_slot": 0,
+            "target_id": 120,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 226,
+            "origin_id": 119,
+            "origin_slot": 0,
+            "target_id": 121,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 227,
+            "origin_id": 120,
+            "origin_slot": 0,
+            "target_id": 122,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 228,
+            "origin_id": 122,
+            "origin_slot": 0,
+            "target_id": 123,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 229,
+            "origin_id": 125,
+            "origin_slot": 0,
+            "target_id": 124,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 230,
+            "origin_id": 121,
+            "origin_slot": 0,
+            "target_id": 125,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 231,
+            "origin_id": 123,
+            "origin_slot": 0,
+            "target_id": 86,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 232,
+            "origin_id": 124,
+            "origin_slot": 0,
+            "target_id": 85,
+            "target_slot": 0,
+            "type": "MODEL"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.35.9",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.552018134947693,
+      "offset": [
+        758.1399538098963,
+        573.840228241915
+      ]
+    }
+  },
+  "version": 0.4
+}
