@@ -43,13 +43,13 @@ pip install -r requirements.txt --upgrade
 # 📌 8. Mettre à jour PyTorch et extensions
 Write-Host ""
 Write-Host "=== Mise à jour PyTorch CUDA 13.0 ===" -ForegroundColor Yellow
-pip uninstall -y torch torchvision torchaudio
-pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130 --upgrade
+# pip uninstall -y torch torchvision torchaudio
+# pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130 --upgrade
 
 Write-Host ""
 Write-Host "=== Mise à jour des extensions ===" -ForegroundColor Yellow
-pip install sageattention --upgrade
-pip install -U "triton-windows==3.3.1.post19"
+# pip install sageattention --upgrade
+# pip install -U "triton-windows==3.3.1.post19"
 
 Write-Host ""
 Write-Host "✅ Mise à jour terminée. 🎉" -ForegroundColor Green

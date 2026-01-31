@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 # ==========================================
 # Installation IndexTTS pour ComfyUI
 # ==========================================

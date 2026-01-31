@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 # 1. Définition des chemins
 Clear-Host
 

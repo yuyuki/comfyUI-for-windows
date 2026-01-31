@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 # ================================
 # Wan2.2 ComfyUI Repackaged Installer
 # ================================

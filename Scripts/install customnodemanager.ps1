@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 Write-Host "=== Installe : Custom Nodes Manager ===" -ForegroundColor Cyan
 
 # ------------------------

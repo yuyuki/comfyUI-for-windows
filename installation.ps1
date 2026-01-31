@@ -12,4 +12,6 @@ Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
 
 & "$PSScriptRoot\Scripts\install F5 TTS.ps1"
 
+& "$PSScriptRoot\Scripts\install ffmpeg.ps1"
+
 Write-Host "=== Fin du script d'installation ==="

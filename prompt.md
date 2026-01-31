@@ -46,3 +46,20 @@ high quality, concept art, 4k
 Une jeune femme aux longs cheveux ondulés est assise dans un café chaleureux et accueillant, un cappucino à la main. D'un air espiègle, elle se lèche lentement le doigt, enlève la petite goutte de mousse de lait, puis sirote son café avec délectation. Après la gorgée, elle se lèche à nouveau le doigt, ajoutant une touche naturelle et sensuelle à l'instant. La caméra reste au premier plan, se concentrant sur son visage, sa main et la tasse de caffé fumante.
 L'arrière-plan, légèrement flouté par une douce lumière, confère à la scène une atmosphère à la fois vivante et intime. Le mouvement, fluide et cinématographique, souligne ses expressions et la précision de ses gestes.
 ```
+
+# femme style 80 (stranger things)
+```
+Photo ultra-réaliste d'une jeune femme d'une vingtaine d'années, allongée sur le dos, le regard perdu au plafond, dans une chambre cosy typique des années 80.
+
+Peau claire, texture naturelle, cheveux châtain clair lisses. Expression calme et pensive, regard doux et légèrement en coin, humeur curieuse, un sourire aux lèvres.
+
+Tenue vintage années 80 : pull rayé bleu, jaune et rose. Un look rétro authentique.
+
+Éclairage intérieur chaleureux, ombres douces, ambiance intime du soir, une touche de nostalgie.
+
+Prise de vue du buste à la tête, légèrement en plongée, à droite de la femme. Tête posée sur un oreiller, posture détendue.
+
+Arrière-plan : portes d'armoire en bois clair, décor simple d'une chambre d'enfant, légèrement flou.
+
+Photoréalisme, réalisme cinématographique, faible profondeur de champ, couleurs naturelles, aspect argentique, sans maquillage ni retouche, atmosphère calme et sincère.
+```
