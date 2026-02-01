@@ -17,8 +17,8 @@ Write-Host "Navigation vers $ComfyUIRoot"
 
 # 📌 5. Mettre à jour le repo ComfyUI
 Write-Host "Mise à jour du repo ComfyUI..." -ForegroundColor Yellow
-git fetch origin
-git pull origin master
+git checkout master
+git pull
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "❌ Erreur lors de la mise à jour Git"

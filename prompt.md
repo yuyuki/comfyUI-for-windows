@@ -63,3 +63,7 @@ Arrière-plan : portes d'armoire en bois clair, décor simple d'une chambre d'e
 
 Photoréalisme, réalisme cinématographique, faible profondeur de champ, couleurs naturelles, aspect argentique, sans maquillage ni retouche, atmosphère calme et sincère.
 ```
+ scene 1
+ ```
+ La femme se redresse sur ses coudes et regarde le mur en face de son lit avec une expression d’attention et de curiosité calme.
+ ```

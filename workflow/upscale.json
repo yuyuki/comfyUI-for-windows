@@ -1,0 +1,262 @@
+{
+  "id": "751bb676-4418-40cf-a29c-2722257adf7e",
+  "revision": 0,
+  "last_node_id": 1,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "087bf4ce-46e8-46bb-a88d-62733d91d50e",
+      "pos": [
+        -1215.5955266565124,
+        1285.5786675392173
+      ],
+      "size": [
+        219.921875,
+        14.817708333333334
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [],
+        "cnr_id": "comfy-core",
+        "ver": "0.10.0",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "087bf4ce-46e8-46bb-a88d-62733d91d50e",
+        "version": 1,
+        "state": {
+          "lastGroupId": 1,
+          "lastNodeId": 94,
+          "lastLinkId": 102,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Upscale",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -442,
+            1494.8,
+            144,
+            72
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            633.076484375,
+            1494.8,
+            144,
+            72
+          ]
+        },
+        "inputs": [
+          {
+            "id": "3f39d32d-9d3b-4699-9c9c-b318d7910c65",
+            "name": "images",
+            "type": "IMAGE",
+            "linkIds": [
+              101
+            ],
+            "localized_name": "images",
+            "pos": [
+              -270,
+              1264
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "1bb0c542-6a78-4b3e-825f-7a0ee438c5f3",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              102
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              545.8970703125,
+              1264
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 93,
+            "type": "UpscaleModelLoader",
+            "pos": [
+              -226,
+              1454
+            ],
+            "size": [
+              324,
+              99.6
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "UPSCALE_MODEL",
+                "name": "UPSCALE_MODEL",
+                "type": "UPSCALE_MODEL",
+                "links": [
+                  100
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.10.0",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "UpscaleModelLoader"
+            },
+            "widgets_values": [
+              "4x-UltraSharpV2.safetensors"
+            ]
+          },
+          {
+            "id": 94,
+            "type": "ImageUpscaleWithModelBatched",
+            "pos": [
+              158,
+              1550
+            ],
+            "size": [
+              403.07648437499995,
+              150
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "upscale_model",
+                "name": "upscale_model",
+                "type": "UPSCALE_MODEL",
+                "link": 100
+              },
+              {
+                "localized_name": "images",
+                "name": "images",
+                "type": "IMAGE",
+                "link": 101
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  102
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.6",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "ImageUpscaleWithModelBatched"
+            },
+            "widgets_values": [
+              16,
+              1,
+              "lanczos",
+              "float32"
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 100,
+            "origin_id": 93,
+            "origin_slot": 0,
+            "target_id": 94,
+            "target_slot": 0,
+            "type": "UPSCALE_MODEL"
+          },
+          {
+            "id": 101,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 94,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 102,
+            "origin_id": 94,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "Vue"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "ds": {
+      "scale": 1.1421476403240691,
+      "offset": [
+        2108.9628262809442,
+        -921.5814951388865
+      ]
+    },
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
