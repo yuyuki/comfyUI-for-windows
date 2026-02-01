@@ -3,7 +3,8 @@ Clear-Host
 Write-Host "=== Mise à jour ComfyUI ===" -ForegroundColor Cyan
 
 # 📌 1. Variables
-$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
+$ParentDir = (Get-Location).Path
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 
 # 📌 2. Vérifier que ComfyUI existe
 if (!(Test-Path $ComfyUIRoot)) {
@@ -50,6 +51,8 @@ Write-Host ""
 Write-Host "=== Mise à jour des extensions ===" -ForegroundColor Yellow
 # pip install sageattention --upgrade
 # pip install -U "triton-windows==3.3.1.post19"
+
+set-location $ParentDir
 
 Write-Host ""
 Write-Host "✅ Mise à jour terminée. 🎉" -ForegroundColor Green

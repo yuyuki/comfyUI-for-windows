@@ -67,3 +67,121 @@ Photoréalisme, réalisme cinématographique, faible profondeur de champ, couleu
  ```
  La femme se redresse sur ses coudes et regarde le mur en face de son lit avec une expression d’attention et de curiosité calme.
  ```
+ scene 2
+ ```
+ La femme se lève d'un bond et se dirige vers la caméra.
+
+Elle fixe l'objectif.
+
+Son visage exprime une attention mêlée de curiosité, un air sérieux.
+
+La caméra effectue un zoom arrière pour dévoiler le lit dans son intégralité, de ses genoux à sa tête.
+ ```
+ scene 3
+ ```
+ La caméra adopte parfaitement le point de vue du personnage principal, voyant exactement la même chose que lui : un mur avec le même papier peint, avec pour seule décoration un texte peint en noir à la main avec un gros pinceau où on peut voir : "Unifor 2026".
+ ```
+scene 4
+```
+Panoramique brusque de la caméra vers la droite révélant un autre mur orné de décorations florales identiques dans la même pièce élégante, changement soudain sans transition fluide, éclairage constant, plan large fixe, qualité cinématographique.
+```
+Abrupt camera pan right to reveal different wall with identical floral decorations in the same elegant room, sudden shift no smooth transition, consistent lighting, fixed wide shot, cinematic 4K quality.
+```
+
+scene 4 (cut scene)
+```
+Photo ultra-réaliste d'une chambre cosy typique des années 80.
+
+Éclairage intérieur chaleureux, ombres douces, ambiance intime du jour, une touche de nostalgie.
+
+Prise de vue d'un mur de la chambre avec pour seule décoration  un texte peint en noir à la main avec un gros pinceau où on peut voir : "Unifor 2026".
+
+la caméra est centrée sur le mur. On voit également le début du plafond.
+
+Photoréalisme, réalisme cinématographique, faible profondeur de champ, couleurs naturelles, aspect argentique, sans maquillage ni retouche, atmosphère calme et sincère.
+```
+
+scene 4
+```
+Un mur composé de planches de bois verticales recouvertes d'un papier peint imprimé. Les planches craquent et se brisent violemment. À mesure que le bois se fend et que le mur se déforme, il ne révèle derrière sa structure qu'un vide d'un noir absolu. L'intérieur du mur est un abîme obscur et vide, plongé dans l'obscurité. Détails précis du bois qui se brise et du papier qui se déchire. Éclairage photoréaliste et chaud sur les planches, ténèbres totales à l'intérieur de la brèche. Un seul mouvement continu, aucun humain, aucun personnage.
+```
+
+
+```
+Photo ultra-réaliste d'un démon Gorgone émergeant d'un mur.
+
+Au début de la vidéo, le mur est intact.
+
+À la fin, le mur est brisé et la tête du démon en jaillit.
+
+Le mur est constitué de planches de bois clair, dont les surfaces verticales sont recouvertes d'un papier peint uni, sans motif, style années 80.
+
+À mi-hauteur, une inscription noire est peinte à la main.
+
+Quelques gouttes de peinture sont visibles.
+
+On peut lire : « Unifor 2026 ».
+
+Les planches craquent et se fendent tandis que le démon tente de percer le mur.
+
+À mesure que le bois se fend et que le mur se déforme, la tête du démon apparaît derrière sa structure.
+
+Le papier peint suit les déformations et les déchirures des planches.
+
+Éclairage photoréaliste et chaleureux ; obscurité totale à l'intérieur de la brèche. La lumière ambiante s'atténue lorsque le démon émerge du mur.
+
+La caméra est centrée sur le mur. On aperçoit également le début du plafond.
+
+Photoréalisme, réalisme cinématographique, couleurs naturelles, rendu cinématographique, sans maquillage ni retouche, atmosphère troublante.
+```
+
+```
+Un mur élastique,
+
+un visage déforme le mur,
+le visage a la même taille que la lettre "o" sur le mur,
+La déformation se fait au niveau du texte peint en noir,
+le visage exerce une pression sur le mur de l'extérieur, vers l'intérieur,
+le visage ne traverse pas le mur,
+Le mur se déforme un petit peu,
+On ne voit pas la texture du visage,
+Seule celle du papier peint,
+On distingue juste la forme du visage sur le mur,
+Le mur s'étire un peu,
+
+la caméra est à l'intérieur,
+Elle est cadrée sur le mur,
+
+Éclairage photoréaliste et chaud sur le mur, 
+Un seul mouvement continu.
+```
+
+```
+Gros plan sur un mur élastique recouvert d'un papier peint texturé portant l'inscription noire « Unifor 2026 ». Une forme organique subtile exerce une pression depuis l'arrière du mur, créant une légère convexité dans le papier peint. Cette déformation se produit près de la lettre « o » de l'inscription. Le papier peint s'étire et se déforme légèrement, révélant la tension exercée sur le matériau, mais reste intact. La texture du papier peint est clairement visible dans la zone déformée. Aucune partie de l'objet exerçant la pression n'est visible ; seule la déformation du mur est perceptible. Un éclairage chaud et photoréaliste met en valeur la texture et le subtil changement de la surface du mur. Un seul mouvement continu au ralenti capture le mur se dilatant puis se contractant légèrement.
+```
+
+```
+Gros plan sur un mur élastique recouvert d'un papier peint texturé portant l'inscription noire « Unifor 2026 ». Une forme ressemblant à un visage exerce une pression depuis l'arrière du mur. Cette déformation se produit près de la lettre « o » de l'inscription.
+la forme est à peine plus grande que la lettre "o",
+Le papier peint s'étire et se déforme légèrement, révélant la tension exercée sur le matériau, mais reste intact.
+La texture du papier peint est clairement visible dans la zone déformée.
+Aucune partie de l'objet exerçant la pression n'est visible ; seule la déformation du mur est perceptible.
+
+Un éclairage chaud et photoréaliste met en valeur la texture et le subtil changement de la surface du mur. Un seul mouvement continu au ralenti capture le mur se dilatant puis se contractant légèrement.
+
+-- 
+face, head, person, features, eyes, nose, mouth, skin texture, transparent wall, breaking wall, hole, tear, visible object behind wall, strong deformation
+```
+
+```
+Gros plan sur un mur élastique recouvert d'un papier peint texturé portant l'inscription noire « Unifor 2026 ». Une forme ressemblant à un visage exerce une pression depuis l'arrière du mur. Cette déformation se produit près de la lettre « o » de l'inscription.
+la forme est aussi grande que la lettre "o",
+Le papier peint s'étire et se déforme légèrement, révélant la tension exercée sur le matériau, mais reste intact.
+La texture du papier peint est clairement visible dans la zone déformée.
+Aucune partie de l'objet exerçant la pression n'est visible ; seule la déformation du mur est perceptible.
+
+Un éclairage chaud et photoréaliste met en valeur la texture et le subtil changement de la surface du mur. Un seul mouvement continu au ralenti capture le mur se dilatant puis se contractant légèrement.
+
+---
+visible object behind wall, strong deformation, person, eyes, nose, mouth, skin texture
+```

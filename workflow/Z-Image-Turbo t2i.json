@@ -5,32 +5,6 @@
   "last_link_id": 126,
   "nodes": [
     {
-      "id": 74,
-      "type": "MarkdownNote",
-      "pos": [
-        10700,
-        -1090
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Hit run 👆",
-      "properties": {},
-      "widgets_values": [
-        ""
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 76,
       "type": "SaveImage",
       "pos": [
@@ -44,7 +18,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -56,7 +30,13 @@
       "outputs": [],
       "properties": {
         "cnr_id": "comfy-core",
-        "ver": "0.3.71"
+        "ver": "0.3.71",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
       },
       "widgets_values": [
         "comfyui-airport-editorial"
@@ -76,7 +56,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -105,7 +85,12 @@
           ]
         ],
         "cnr_id": "comfy-core",
-        "ver": "0.9.1"
+        "ver": "0.9.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
       },
       "widgets_values": []
     }
@@ -215,7 +200,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
               3
@@ -263,7 +253,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": []
           },
@@ -309,7 +304,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
               "z_image_turbo_bf16.safetensors",
@@ -358,7 +358,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
               "qwen_3_4b.safetensors",
@@ -408,7 +413,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
               "ae.safetensors"
@@ -450,7 +460,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
               768,
@@ -509,7 +524,12 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": []
           },
@@ -556,10 +576,15 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
-              "Portrait photographique réaliste d’une jeune femme à l’intérieur d’un logement. Visage centré, expression douce avec un léger sourire naturel. Peau claire, rendu authentique et non retouché. Cheveux bruns foncés, lisses, attachés en arrière avec une raie au milieu. Lunettes rondes à monture fine métallique, légèrement réfléchissantes. Yeux calmes et regard direct vers l’objectif. Vêtue d’un sweat à capuche noir, style décontracté. Éclairage intérieur chaud et uniforme, ambiance domestique simple. Arrière-plan avec une porte en bois et des murs clairs décorés de petits papiers et dessins, légèrement flou. Style photo lifestyle, réalisme élevé, couleurs naturelles, atmosphère intime et sincère, prise de vue frontale."
+              "Photo ultra-réaliste d'une chambre cosy typique des années 80.\n\nÉclairage intérieur chaleureux, ombres douces, ambiance intime du soir, une touche de nostalgie.\n\nPrise de vue d'un mur avec pour seule décoration  un texte peint en noir à la main avec un gros pinceau où on peut voir : \"Unifor 2026\".\n\nPhotoréalisme, réalisme cinématographique, faible profondeur de champ, couleurs naturelles, aspect argentique, sans maquillage ni retouche, atmosphère calme et sincère."
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -625,10 +650,15 @@
               "secondTabText": "Send Back",
               "secondTabWidth": 65,
               "tabWidth": 65,
-              "tabXOffset": 10
+              "tabXOffset": 10,
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
             },
             "widgets_values": [
-              210542242347924,
+              549888642215526,
               "randomize",
               8,
               1,
@@ -775,7 +805,9 @@
           }
         ],
         "extra": {
-          "workflowRendererVersion": "LG"
+          "workflowRendererVersion": "LG",
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       }
     ]
@@ -786,15 +818,17 @@
     "VHS_MetadataImage": true,
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
-    "frontendVersion": "1.36.14",
+    "frontendVersion": "1.37.11",
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 1.5338585976899157,
+      "scale": 1.2676517336280295,
       "offset": [
-        -9110.316705448175,
-        1035.0323298169196
+        -8974.722500195066,
+        1090.2001851093073
       ]
-    }
+    },
+    "ue_links": [],
+    "links_added_by_ue": []
   },
   "version": 0.4
 }
