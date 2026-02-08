@@ -1,0 +1,134 @@
+{
+  "last_node_id": 300,
+  "last_link_id": 600,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MMAudioModelLoader",
+      "pos": [100, -400],
+      "widgets_values": [
+        "mmaudio_large_44k_v2_fp16.safetensors",
+        "fp16"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "MMAudioFeatureUtilsLoader",
+      "pos": [100, -250],
+      "widgets_values": [
+        "mmaudio_vae_44k_fp16.safetensors",
+        "mmaudio_synchformer_fp16.safetensors",
+        "apple_DFN5B-CLIP-ViT-H-14-384_fp16.safetensors",
+        "44k",
+        "fp16"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VHS_LoadVideo",
+      "pos": [100, 50],
+      "widgets_values": {
+        "video": "Timeline 1.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "Wan",
+        "videopreview": {"hidden": true}
+      }
+    },
+    {
+      "id": 4,
+      "type": "VHS_VideoInfo",
+      "pos": [350, 50]
+    },
+
+    
+    {
+      "id": 10,
+      "type": "MMAudioSampler",
+      "pos": [650, -350],
+      "widgets_values": [
+        20,
+        30,
+        4.5,
+        7,
+        "fixed",
+        "Cinematic orchestral tension, mysterious temple ambiance, gradual crescendo, rising strings and horns, swelling volume, dramatic climax as a book is revealed, epic discovery, intense choral layers, high quality, 4k audio.",
+        "voice, speaking, narration, sharp percussion, silence, fade out, quiet ending, abrupt stop, cut off.",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 11,
+      "type": "MMAudioSampler",
+      "pos": [650, -50],
+      "widgets_values": [
+        20,
+        30,
+        4.5,
+        7,
+        "fixed",
+        "Cinematic orchestral tension, mysterious temple ambiance, gradual crescendo, rising strings and horns, swelling volume, dramatic climax as a book is revealed, epic discovery, intense choral layers, high quality, 4k audio.",
+        "voice, speaking, narration, sharp percussion, silence, fade out, quiet ending, abrupt stop, cut off.",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 12,
+      "type": "MMAudioSampler",
+      "pos": [650, 250],
+      "widgets_values": [
+        20,
+        30,
+        4.5,
+        7,
+        "fixed",
+        "Cinematic orchestral tension, mysterious temple ambiance, gradual crescendo, rising strings and horns, swelling volume, dramatic climax as a book is revealed, epic discovery, intense choral layers, high quality, 4k audio.",
+        "voice, speaking, narration, sharp percussion, silence, fade out, quiet ending, abrupt stop, cut off.",
+        false,
+        false
+      ]
+    },
+
+    
+    {
+      "id": 20,
+      "type": "AudioConcat",
+      "pos": [1000, -50],
+      "widgets_values": {
+        "crossfade": 1.0
+      }
+    },
+
+    {
+      "id": 30,
+      "type": "PreviewAudio",
+      "pos": [1300, -50]
+    }
+  ],
+
+  "links": [
+    [101, 1, 0, 10, 0],
+    [102, 1, 0, 11, 0],
+    [103, 1, 0, 12, 0],
+
+    [104, 2, 0, 10, 1],
+    [105, 2, 0, 11, 1],
+    [106, 2, 0, 12, 1],
+
+    [107, 3, 0, 10, 2],
+    [108, 3, 0, 11, 2],
+    [109, 3, 0, 12, 2],
+
+    [110, 10, 0, 20, 0],
+    [111, 11, 0, 20, 1],
+    [112, 12, 0, 20, 2],
+
+    [113, 20, 0, 30, 0]
+  ]
+}

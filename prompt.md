@@ -185,3 +185,57 @@ Un éclairage chaud et photoréaliste met en valeur la texture et le subtil chan
 ---
 visible object behind wall, strong deformation, person, eyes, nose, mouth, skin texture
 ```
+
+# indi
+
+image 1
+``` 5
+Un aventurier masculin dans un ancien temple de pierre couvert de mousse et d’humidité.
+Il porte un chapeau fedora, une veste en cuir usée et une chemise claire.
+Son expression est intense et concentrée. Il est agenouillé devant un piédestal de pierre et lit un vieux livre ancien posé au centre.
+
+Le livre est épais, ancien, avec une couverture en cuir brun foncé légèrement abîmée, coins usés et surface craquelée. Des symboles mystérieux sont gravés dans le cuir de la couverture, motifs anciens et ésotériques, légèrement en relief, suggérant un savoir ancien.
+
+Sur une des pages du livre, on y distingue la représentation d'un masque aztèque.
+
+Le livre est couché sur le piédestale de façon à ce que la caméra montre le contenu du livre.
+
+La caméra est en vue frontale légèrement basse, cadrage serré sur l’homme, le piédestal et la page du livre, composition iconique et cinématographique.
+
+L’environnement est sombre, humide, avec des murs de pierre anciens en arrière-plan. Éclairage chaud et dramatique, style film d’aventure des années 80, rendu cinématographique, couleurs riches, profondeur de champ marquée, ultra-réaliste, haute définition, tension dramatique.
+```
+``` 4
+A cinematic wide shot of an adventurer in a brown leather jacket and fedora, standing five steps back from a mossy stone pedestal in a dimly lit ancient temple. He has just placed a thick leather-bound book on the altar and is now standing in a defensive, cautious posture with his hands slightly raised. High contrast lighting, moody atmosphere, 1980s adventure film aesthetic, deep shadows, 8k resolution.
+```
+``` audio
+Cinematic ambient soundtrack, ancient temple atmosphere, mysterious flute, low orchestral drones, subtle echoing percussion, shimmering bells, mystical and awe-inspiring, adventurous discovery, high quality.
+```
+``` 5
+Plan large et cinématographique d'un aventurier.
+
+Il referme le livre.
+
+Il le ramasse.
+
+Il le range dans sa sacoche avec un sourire.
+
+Il se lève et se tourne vers la porte.
+
+La porte est close, en bois brun foncé.
+
+Éclairage à fort contraste, atmosphère mystérieuse, esthétique d'un film d'aventure des années 80, ombres profondes, résolution 8K.
+```
+A wide, cinematic shot of an adventurer.
+
+He closes the book.
+
+He picks it up.
+
+He puts it in his bag with a smile.
+
+He stands up and turns toward the door.
+
+The door is closed, simple, made of dark brown wood, with eight molded panels.
+
+High-contrast lighting, a mysterious atmosphere, the aesthetic of an '80s adventure film, deep shadows, 8K resolution.
+```

@@ -1,0 +1,508 @@
+{
+  "id": "20094a2e-31b3-47f8-af40-ea5d91fbf1d0",
+  "revision": 0,
+  "last_node_id": 1,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "8ed9edbe-344e-4e23-85e2-beedcb4a211b",
+      "pos": [
+        747.4383621421978,
+        1113.137467069826
+      ],
+      "size": [
+        400,
+        50
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "8ed9edbe-344e-4e23-85e2-beedcb4a211b",
+        "version": 1,
+        "state": {
+          "lastGroupId": 5,
+          "lastNodeId": 205,
+          "lastLinkId": 342,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Florence Image Read (LLM Prompt)",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -2320,
+            -540,
+            120,
+            80
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -220,
+            -290,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "53a63dbe-9f5e-401e-8779-9a6b113d0f48",
+            "name": "image",
+            "type": "IMAGE",
+            "linkIds": [
+              337
+            ],
+            "localized_name": "image",
+            "pos": [
+              -2220,
+              -520
+            ]
+          },
+          {
+            "id": "d6009c74-9fd6-486b-8ffd-15495bce1961",
+            "name": "string_b",
+            "type": "STRING",
+            "linkIds": [],
+            "localized_name": "string_b",
+            "pos": [
+              -2220,
+              -500
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "d914875d-b604-42ca-8540-35bd7b6240c7",
+            "name": "STRING",
+            "type": "STRING",
+            "linkIds": [
+              340
+            ],
+            "localized_name": "STRING",
+            "pos": [
+              -200,
+              -270
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 199,
+            "type": "easy promptReplace",
+            "pos": [
+              -1170,
+              -307
+            ],
+            "size": [
+              210,
+              178
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "link": 332
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  333
+                ]
+              }
+            ],
+            "title": "PromptReplace Video",
+            "properties": {
+              "cnr_id": "comfyui-easy-use",
+              "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "ue_properties": {
+                "version": "7.5.2",
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "easy promptReplace"
+            },
+            "widgets_values": [
+              "photo",
+              "video",
+              "image",
+              "video",
+              "portrait",
+              "video"
+            ],
+            "color": "#222",
+            "bgcolor": "#000",
+            "shape": 1
+          },
+          {
+            "id": 200,
+            "type": "easy promptReplace",
+            "pos": [
+              -920,
+              -295
+            ],
+            "size": [
+              214.59921875,
+              178
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "link": 333
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  339
+                ]
+              }
+            ],
+            "title": "Prompt Replace Animation",
+            "properties": {
+              "cnr_id": "comfyui-easy-use",
+              "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "ue_properties": {
+                "version": "7.5.2",
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "easy promptReplace"
+            },
+            "widgets_values": [
+              "illustration",
+              "animation",
+              "drawing",
+              "animation",
+              "painting",
+              "animation"
+            ],
+            "color": "#222",
+            "bgcolor": "#000",
+            "shape": 1
+          },
+          {
+            "id": 202,
+            "type": "easy promptReplace",
+            "pos": [
+              -610,
+              -283
+            ],
+            "size": [
+              210,
+              178
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "link": 339
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "links": [
+                  340
+                ]
+              }
+            ],
+            "title": "Prompt Replace Misc",
+            "properties": {
+              "cnr_id": "comfyui-easy-use",
+              "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "ue_properties": {
+                "version": "7.5.2",
+                "widget_ue_connectable": {},
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "easy promptReplace"
+            },
+            "widgets_values": [
+              "photograph",
+              "video",
+              "Photo",
+              "video",
+              "painting",
+              "animation"
+            ],
+            "color": "#222",
+            "bgcolor": "#000",
+            "shape": 1
+          },
+          {
+            "id": 198,
+            "type": "Florence2Run",
+            "pos": [
+              -1750,
+              -530
+            ],
+            "size": [
+              400,
+              389
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 337
+              },
+              {
+                "localized_name": "florence2_model",
+                "name": "florence2_model",
+                "type": "FL2MODEL",
+                "link": 341
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "links": []
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "links": []
+              },
+              {
+                "localized_name": "caption",
+                "name": "caption",
+                "type": "STRING",
+                "links": [
+                  332
+                ]
+              },
+              {
+                "localized_name": "data",
+                "name": "data",
+                "type": "JSON",
+                "links": []
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-florence2",
+              "ver": "1.0.6",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "Florence2Run"
+            },
+            "widgets_values": [
+              "",
+              "detailed_caption",
+              true,
+              false,
+              1024,
+              3,
+              true,
+              "",
+              777777777777777,
+              "fixed"
+            ]
+          },
+          {
+            "id": 203,
+            "type": "DownloadAndLoadFlorence2Model",
+            "pos": [
+              -2170,
+              -271
+            ],
+            "size": [
+              332.9986328125,
+              130
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "lora",
+                "name": "lora",
+                "shape": 7,
+                "type": "PEFTLORA",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "florence2_model",
+                "name": "florence2_model",
+                "type": "FL2MODEL",
+                "links": [
+                  341
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-florence2",
+              "ver": "1.0.7",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              },
+              "Node name for S&R": "DownloadAndLoadFlorence2Model"
+            },
+            "widgets_values": [
+              "microsoft/Florence-2-base",
+              "fp16",
+              "sdpa",
+              false
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 332,
+            "origin_id": 198,
+            "origin_slot": 2,
+            "target_id": 199,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 333,
+            "origin_id": 199,
+            "origin_slot": 0,
+            "target_id": 200,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 337,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 198,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 339,
+            "origin_id": 200,
+            "origin_slot": 0,
+            "target_id": 202,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 340,
+            "origin_id": 202,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 341,
+            "origin_id": 203,
+            "origin_slot": 0,
+            "target_id": 198,
+            "target_slot": 1,
+            "type": "FL2MODEL"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "ds": {
+      "scale": 1.2322431064964385,
+      "offset": [
+        -112.82332889326948,
+        -726.0385273514898
+      ]
+    },
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
