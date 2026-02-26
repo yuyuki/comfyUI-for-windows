@@ -1,8 +1,8 @@
 {
   "id": "87279e87-05db-47b9-8436-06e8f1a4c6ee",
   "revision": 0,
-  "last_node_id": 115,
-  "last_link_id": 135,
+  "last_node_id": 121,
+  "last_link_id": 145,
   "nodes": [
     {
       "id": 30,
@@ -72,7 +72,7 @@
         82
       ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -147,100 +147,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 87,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        -1120,
-        1500
-      ],
-      "size": [
-        220.7333984375,
-        498.550048828125
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 106
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "name": "frame_rate",
-          "type": "FLOAT",
-          "widget": {
-            "name": "frame_rate"
-          },
-          "link": 128
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "1.7.9",
-        "Node name for S&R": "VHS_VideoCombine",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "frame_rate": true
-          },
-          "version": "7.5.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": {
-        "frame_rate": 16,
-        "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
-        "format": "video/nvenc_h264-mp4",
-        "pix_fmt": "yuv420p",
-        "bitrate": 10,
-        "megabit": true,
-        "save_metadata": true,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "AnimateDiff_00105.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/nvenc_h264-mp4",
-            "frame_rate": 16,
-            "workflow": "AnimateDiff_00105.png",
-            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00105.mp4"
-          }
-        }
-      },
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 80,
       "type": "dc381728-46e8-4c02-885f-cf8d5ea7c7b8",
       "pos": [
@@ -252,7 +158,7 @@
         138
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -323,7 +229,7 @@
         309.97395833333337
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -346,6 +252,314 @@
       }
     },
     {
+      "id": 110,
+      "type": "easy positive",
+      "pos": [
+        -1970,
+        1950
+      ],
+      "size": [
+        409.97395833333337,
+        250
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            130
+          ]
+        }
+      ],
+      "title": "Negative",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.5",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "all text from the picture"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 116,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": [
+        -2430,
+        1110
+      ],
+      "size": [
+        340,
+        160
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "2V",
+        "showNav": false,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 108,
+      "type": "5f200e86-9128-483e-b521-08b659f99f80",
+      "pos": [
+        -2370,
+        1380
+      ],
+      "size": [
+        250,
+        288.74665148951703
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            143
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "103",
+            "choose video to upload"
+          ],
+          [
+            "103",
+            "videopreview"
+          ],
+          [
+            "103",
+            "skip_first_frames"
+          ],
+          [
+            "103",
+            "frame_load_cap"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 121,
+      "type": "ImpactMakeImageList",
+      "pos": [
+        -1890,
+        1440
+      ],
+      "size": [
+        230,
+        70
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 143
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 144
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            145
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "8.28.2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        },
+        "Node name for S&R": "ImpactMakeImageList"
+      }
+    },
+    {
+      "id": 85,
+      "type": "easy positive",
+      "pos": [
+        -1970,
+        1650
+      ],
+      "size": [
+        409.97395833333337,
+        250
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            118
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.5",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "The monster is holding a poster in its hands at chest level.\nThe poster reads, \"Let your fear out.\""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 109,
+      "type": "230297df-c1ee-4aeb-b2a4-30f68205731a",
+      "pos": [
+        -2370,
+        1780
+      ],
+      "size": [
+        260,
+        306
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            144
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "104",
+            "image"
+          ],
+          [
+            "104",
+            "upload"
+          ],
+          [
+            "104",
+            "$$canvas-image-preview"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 49,
+      "type": "PreviewImage",
+      "pos": [
+        -1520,
+        1750
+      ],
+      "size": [
+        280,
+        258
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Cropped Image",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 47,
       "type": "7cb909d5-7d2c-4076-b868-7c86fc98142b",
       "pos": [
@@ -357,13 +571,13 @@
         294
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 133
+          "link": 145
         },
         {
           "label": "positive prompt",
@@ -471,268 +685,94 @@
       "bgcolor": "#335"
     },
     {
-      "id": 115,
-      "type": "ComfySwitchNode",
+      "id": 87,
+      "type": "VHS_VideoCombine",
       "pos": [
-        -1920,
-        1420
+        -1120,
+        1500
       ],
       "size": [
-        270,
-        78
+        220.7333984375,
+        402.550048828125
       ],
       "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "on_false",
-          "type": "IMAGE",
-          "link": 134
-        },
-        {
-          "name": "on_true",
-          "type": "IMAGE",
-          "link": 135
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "IMAGE",
-          "links": [
-            133
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "ComfySwitchNode"
-      },
-      "widgets_values": [
-        true
-      ]
-    },
-    {
-      "id": 110,
-      "type": "easy positive",
-      "pos": [
-        -1970,
-        1950
-      ],
-      "size": [
-        409.97395833333337,
-        250
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "STRING",
-          "links": [
-            130
-          ]
-        }
-      ],
-      "title": "Negative",
-      "properties": {
-        "cnr_id": "comfyui-easy-use",
-        "ver": "1.3.5",
-        "Node name for S&R": "easy positive",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        ""
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 85,
-      "type": "easy positive",
-      "pos": [
-        -1970,
-        1650
-      ],
-      "size": [
-        409.97395833333337,
-        250
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "STRING",
-          "links": [
-            118
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-easy-use",
-        "ver": "1.3.5",
-        "Node name for S&R": "easy positive",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "The adventurer takes back 5 steps"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 108,
-      "type": "5f200e86-9128-483e-b521-08b659f99f80",
-      "pos": [
-        -2370,
-        1380
-      ],
-      "size": [
-        250,
-        280
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            134
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "103",
-            "choose video to upload"
-          ],
-          [
-            "103",
-            "videopreview"
-          ],
-          [
-            "103",
-            "skip_first_frames"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.2"
-        }
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 109,
-      "type": "230297df-c1ee-4aeb-b2a4-30f68205731a",
-      "pos": [
-        -2370,
-        1780
-      ],
-      "size": [
-        260,
-        306
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            135
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "104",
-            "image"
-          ],
-          [
-            "104",
-            "upload"
-          ],
-          [
-            "104",
-            "$$canvas-image-preview"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.2"
-        }
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 49,
-      "type": "PreviewImage",
-      "pos": [
-        -1520,
-        1750
-      ],
-      "size": [
-        280,
-        258
-      ],
-      "flags": {},
-      "order": 8,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 47
+          "link": 106
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 128
         }
       ],
-      "outputs": [],
-      "title": "Preview Cropped Image",
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.51",
-        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_VideoCombine",
         "ue_properties": {
-          "widget_ue_connectable": {},
+          "widget_ue_connectable": {
+            "frame_rate": true
+          },
           "version": "7.5.2",
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00128.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 16,
+            "workflow": "AnimateDiff_00128.png",
+            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00128.mp4"
+          }
+        }
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     }
   ],
   "links": [
@@ -841,27 +881,27 @@
       "STRING"
     ],
     [
-      133,
-      115,
+      143,
+      108,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      144,
+      109,
+      0,
+      121,
+      1,
+      "IMAGE"
+    ],
+    [
+      145,
+      121,
       0,
       47,
       0,
-      "IMAGE"
-    ],
-    [
-      134,
-      108,
-      0,
-      115,
-      0,
-      "IMAGE"
-    ],
-    [
-      135,
-      109,
-      0,
-      115,
-      1,
       "IMAGE"
     ]
   ],
@@ -884,7 +924,7 @@
       "title": "V2V",
       "bounding": [
         -2380,
-        1306.4,
+        1310,
         270,
         363.6
       ],
@@ -897,7 +937,7 @@
       "title": "I2V",
       "bounding": [
         -2380,
-        1706.4,
+        1710,
         280,
         389.6
       ],
@@ -2548,8 +2588,8 @@
               }
             },
             "widgets_values": [
-              640,
-              480,
+              551,
+              675,
               "lanczos",
               "pad",
               "0, 0, 0",
@@ -4771,11 +4811,11 @@
             ],
             "size": [
               255.8291015625,
-              500.74665148951703
+              310
             ],
             "flags": {},
             "order": 0,
-            "mode": 0,
+            "mode": 2,
             "inputs": [
               {
                 "localized_name": "meta_batch",
@@ -4836,7 +4876,7 @@
               "custom_width": 640,
               "custom_height": 480,
               "frame_load_cap": 1,
-              "skip_first_frames": 0,
+              "skip_first_frames": 65,
               "select_every_nth": 1,
               "format": "AnimateDiff",
               "videopreview": {
@@ -4847,7 +4887,7 @@
                   "custom_width": 640,
                   "custom_height": 480,
                   "frame_load_cap": 1,
-                  "skip_first_frames": 0,
+                  "skip_first_frames": 65,
                   "select_every_nth": 1,
                   "filename": "scene 05 b.mp4",
                   "type": "input",
@@ -4965,7 +5005,7 @@
               }
             },
             "widgets_values": [
-              "frame 1.png",
+              "vecna (1).jpg",
               "image"
             ]
           }
@@ -5233,10 +5273,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.1581149208858532,
+      "scale": 0.7910080738240926,
       "offset": [
-        2727.481164705152,
-        -1179.3346600621494
+        2768.0425679842865,
+        -1140.8167267087292
       ]
     }
   },

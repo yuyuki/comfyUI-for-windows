@@ -1,9 +1,92 @@
 {
   "id": "20094a2e-31b3-47f8-af40-ea5d91fbf1d0",
   "revision": 0,
-  "last_node_id": 1,
-  "last_link_id": 0,
+  "last_node_id": 3,
+  "last_link_id": 2,
   "nodes": [
+    {
+      "id": 3,
+      "type": "Show any [Crystools]",
+      "pos": [
+        1240,
+        1110
+      ],
+      "size": [
+        559.9739583333334,
+        309.97395833333337
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_value",
+          "shape": 7,
+          "type": "*",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "1.27.4",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "Node name for S&R": "Show any [Crystools]"
+      }
+    },
+    {
+      "id": 2,
+      "type": "9a30fc2f-fad2-49e3-b8b0-c3547a8db8d5",
+      "pos": [
+        310,
+        1100
+      ],
+      "size": [
+        260,
+        306
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "104",
+            "image"
+          ],
+          [
+            "104",
+            "upload"
+          ],
+          [
+            "104",
+            "$$canvas-image-preview"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
     {
       "id": 1,
       "type": "8ed9edbe-344e-4e23-85e2-beedcb4a211b",
@@ -16,25 +99,22 @@
         50
       ],
       "flags": {},
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "string_b",
-          "type": "STRING",
-          "link": null
+          "link": 1
         }
       ],
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
-          "links": []
+          "links": [
+            2
+          ]
         }
       ],
       "properties": {
@@ -52,7 +132,24 @@
       "bgcolor": "#335"
     }
   ],
-  "links": [],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ]
+  ],
   "groups": [],
   "definitions": {
     "subgraphs": [
@@ -74,7 +171,7 @@
             -2320,
             -540,
             120,
-            80
+            60
           ]
         },
         "outputNode": {
@@ -98,17 +195,6 @@
             "pos": [
               -2220,
               -520
-            ]
-          },
-          {
-            "id": "d6009c74-9fd6-486b-8ffd-15495bce1961",
-            "name": "string_b",
-            "type": "STRING",
-            "linkIds": [],
-            "localized_name": "string_b",
-            "pos": [
-              -2220,
-              -500
             ]
           }
         ],
@@ -167,12 +253,12 @@
             "properties": {
               "cnr_id": "comfyui-easy-use",
               "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "Node name for S&R": "easy promptReplace",
               "ue_properties": {
                 "version": "7.5.2",
                 "widget_ue_connectable": {},
                 "input_ue_unconnectable": {}
-              },
-              "Node name for S&R": "easy promptReplace"
+              }
             },
             "widgets_values": [
               "photo",
@@ -224,12 +310,12 @@
             "properties": {
               "cnr_id": "comfyui-easy-use",
               "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "Node name for S&R": "easy promptReplace",
               "ue_properties": {
                 "version": "7.5.2",
                 "widget_ue_connectable": {},
                 "input_ue_unconnectable": {}
-              },
-              "Node name for S&R": "easy promptReplace"
+              }
             },
             "widgets_values": [
               "illustration",
@@ -281,12 +367,12 @@
             "properties": {
               "cnr_id": "comfyui-easy-use",
               "ver": "5c8cdb58c798a404e50636c6f3e179b084a23fab",
+              "Node name for S&R": "easy promptReplace",
               "ue_properties": {
                 "version": "7.5.2",
                 "widget_ue_connectable": {},
                 "input_ue_unconnectable": {}
-              },
-              "Node name for S&R": "easy promptReplace"
+              }
             },
             "widgets_values": [
               "photograph",
@@ -359,12 +445,12 @@
             "properties": {
               "cnr_id": "comfyui-florence2",
               "ver": "1.0.6",
+              "Node name for S&R": "Florence2Run",
               "ue_properties": {
                 "widget_ue_connectable": {},
                 "version": "7.5.2",
                 "input_ue_unconnectable": {}
-              },
-              "Node name for S&R": "Florence2Run"
+              }
             },
             "widgets_values": [
               "",
@@ -415,12 +501,12 @@
             "properties": {
               "cnr_id": "comfyui-florence2",
               "ver": "1.0.7",
+              "Node name for S&R": "DownloadAndLoadFlorence2Model",
               "ue_properties": {
                 "widget_ue_connectable": {},
                 "version": "7.5.2",
                 "input_ue_unconnectable": {}
-              },
-              "Node name for S&R": "DownloadAndLoadFlorence2Model"
+              }
             },
             "widgets_values": [
               "microsoft/Florence-2-base",
@@ -482,7 +568,121 @@
           }
         ],
         "extra": {
-          "workflowRendererVersion": "LG"
+          "workflowRendererVersion": "LG",
+          "ue_links": []
+        }
+      },
+      {
+        "id": "9a30fc2f-fad2-49e3-b8b0-c3547a8db8d5",
+        "version": 1,
+        "state": {
+          "lastGroupId": 3,
+          "lastNodeId": 108,
+          "lastLinkId": 127,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Upload image",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -2990,
+            1879.9869791666667,
+            120,
+            40
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -2310,
+            1750,
+            120,
+            60
+          ]
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "e09d49b4-c9f1-4dbd-866f-45456251ef38",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              127
+            ],
+            "pos": [
+              -2290,
+              1770
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 104,
+            "type": "LoadImage",
+            "pos": [
+              -2810,
+              1750
+            ],
+            "size": [
+              409.97395833333337,
+              329.97395833333337
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  127
+                ]
+              },
+              {
+                "localized_name": "MASK",
+                "name": "MASK",
+                "type": "MASK",
+                "slot_index": 1,
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "Node name for S&R": "LoadImage",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              "vecna.jpg",
+              "image"
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 127,
+            "origin_id": 104,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG",
+          "ue_links": [],
+          "links_added_by_ue": []
         }
       }
     ]
@@ -494,8 +694,8 @@
     "ds": {
       "scale": 1.2322431064964385,
       "offset": [
-        -112.82332889326948,
-        -726.0385273514898
+        268.5949135964956,
+        -721.9808864739392
       ]
     },
     "frontendVersion": "1.37.11",
