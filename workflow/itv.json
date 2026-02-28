@@ -147,6 +147,131 @@
       "bgcolor": "#335"
     },
     {
+      "id": 97,
+      "type": "Show any [Crystools]",
+      "pos": [
+        -1510,
+        2080
+      ],
+      "size": [
+        559.9739583333334,
+        309.97395833333337
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_value",
+          "shape": 7,
+          "type": "*",
+          "link": 113
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "1.27.4",
+        "Node name for S&R": "Show any [Crystools]",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      }
+    },
+    {
+      "id": 121,
+      "type": "ImpactMakeImageList",
+      "pos": [
+        -1890,
+        1440
+      ],
+      "size": [
+        230,
+        70
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 143
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 144
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            145
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-impact-pack",
+        "ver": "8.28.2",
+        "Node name for S&R": "ImpactMakeImageList",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 49,
+      "type": "PreviewImage",
+      "pos": [
+        -1520,
+        1750
+      ],
+      "size": [
+        280,
+        258
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 47
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Cropped Image",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
       "id": 80,
       "type": "dc381728-46e8-4c02-885f-cf8d5ea7c7b8",
       "pos": [
@@ -218,117 +343,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 97,
-      "type": "Show any [Crystools]",
-      "pos": [
-        -1510,
-        2080
-      ],
-      "size": [
-        559.9739583333334,
-        309.97395833333337
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "any_value",
-          "shape": 7,
-          "type": "*",
-          "link": 113
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfyui-crystools",
-        "ver": "1.27.4",
-        "Node name for S&R": "Show any [Crystools]",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.2"
-        }
-      }
-    },
-    {
-      "id": 110,
-      "type": "easy positive",
-      "pos": [
-        -1970,
-        1950
-      ],
-      "size": [
-        409.97395833333337,
-        250
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "STRING",
-          "links": [
-            130
-          ]
-        }
-      ],
-      "title": "Negative",
-      "properties": {
-        "cnr_id": "comfyui-easy-use",
-        "ver": "1.3.5",
-        "Node name for S&R": "easy positive",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "all text from the picture"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 116,
-      "type": "Fast Groups Muter (rgthree)",
-      "pos": [
-        -2430,
-        1110
-      ],
-      "size": [
-        340,
-        160
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "OPT_CONNECTION",
-          "type": "*",
-          "links": []
-        }
-      ],
-      "properties": {
-        "matchColors": "",
-        "matchTitle": "2V",
-        "showNav": false,
-        "showAllGraphs": true,
-        "sort": "position",
-        "customSortAlphabet": "",
-        "toggleRestriction": "default",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        }
-      }
-    },
-    {
       "id": 108,
       "type": "5f200e86-9128-483e-b521-08b659f99f80",
       "pos": [
@@ -337,10 +351,10 @@
       ],
       "size": [
         250,
-        288.74665148951703
+        289.247350218949
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -382,98 +396,6 @@
       "widgets_values": []
     },
     {
-      "id": 121,
-      "type": "ImpactMakeImageList",
-      "pos": [
-        -1890,
-        1440
-      ],
-      "size": [
-        230,
-        70
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 143
-        },
-        {
-          "name": "image2",
-          "type": "IMAGE",
-          "link": 144
-        },
-        {
-          "name": "image3",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "shape": 6,
-          "type": "IMAGE",
-          "links": [
-            145
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-impact-pack",
-        "ver": "8.28.2",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "Node name for S&R": "ImpactMakeImageList"
-      }
-    },
-    {
-      "id": 85,
-      "type": "easy positive",
-      "pos": [
-        -1970,
-        1650
-      ],
-      "size": [
-        409.97395833333337,
-        250
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "STRING",
-          "links": [
-            118
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-easy-use",
-        "ver": "1.3.5",
-        "Node name for S&R": "easy positive",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.5.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "The monster is holding a poster in its hands at chest level.\nThe poster reads, \"Let your fear out.\""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 109,
       "type": "230297df-c1ee-4aeb-b2a4-30f68205731a",
       "pos": [
@@ -485,7 +407,7 @@
         306
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -523,41 +445,123 @@
       "widgets_values": []
     },
     {
-      "id": 49,
-      "type": "PreviewImage",
+      "id": 85,
+      "type": "easy positive",
       "pos": [
-        -1520,
-        1750
+        -1970,
+        1650
       ],
       "size": [
-        280,
-        258
+        409.97395833333337,
+        250
       ],
       "flags": {},
-      "order": 9,
+      "order": 4,
       "mode": 0,
-      "inputs": [
+      "inputs": [],
+      "outputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 47
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            118
+          ]
         }
       ],
-      "outputs": [],
-      "title": "Preview Cropped Image",
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.51",
-        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.5",
+        "Node name for S&R": "easy positive",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.5.2",
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": [],
-      "color": "#432",
-      "bgcolor": "#653"
+      "widgets_values": [
+        "A monster is in the hole in the wall,\nit backs away to hide in the shadow of the hole,\nIt stops backing away when only its head is visible."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 110,
+      "type": "easy positive",
+      "pos": [
+        -1970,
+        1950
+      ],
+      "size": [
+        409.97395833333337,
+        250
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "negative",
+          "name": "positive",
+          "type": "STRING",
+          "links": [
+            130
+          ]
+        }
+      ],
+      "title": "Negative",
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.5",
+        "Node name for S&R": "easy positive",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 116,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": [
+        -2430,
+        1110
+      ],
+      "size": [
+        340,
+        160
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "2V",
+        "showNav": false,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      }
     },
     {
       "id": 47,
@@ -693,7 +697,7 @@
       ],
       "size": [
         220.7333984375,
-        402.550048828125
+        334
       ],
       "flags": {},
       "order": 13,
@@ -753,21 +757,25 @@
       "widgets_values": {
         "frame_rate": 16,
         "loop_count": 0,
-        "filename_prefix": "AnimateDiff",
-        "format": "image/gif",
+        "filename_prefix": "movie",
+        "format": "video/nvenc_h264-mp4",
+        "pix_fmt": "yuv420p",
+        "bitrate": 10,
+        "megabit": true,
+        "save_metadata": true,
         "pingpong": false,
         "save_output": true,
         "videopreview": {
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_00128.mp4",
+            "filename": "AnimateDiff_00161.mp4",
             "subfolder": "",
             "type": "output",
-            "format": "video/h264-mp4",
+            "format": "video/h265-mp4",
             "frame_rate": 16,
-            "workflow": "AnimateDiff_00128.png",
-            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00128.mp4"
+            "workflow": "AnimateDiff_00161.png",
+            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00161.mp4"
           }
         }
       },
@@ -2515,90 +2523,6 @@
             "bgcolor": "#29699c"
           },
           {
-            "id": 36,
-            "type": "ImageResizeKJv2",
-            "pos": [
-              1524.3330360558984,
-              925.7332843436344
-            ],
-            "size": [
-              400,
-              300.1822916666667
-            ],
-            "flags": {
-              "collapsed": false
-            },
-            "order": 10,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "image",
-                "name": "image",
-                "type": "IMAGE",
-                "link": 138
-              },
-              {
-                "localized_name": "mask",
-                "name": "mask",
-                "shape": 7,
-                "type": "MASK",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  58
-                ]
-              },
-              {
-                "localized_name": "width",
-                "name": "width",
-                "type": "INT",
-                "links": [
-                  85
-                ]
-              },
-              {
-                "localized_name": "height",
-                "name": "height",
-                "type": "INT",
-                "links": [
-                  86
-                ]
-              },
-              {
-                "localized_name": "mask",
-                "name": "mask",
-                "type": "MASK",
-                "links": null
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-kjnodes",
-              "ver": "1.1.3",
-              "Node name for S&R": "ImageResizeKJv2",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.5.2",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": [
-              551,
-              675,
-              "lanczos",
-              "pad",
-              "0, 0, 0",
-              "center",
-              2,
-              "cpu"
-            ]
-          },
-          {
             "id": 109,
             "type": "2b616117-8eaf-4b4b-a387-b5d0ef3c318d",
             "pos": [
@@ -2769,6 +2693,7 @@
             ],
             "outputs": [
               {
+                "label": "negative",
                 "localized_name": "CONDITIONING",
                 "name": "CONDITIONING",
                 "type": "CONDITIONING",
@@ -2801,6 +2726,90 @@
             ],
             "color": "#322",
             "bgcolor": "#533"
+          },
+          {
+            "id": 36,
+            "type": "ImageResizeKJv2",
+            "pos": [
+              1524.3330360558984,
+              925.7332843436344
+            ],
+            "size": [
+              400,
+              300.1822916666667
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 138
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "shape": 7,
+                "type": "MASK",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  58
+                ]
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "links": [
+                  85
+                ]
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "links": [
+                  86
+                ]
+              },
+              {
+                "localized_name": "mask",
+                "name": "mask",
+                "type": "MASK",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.1.3",
+              "Node name for S&R": "ImageResizeKJv2",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.5.2",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": [
+              600,
+              600,
+              "lanczos",
+              "resize",
+              "0, 0, 0",
+              "center",
+              2,
+              "cpu"
+            ]
           }
         ],
         "groups": [
@@ -4811,7 +4820,7 @@
             ],
             "size": [
               255.8291015625,
-              310
+              501.247350218949
             ],
             "flags": {},
             "order": 0,
@@ -4871,12 +4880,12 @@
               }
             },
             "widgets_values": {
-              "video": "scene 05 b.mp4",
+              "video": "afraid 03.mp4",
               "force_rate": 0,
               "custom_width": 640,
               "custom_height": 480,
               "frame_load_cap": 1,
-              "skip_first_frames": 65,
+              "skip_first_frames": 30,
               "select_every_nth": 1,
               "format": "AnimateDiff",
               "videopreview": {
@@ -4887,9 +4896,9 @@
                   "custom_width": 640,
                   "custom_height": 480,
                   "frame_load_cap": 1,
-                  "skip_first_frames": 65,
+                  "skip_first_frames": 30,
                   "select_every_nth": 1,
-                  "filename": "scene 05 b.mp4",
+                  "filename": "afraid 03.mp4",
                   "type": "input",
                   "format": "video/mp4"
                 }
@@ -5005,7 +5014,7 @@
               }
             },
             "widgets_values": [
-              "vecna (1).jpg",
+              "mix 3.png",
               "image"
             ]
           }
@@ -5273,10 +5282,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 0.7910080738240926,
+      "scale": 1.158114920885859,
       "offset": [
-        2768.0425679842865,
-        -1140.8167267087292
+        2250.8549414980157,
+        -1063.7091441341151
       ]
     }
   },
