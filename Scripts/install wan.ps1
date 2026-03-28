@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+Clear-Host
+
 # ================================
 # Wan2.2 ComfyUI Repackaged Installer
 # ================================

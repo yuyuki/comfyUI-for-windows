@@ -6,6 +6,8 @@ Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
 
 & "$PSScriptRoot\Scripts\install comfyUI.ps1"
 
+& "$PSScriptRoot\Scripts\install nvidia.ps1"
+
 # & "$PSScriptRoot\Scripts\install wan.ps1"
 
 # & "$PSScriptRoot\Scripts\install indexTTS.ps1"

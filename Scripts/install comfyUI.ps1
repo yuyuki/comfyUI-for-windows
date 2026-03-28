@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+Clear-Host
+
 Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
 
 # 📌 1. Variables d'installation
@@ -44,40 +46,7 @@ Write-Host ""
 Write-Host "Installation des dépendances ComfyUI..." -ForegroundColor Yellow
 pip install -r requirements.txt
 
-Write-Host ""
-Write-Host "=== Installation PyTorch CUDA 11.8 ===" -ForegroundColor Yellow
-
-Write-Host "Check Cuda version on Windows"
-nvidia-smi
-
-# Désinstaller anciens torch
-$pytorch = 'https://download.pytorch.org/whl/cu126'
-
-pip uninstall -y torch torchvision torchaudio
-pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorch
-
-# specific for TTS and usage of ffmpeg
-pip install torchcodec --index-url=$pytorch
-
-# improve http download performance (used with F5 TTS)
-pip install hf_xet
-
-if ($LASTEXITCODE -ne 0) {
-    Write-Error "❌ Erreur lors de l'installation de PyTorch"
-    exit 1
-}
-
-Write-Host ""
-Write-Host "=== Installation sage attention ===" -ForegroundColor Yellow
-pip install sageattention
-
-pip uninstall triton-windows
-pip install -U "triton-windows<3.5"
-# pip install -U "triton-windows==3.3.1.post19"
-
-Write-Host "Nettoyage des dépendances NVIDIA..." -ForegroundColor Yellow
-python -m pip uninstall pynvml -y
-python -m pip install nvidia-ml-py
+& "$PSScriptRoot\install nvidia.ps1"
 
 Set-Location $ParentDir
 

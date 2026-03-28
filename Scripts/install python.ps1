@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+Clear-Host
+
 Write-Host "=== Download and install Python 3.12.10 (64-bit) on Windows ==="
 
 $pythonInstallerUrl = "https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe"

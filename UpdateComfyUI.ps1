@@ -41,16 +41,8 @@ Write-Host ""
 Write-Host "Mise à jour des dépendances ComfyUI..." -ForegroundColor Yellow
 pip install -r requirements.txt --upgrade
 
-# 📌 8. Mettre à jour PyTorch et extensions
-Write-Host ""
-Write-Host "=== Mise à jour PyTorch CUDA 13.0 ===" -ForegroundColor Yellow
-# pip uninstall -y torch torchvision torchaudio
-# pip install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130 --upgrade
+& "$PSScriptRoot\Scripts\install nvidia.ps1"
 
-Write-Host ""
-Write-Host "=== Mise à jour des extensions ===" -ForegroundColor Yellow
-# pip install sageattention --upgrade
-# pip install -U "triton-windows==3.3.1.post19"
 
 set-location $ParentDir
 

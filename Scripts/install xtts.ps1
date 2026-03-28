@@ -1,3 +1,7 @@
+$ErrorActionPreference = "Stop"
+
+Clear-Host
+
 # ================================
 # XTTS v2 Installer for ComfyUI
 # Windows 11 + NVIDIA GPU

@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+Clear-Host
+
 # ==========================
 # CONFIGURATION
 # ==========================

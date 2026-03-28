@@ -1,11 +1,17 @@
 $ErrorActionPreference = "Stop"
 
+Clear-Host
+
 # ==========================
 # CONFIGURATION
 # ==========================
-$ComfyUIPath = "$((Get-Location).Path)\..\ComfyUI"
+
+$CurrentPath = $PSScriptRoot
+$rootPath = (Get-Location).Path
+$ComfyUIPath = "$rootPath\ComfyUI"
 $CustomNodesPath = Join-Path $ComfyUIPath "custom_nodes"
 $OutputFile = "custom_nodes.txt"
+$OutputPath = Join-Path $CurrentPath $OutputFile
 
 # ==========================
 # VÉRIFICATIONS
@@ -56,11 +62,11 @@ Get-ChildItem -Path $CustomNodesPath -Directory | ForEach-Object {
 if ($exported.Count -gt 0) {
 
     "# Custom nodes ComfyUI exportés le $(Get-Date -Format 'yyyy-MM-dd HH:mm')" |
-        Set-Content $OutputFile
+        Set-Content $OutputPath
 
-    $exported | Sort-Object -Unique | Add-Content $OutputFile
+    $exported | Sort-Object -Unique | Add-Content $OutputPath
 
-    Write-Host "`n📄 Fichier créé : $OutputFile" -ForegroundColor Cyan
+    Write-Host "`n📄 Fichier créé : $OutputPath" -ForegroundColor Cyan
 }
 else {
     Write-Host "`n⚠ Aucun custom node Git trouvé." -ForegroundColor Yellow

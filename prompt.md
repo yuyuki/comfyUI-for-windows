@@ -239,3 +239,14 @@ The door is closed, simple, made of dark brown wood, with eight molded panels.
 
 High-contrast lighting, a mysterious atmosphere, the aesthetic of an '80s adventure film, deep shadows, 8K resolution.
 ```
+
+
+Camera: gentle dolly-in (~5% over the whole shot), otherwise locked.
+Framing: eye-level front view, medium shot (waist to knees/feet visible if seated), centered; direct eye contact.
+Subject: adult woman with long wavy blonde hair, light skin, warm natural makeup, oval face, soft brows, friendly smile; statement blue drop earrings, thin gold necklace with a small blue pendant.
+Wardrobe: white off-shoulder blouse with blue floral embroidery, fitted waist (Mediterranean/summer vibe); matching shoes on both feet (e.g., blue espadrille sandals or neutral flats), both shoes clearly visible.
+Action: she holds a cheeseburger with both hands, lifts it, takes a small bite, chews naturally, slight smile; minimal crumbs/sauce.
+Environment: sunlit terrace/balcony with flowers; soft ocean/sky bokeh; uncluttered background.
+Lighting: soft key 45° from camera left, gentle fill ~25% from camera right, subtle rim for hair separation; no dominant backlight. Exposure balanced; no blown highlights on the face; natural skin tone.
+Look/feel: realistic skin texture, natural color, no beauty filter. 24 fps.
+Continuity: legs and both feet fully in frame; no occlusions.

@@ -248,6 +248,10 @@ These help define the look and feel of the scene.
 
 This helps avoid common AI issues.
 
+ # list of models
+
+ * [4x-UltraSharpV2.safetensors](https://huggingface.co/Kim2091/UltraSharpV2/resolve/main/4x-UltraSharpV2.safetensors)
+
 # Reference
 
 https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged

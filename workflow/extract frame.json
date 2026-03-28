@@ -1,22 +1,22 @@
 {
   "id": "87279e87-05db-47b9-8436-06e8f1a4c6ee",
   "revision": 0,
-  "last_node_id": 123,
-  "last_link_id": 153,
+  "last_node_id": 125,
+  "last_link_id": 154,
   "nodes": [
     {
       "id": 87,
       "type": "VHS_VideoCombine",
       "pos": [
-        -1650,
-        1380
+        -1650.0004112121912,
+        1379.9998315440032
       ],
       "size": [
-        220.7333984375,
-        426.550048828125
+        230,
+        478.359375
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -74,13 +74,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "AnimateDiff_00146.webp",
+            "filename": "AnimateDiff_00177.webp",
             "subfolder": "",
             "type": "output",
             "format": "image/webp",
             "frame_rate": 1,
-            "workflow": "AnimateDiff_00146.png",
-            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00146.webp"
+            "workflow": "AnimateDiff_00177.png",
+            "fullpath": "E:\\AI\\ComfyUI\\output\\AnimateDiff_00177.webp"
           }
         }
       },
@@ -88,60 +88,15 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 122,
-      "type": "ImageUpscaleWithModel",
-      "pos": [
-        -1970,
-        1370
-      ],
-      "size": [
-        233.5689453125,
-        46
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 153
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 151
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            152
-          ]
-        }
-      ],
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
-        "cnr_id": "comfy-core",
-        "ver": "0.11.1",
-        "Node name for S&R": "ImageUpscaleWithModel"
-      }
-    },
-    {
       "id": 123,
       "type": "UpscaleModelLoader",
       "pos": [
-        -2380,
-        1200
+        -2379.9999801740796,
+        1200.0000041956914
       ],
       "size": [
         270,
-        58
+        110
       ],
       "flags": {},
       "order": 0,
@@ -157,63 +112,60 @@
         }
       ],
       "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        },
         "cnr_id": "comfy-core",
         "ver": "0.11.1",
-        "Node name for S&R": "UpscaleModelLoader"
+        "Node name for S&R": "UpscaleModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "model_name": true
+          },
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
       },
       "widgets_values": [
         "4x-UltraSharpV2.safetensors"
       ]
     },
     {
-      "id": 108,
-      "type": "5f200e86-9128-483e-b521-08b659f99f80",
+      "id": 122,
+      "type": "ImageUpscaleWithModel",
       "pos": [
-        -2370,
-        1380
+        -1970.0000584613204,
+        1369.999895949584
       ],
       "size": [
-        250,
-        288.74665148951703
+        240,
+        100
       ],
       "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
+      "order": 3,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 153
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 154
+        }
+      ],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            151
+            152
           ]
         }
       ],
       "properties": {
-        "proxyWidgets": [
-          [
-            "103",
-            "choose video to upload"
-          ],
-          [
-            "103",
-            "videopreview"
-          ],
-          [
-            "103",
-            "skip_first_frames"
-          ],
-          [
-            "103",
-            "frame_load_cap"
-          ]
-        ],
         "cnr_id": "comfy-core",
         "ver": "0.11.1",
+        "Node name for S&R": "ImageUpscaleWithModel",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -221,17 +173,127 @@
         }
       },
       "widgets_values": []
+    },
+    {
+      "id": 124,
+      "type": "MarkdownNote",
+      "pos": [
+        -2960,
+        1200
+      ],
+      "size": [
+        480,
+        529
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Model Links",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "**Upscale Models**\n- [4x-UltraSharpV2.safetensors](https://huggingface.co/Kim2091/UltraSharpV2/resolve/main/4x-UltraSharpV2.safetensors)\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 upscale_models/\n│   │   └───4x-UltraSharpV2.safetensors\n```\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 125,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -2370,
+        1370
+      ],
+      "size": [
+        260,
+        549.5625
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            154
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "PXL_20260226_091224684.TS.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 1,
+        "skip_first_frames": 5,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": true,
+          "params": {
+            "force_rate": 0,
+            "custom_width": 0,
+            "custom_height": 512,
+            "frame_load_cap": 1,
+            "skip_first_frames": 5,
+            "select_every_nth": 1,
+            "filename": "PXL_20260226_091224684.TS.mp4",
+            "type": "input",
+            "format": "video/mp4"
+          }
+        }
+      }
     }
   ],
   "links": [
-    [
-      151,
-      108,
-      0,
-      122,
-      1,
-      "IMAGE"
-    ],
     [
       152,
       122,
@@ -247,190 +309,21 @@
       122,
       0,
       "UPSCALE_MODEL"
+    ],
+    [
+      154,
+      125,
+      0,
+      122,
+      1,
+      "IMAGE"
     ]
   ],
-  "groups": [
-    {
-      "id": 2,
-      "title": "V2V",
-      "bounding": [
-        -2380,
-        1310,
-        270,
-        363.6
-      ],
-      "color": "#3f789e",
-      "font_size": 24,
-      "flags": {}
-    }
-  ],
-  "definitions": {
-    "subgraphs": [
-      {
-        "id": "5f200e86-9128-483e-b521-08b659f99f80",
-        "version": 1,
-        "state": {
-          "lastGroupId": 3,
-          "lastNodeId": 107,
-          "lastLinkId": 126,
-          "lastRerouteId": 0
-        },
-        "revision": 0,
-        "config": {},
-        "name": "Upload video",
-        "inputNode": {
-          "id": -10,
-          "bounding": [
-            -3000,
-            1450,
-            120,
-            40
-          ]
-        },
-        "outputNode": {
-          "id": -20,
-          "bounding": [
-            -2420,
-            1330,
-            120,
-            60
-          ]
-        },
-        "inputs": [],
-        "outputs": [
-          {
-            "id": "d80d574b-32c9-48db-8320-1d71437a0555",
-            "name": "IMAGE",
-            "type": "IMAGE",
-            "linkIds": [
-              126
-            ],
-            "pos": [
-              -2400,
-              1350
-            ]
-          }
-        ],
-        "widgets": [],
-        "nodes": [
-          {
-            "id": 103,
-            "type": "VHS_LoadVideo",
-            "pos": [
-              -2820,
-              1330
-            ],
-            "size": [
-              255.8291015625,
-              500.74665148951703
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "meta_batch",
-                "name": "meta_batch",
-                "shape": 7,
-                "type": "VHS_BatchManager",
-                "link": null
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "shape": 7,
-                "type": "VAE",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  126
-                ]
-              },
-              {
-                "localized_name": "frame_count",
-                "name": "frame_count",
-                "type": "INT",
-                "links": []
-              },
-              {
-                "localized_name": "audio",
-                "name": "audio",
-                "type": "AUDIO",
-                "links": []
-              },
-              {
-                "localized_name": "video_info",
-                "name": "video_info",
-                "type": "VHS_VIDEOINFO",
-                "links": []
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-videohelpersuite",
-              "ver": "1.7.9",
-              "Node name for S&R": "VHS_LoadVideo",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "input_ue_unconnectable": {},
-                "version": "7.5.2"
-              }
-            },
-            "widgets_values": {
-              "video": "scene 4.mp4",
-              "force_rate": 0,
-              "custom_width": 640,
-              "custom_height": 480,
-              "frame_load_cap": 1,
-              "skip_first_frames": 5,
-              "select_every_nth": 1,
-              "format": "AnimateDiff",
-              "videopreview": {
-                "hidden": false,
-                "paused": true,
-                "params": {
-                  "force_rate": 0,
-                  "custom_width": 640,
-                  "custom_height": 480,
-                  "frame_load_cap": 1,
-                  "skip_first_frames": 5,
-                  "select_every_nth": 1,
-                  "filename": "scene 4.mp4",
-                  "type": "input",
-                  "format": "video/mp4"
-                }
-              }
-            }
-          }
-        ],
-        "groups": [],
-        "links": [
-          {
-            "id": 126,
-            "origin_id": 103,
-            "origin_slot": 0,
-            "target_id": -20,
-            "target_slot": 0,
-            "type": "IMAGE"
-          }
-        ],
-        "extra": {
-          "workflowRendererVersion": "LG",
-          "ue_links": [],
-          "links_added_by_ue": []
-        }
-      }
-    ]
-  },
+  "groups": [],
   "config": {},
   "extra": {
     "workflowRendererVersion": "LG",
-    "frontendVersion": "1.37.11",
+    "frontendVersion": "1.42.8",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
@@ -438,10 +331,10 @@
     "ue_links": [],
     "links_added_by_ue": [],
     "ds": {
-      "scale": 1.139790360905552,
+      "scale": 0.9419755048806219,
       "offset": [
-        2945.9664667239713,
-        -1008.7882801733333
+        3266.6036213439384,
+        -940.0126925286908
       ]
     }
   },
