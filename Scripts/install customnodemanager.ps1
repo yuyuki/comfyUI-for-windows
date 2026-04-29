@@ -7,7 +7,7 @@ Write-Host "=== Installe : Custom Nodes Manager ===" -ForegroundColor Cyan
 # ------------------------
 # 1️⃣ Répertoire de travail
 # ------------------------
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"

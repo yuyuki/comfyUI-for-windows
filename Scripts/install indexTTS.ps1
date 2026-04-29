@@ -9,7 +9,7 @@ Clear-Host
 Write-Host "=== Installation de IndexTTS pour ComfyUI ===" -ForegroundColor Cyan
 
 # 🔧 CONFIGURATION
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
 $IndexTTSDir = "$CustomNodesDir\ComfyUI-Index-TTS"

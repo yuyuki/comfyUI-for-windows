@@ -5,7 +5,7 @@ Clear-Host
 Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
 
 # 📌 1. Variables d'installation
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $gitUrl = "https://github.com/comfyanonymous/ComfyUI.git"
 

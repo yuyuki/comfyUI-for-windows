@@ -9,7 +9,7 @@ Clear-Host
 Write-Host "=== Installation du modèle vidéo Wan2.2 pour ComfyUI ===" -ForegroundColor Cyan
 
 # 🔧 CONFIGURATION
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 
 # 📁 DOSSIERS CIBLES

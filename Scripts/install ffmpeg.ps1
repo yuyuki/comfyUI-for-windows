@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 # 1. Configuration des chemins
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $softwareRoot = Join-Path $ParentDir "software"
 $ffmpegFolder = Join-Path $softwareRoot "ffmpeg"
 $zipPath = Join-Path $softwareRoot "ffmpeg.zip"

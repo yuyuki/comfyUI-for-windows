@@ -1,7 +1,9 @@
+$ErrorActionPreference = "Stop"
+
 Write-Host "=== Mise à jour ComfyUI ===" -ForegroundColor Cyan
 
 # 📌 Variables
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 
 # 📌 Activer l'environnement virtuel
@@ -16,16 +18,6 @@ pip uninstall -y torch torchvision torchaudio
 
 $pytorch = 'https://download.pytorch.org/whl/cu126'
 pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorch
-
-# 📌 Mettre à jour torchcodec et extensions
-Write-Host ""
-Write-Host "=== specific for TTS and usage of ffmpeg ===" -ForegroundColor Yellow
-pip install torchcodec --index-url=$pytorch
-
-# 📌 Mettre à jour http download performance
-Write-Host ""
-Write-Host "=== improve http download performance (used with F5 TTS) ===" -ForegroundColor Yellow
-pip install hf_xet
 
 # 📌 Mettre à jour de sageattention
 Write-Host ""

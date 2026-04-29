@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 # 1. Définition des chemins
 Clear-Host
 
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $NodesPath = "$ComfyUIRoot\custom_nodes"

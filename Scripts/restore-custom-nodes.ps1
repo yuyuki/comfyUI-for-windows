@@ -5,7 +5,7 @@ Clear-Host
 # ==========================
 # CONFIGURATION
 # ==========================
-$ParentDir = (Get-Location).Path
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $CustomNodesPath = Join-Path $ComfyUIRoot "custom_nodes"
 $NodesFile = "custom_nodes.txt"
