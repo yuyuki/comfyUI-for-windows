@@ -13,11 +13,29 @@ Write-Host "Activation de l'environnement virtuel..."
 
 # 📌 Mettre à jour PyTorch et extensions
 Write-Host ""
-Write-Host "=== Mise à jour PyTorch CUDA 12.6 ===" -ForegroundColor Yellow
+Write-Host "=== Installation PyTorch + CUDA ===" -ForegroundColor Yellow
 pip uninstall -y torch torchvision torchaudio
 
-$pytorch = 'https://download.pytorch.org/whl/cu126'
-pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorch
+# $pytorchIndex = 'https://download.pytorch.org/whl/cu126'
+$pytorchIndex = 'https://download.pytorch.org/whl/cu130'
+pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorchIndex
+# pip install --no-cache-dir --upgrade "torch==2.6.0" "torchvision==0.21.0" "torchaudio==2.6.0" --index-url $pytorchIndex
+
+# 📌 Installer le rasterizer Hunyuan3D compatible avec le support documenté par le wrapper
+# $wheelPath = Join-Path $ComfyUIRoot 'custom_nodes\ComfyUI-Hunyuan3DWrapper\wheels\custom_rasterizer-0.1.0+torch260.cuda126-cp312-cp312-win_amd64.whl'
+# if (Test-Path $wheelPath) {
+#     Write-Host ""
+#     Write-Host "=== Installation du rasterizer Hunyuan3D ===" -ForegroundColor Yellow
+#     pip install --force-reinstall $wheelPath
+# python -c "import custom_rasterizer, custom_rasterizer_kernel; print('rasterizer import OK')"
+# } else {
+#     Write-Warning "Wheel custom_rasterizer introuvable : $wheelPath"
+# }
+
+# 📌 Vérifier que l'extension charge bien
+Write-Host ""
+Write-Host "=== Vérification du rasterizer ===" -ForegroundColor Yellow
+python -c "import torch; print('torch', torch.__version__)"
 
 # 📌 Mettre à jour de sageattention
 Write-Host ""

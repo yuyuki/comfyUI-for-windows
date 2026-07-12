@@ -63,5 +63,8 @@ if (-not $iniContent.ContainsKey('default')) {
 $iniContent['default']['security_level'] = 'normal'
 Write-IniContent -filePath $managerConfigPath -ini $iniContent
 
+$iniContent['default']['allow_git_url_install'] = 'true'
+Write-IniContent -filePath $managerConfigPath -ini $iniContent
+
 Write-Host "Updated $managerConfigPath"
 Write-Host "Security level set to normal"

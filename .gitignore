@@ -1,5 +1,7 @@
 software
 venv
-ComfyUI
 Output
 Sources
+config.local
+ComfyUI
+!ComfyUI/custom_nodes/ComfyUI-MyCustomNodeModule/workflows/*
