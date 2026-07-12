@@ -2,6 +2,15 @@ software
 venv
 Output
 Sources
+
+# Ignore everything under ComfyUI except the requested custom node module
+ComfyUI/**
+!ComfyUI/
+!ComfyUI/custom_nodes/
+!ComfyUI/custom_nodes/ComfyUI-MyCustomNodeModule/
+!ComfyUI/custom_nodes/ComfyUI-MyCustomNodeModule/workflows/
+!ComfyUI/custom_nodes/ComfyUI-MyCustomNodeModule/workflows/**
+
+# local configuration files
 config.local
-ComfyUI
-!ComfyUI/custom_nodes/ComfyUI-MyCustomNodeModule/workflows/*
+
