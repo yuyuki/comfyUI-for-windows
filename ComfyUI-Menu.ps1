@@ -1,12 +1,14 @@
 # ComfyUI-Menu.ps1
 # Simple PowerShell menu to launch repository tasks
 
+$ErrorActionPreference = 'Stop'
+
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-function Pause-ForKey {
-    Write-Host ``
-    Write-Host "Press Enter to continue..."
-    Read-Host | Out-Null
+function Wait-ForKey {
+    Write-Host ""
+    Write-Host "Press any key to continue..."
+    $key = [System.Console]::ReadKey($true)
 }
 
 function Get-InstallScripts {
@@ -15,7 +17,7 @@ function Get-InstallScripts {
     Get-ChildItem -Path $scriptsDir -Filter 'install*.ps1' -File -ErrorAction SilentlyContinue | Sort-Object Name
 }
 
-function Run-Script {
+function Invoke-Script {
     param([string]$relativePath)
     $full = Join-Path $scriptRoot $relativePath
     if (-not (Test-Path $full)) {
@@ -26,63 +28,66 @@ function Run-Script {
     & $full
 }
 
+function Start-ComfyUi {
+    Invoke-Script (Join-Path 'Scripts' 'start ComfyUI.ps1')
+    Wait-ForKey
+}
+
+function Update-ComfyUi {
+    Invoke-Script (Join-Path 'Scripts' 'UpdateComfyUI.ps1')
+    Wait-ForKey
+}
+
+function Install-All {
+    Invoke-Script (Join-Path 'Scripts' 'install.ps1')
+    Wait-ForKey
+}
+
+function Show-InvalidSelection {
+    Write-Host "Invalid selection" -ForegroundColor Red
+    Wait-ForKey
+}
+
+function Exit-Process {
+    Write-Host "Exiting ComfyUI Menu..."
+    exit
+}
+
+function Cleanup {
+    Invoke-Script (Join-Path 'Scripts' 'cleanup.ps1')
+    Wait-ForKey
+}
+
+function Backup {
+    Invoke-Script (Join-Path 'Scripts' 'backup-custom-nodes.ps1')
+    Wait-ForKey
+}
+
+function Restore {
+    Invoke-Script (Join-Path 'Scripts' 'restore-custom-nodes.ps1')
+    Wait-ForKey
+}
+
 while ($true) {
     Clear-Host
-    Write-Host "ComfyUI Helper - Select an action:`n"
+    Write-Host "ComfyUI Menu - Select an action:`n"
     Write-Host "1) Start ComfyUI"
     Write-Host "2) Update ComfyUI"
-    Write-Host "3) Setup (install scripts)"
+    Write-Host "3) Setup"
+    Write-Host "4) Cleanup"
+    Write-Host "5) Backup"
+    Write-Host "6) Restore"
     Write-Host "0) Exit`n"
 
-    $choice = Read-Host "Enter number"
+    $choice = [System.Console]::ReadKey($true).KeyChar
 
     switch ($choice) {
-        '1' {
-            Run-Script (Join-Path 'Scripts' 'start ComfyUI.ps1')
-            Pause-ForKey
-        }
-        '2' {
-            Run-Script (Join-Path 'Scripts' 'UpdateComfyUI.ps1')
-            Pause-ForKey
-        }
-        '3' {
-            $installScripts = Get-InstallScripts
-            if (-not $installScripts -or $installScripts.Count -eq 0) {
-                Write-Host "No install-* scripts found in Scripts/" -ForegroundColor Yellow
-                Pause-ForKey
-                continue
-            }
-
-            while ($true) {
-                Clear-Host
-                Write-Host "Setup Menu - select an installer:`n"
-                for ($i = 0; $i -lt $installScripts.Count; $i++) {
-                    $num = $i + 1
-                    Write-Host "${num}) $($installScripts[$i].Name)"
-                }
-                Write-Host "0) Back`n"
-
-                $schoice = Read-Host "Enter number"
-                if ($schoice -eq '0') { break }
-
-                $ok = [int]::TryParse($schoice, [ref]$null)
-                if ($ok -and [int]$schoice -ge 1 -and [int]$schoice -le $installScripts.Count) {
-                    $idx = [int]$schoice - 1
-                    $name = $installScripts[$idx].Name
-                    Run-Script (Join-Path 'Scripts' $name)
-                    Pause-ForKey
-                } else {
-                    Write-Host "Invalid selection" -ForegroundColor Red
-                    Pause-ForKey
-                }
-            }
-        }
-        '0' { break }
-        default {
-            Write-Host "Invalid selection" -ForegroundColor Red
-            Pause-ForKey
-        }
+        '1' { Start-ComfyUi }
+        '2' { Update-ComfyUi }
+        '3' { Install-All }
+        '4' { Cleanup }
+        '0' { Exit-Process }
+        default { Show-InvalidSelection }
     }
 }
 
-Write-Host "Exiting ComfyUI Helper."

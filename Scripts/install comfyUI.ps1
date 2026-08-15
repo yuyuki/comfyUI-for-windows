@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 Clear-Host
 
-Write-Host "=== Installation ComfyUI et configuraton vidéo Wan2.2 ==="
+Write-Host "=== Installation ComfyUI et configuration ==="
 
 # 📌 1. Variables d'installation
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
@@ -45,8 +45,6 @@ Write-Host "Installation des dépendances (Torch, etc.)..." -ForegroundColor Yel
 Write-Host ""
 Write-Host "Installation des dépendances ComfyUI..." -ForegroundColor Yellow
 pip install -r requirements.txt
-
-& "$PSScriptRoot\install nvidia.ps1"
 
 Set-Location $ParentDir
 

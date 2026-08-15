@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Mise à jour ComfyUI ===" -ForegroundColor Cyan
+Write-Host "=== Installation NVIDIA (Cu130, Torch, torchvision, torchaudio) ===" -ForegroundColor Cyan
 
 # 📌 Variables
 $ParentDir = Resolve-Path "$PSScriptRoot\.."

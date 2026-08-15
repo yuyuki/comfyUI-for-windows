@@ -1,69 +1,70 @@
-# ComfyUI Setup for generating video
+# ComfyUI setup notes
 
-1. Install Python
+This repo is meant to provide a working local ComfyUI environment on Windows.
+
+## 1. Base setup
+
+```powershell
 git clone https://github.com/comfyanonymous/ComfyUI.git
-python -m venv venv
+cd ComfyUI
+python -m venv .venv
+. .\.venv\Scripts\Activate.ps1
+pip install --upgrade pip
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu129
 pip install -r .\requirements.txt
-pip show torch
-# https://github.com/woct0rdho/triton-windows
-https://github.com/woct0rdho/SageAttention
+```
+
+## 2. Install ComfyUI-Manager
+
+```powershell
+git clone https://github.com/ltdrdata/ComfyUI-Manager .\custom_nodes\comfyui-manager
+```
+
+This is the easiest route for installing and updating custom nodes later.
+
+## 3. NVIDIA and SageAttention
+
+```powershell
 pip uninstall triton
 pip install -U "triton-windows<3.5"
-python .\test_triton.py
-git clone https://github.com/ltdrdata/ComfyUI-Manager
-pip install -r .\requirements.txt
-../.. python main.py
+pip install sageattention
+```
 
+If a module like `sageattention` is missing, install it directly in the active environment.
 
-1. install `https://docs.comfy.org/installation/comfyui_portable_windows`
-1. https://huggingface.co/bullerwins/Wan2.2-I2V-A14B-GGUF/tree/main
-wan2.2_i2v_high_noise_14B_Q3_K_L.gguf
-wan2.2_i2v_low_noise_14B_Q3_K_L.gguf
+## 4. Launch ComfyUI
 
-copy models in `~\ComfyUI_windows_portable\ComfyUI\models\unet\`
+```powershell
+python .\main.py
+```
 
-1. https://huggingface.co/Kijai/WanVideo_comfy/tree/main/Lightx2v
+Or with high-VRAM settings:
 
-lightx2v_I2V_14B_480p_cfg_step_distill_rank32_bf16.safetensors
+```powershell
+python .\main.py --highvram --use-split-cross-attention
+```
 
-~\ComfyUI_windows_portable_nvidia\ComfyUI_windows_portable\ComfyUI\models\loras\
+## 5. Workflows
 
-https://comfyanonymous.github.io/ComfyUI_examples/wan22/
+Saved workflows live in the workflow/ folder.
 
-https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/tree/main/split_files/text_encoders
-umt5_xxl_fp8_e4m3fn_scaled.safetensors
+Load a workflow in the UI and check the required model paths for:
 
-~\ComfyUI_windows_portable_nvidia\ComfyUI_windows_portable\ComfyUI\models\text_encoders\
+- checkpoints
+- text encoders
+- VAE files
+- LoRA files
+- custom nodes
 
-https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/blob/main/split_files/vae/wan_2.1_vae.safetensors
-split_files/vae/wan_2.1_vae.safetensors
-~\ComfyUI_windows_portable_nvidia\ComfyUI_windows_portable\ComfyUI\models\vae\
+## 6. Model locations
 
-# Workflow
-https://huggingface.co/datasets/theaidealab/workflows/tree/main
-wan22_14B_i2v_gguf.json
+Typical folders include:
 
-run ComfyUI\run_nvidia_gpu.bat
+- models/unet/
+- models/loras/
+- models/text_encoders/
+- models/vae/
 
-Wait until you see
+## 7. Current gap
 
-`To see the GUI go to: http://127.0.0.1:8188`
-
-in e:\ComfyUI\ComfyUI_windows_portable_nvidia\ComfyUI_windows_portable\ComfyUI\custom_nodes\
-git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
-
-
-https://github.com/loscrossos/helper_comfyUI_accel
-
-# Using npx (no installation required)
-npx https://github.com/google-gemini/gemini-cli
-
-launch with gemini
-
-Prompt : `my ComfyUI is showing this message KSamplerAdvanced NO module named 'sageattention'`
-
-Gemini executed : `pip install sageattention`
-
-
-github.com/woct0rdho/SageAttention
+A script to automatically install all custom nodes used by the saved workflows is still missing and should be added later.

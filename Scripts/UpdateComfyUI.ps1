@@ -1,3 +1,5 @@
+$ErrorActionPreference = 'Stop'
+
 Clear-Host
 
 Write-Host "=== Mise à jour ComfyUI ===" -ForegroundColor Cyan

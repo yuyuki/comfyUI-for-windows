@@ -9,7 +9,7 @@ Clear-Host
 
 Write-Host "=== XTTS v2 installation started ===" -ForegroundColor Cyan
 
-# ---- Paths (fourni par toi)
+# ---- Paths
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot   = "$ParentDir\ComfyUI"
 $VenvActivate  = "$ComfyUIRoot\venv\Scripts\Activate.ps1"

@@ -7,11 +7,12 @@
 Clear-Host
 
 Write-Host ""
-Write-Host "=== Démarrage ComfyUI (profil IA) ===" -ForegroundColor Cyan
+Write-Host "=== Démarrage ComfyUI ===" -ForegroundColor Cyan
 Write-Host ""
 
-# 🔧 CONFIGURATION (répertoire courant)
-$ComfyUIRoot = "$((Get-Location).Path)\ComfyUI"
+# 🔧 CONFIGURATION
+$ParentDir = Resolve-Path "$PSScriptRoot\.."
+$ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $MainPy = "$ComfyUIRoot\main.py"
 
@@ -46,7 +47,7 @@ $pythonVersion = python --version
 
 if ($pythonVersion -notmatch "3\.12") {
     Write-Warning "⚠️ Python détecté : $pythonVersion"
-    Write-Warning "➡️ Python 3.12 est recommandé pour ComfyUI + Wan 2.2"
+    Write-Warning "➡️ Python 3.12 est recommandé pour ComfyUI"
 } else {
     Write-Host "✅ Python $pythonVersion" -ForegroundColor Green
 }
