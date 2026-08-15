@@ -1,4 +1,4 @@
-# Wan 2.2 with ComfyUI
+# ComfyUI Setup for generating video
 
 1. Install Python
 git clone https://github.com/comfyanonymous/ComfyUI.git

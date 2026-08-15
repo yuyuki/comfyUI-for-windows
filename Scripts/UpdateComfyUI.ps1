@@ -41,7 +41,7 @@ Write-Host ""
 Write-Host "Mise à jour des dépendances ComfyUI..." -ForegroundColor Yellow
 pip install -r requirements.txt --upgrade
 
-& "$PSScriptRoot\Scripts\install nvidia.ps1"
+& "$PSScriptRoot\install nvidia.ps1"
 
 
 set-location $ParentDir
