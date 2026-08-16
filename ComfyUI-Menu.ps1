@@ -90,34 +90,68 @@ function Install-FFmpeg {
     Wait-ForKey
 }
 
+function Show-ToolsMenu {
+    while ($true) {
+        Clear-Host
+        Write-Host "Tools - Select an action:`n"
+        Write-Host "1) Install aria2c (portable)"
+        Write-Host "2) Install FFmpeg"
+        Write-Host "b) Back to main menu`n"
+
+        $subchoice = [System.Console]::ReadKey($true).KeyChar
+
+        switch ($subchoice) {
+            '1' { Install-Aria2c }
+            '2' { Install-FFmpeg }
+            'b' { break }
+            default { Show-InvalidSelection }
+        }
+    }
+}
+
+function Show-SetupMenu {
+    while ($true) {
+        Clear-Host
+        Write-Host "Setup ComfyUI - Select an action:`n"
+        Write-Host "1) Update ComfyUI"
+        Write-Host "2) Setup (full install)"
+        Write-Host "3) Uninstall ComfyUI"
+        Write-Host "4) Backup Custom Nodes"
+        Write-Host "5) Restore Custom Nodes"
+        Write-Host "6) Update security level"
+        Write-Host "b) Back to main menu`n"
+
+        $subchoice = [System.Console]::ReadKey($true).KeyChar
+
+        switch ($subchoice) {
+            '1' { Install-All }
+            '2' { Update-ComfyUi }
+            '3' { Update-SecurityLevel }
+            '4' { Backup-CustomNodes }
+            '5' { Restore-CustomNodes }
+            '6' { UnInstall-ComfyUI }
+            'b' { break }
+            default { Show-InvalidSelection }
+        }
+    }
+}
+
 while ($true) {
     Clear-Host
     Write-Host "ComfyUI Menu - Select an action:`n"
     Write-Host "1) Start ComfyUI"
-    Write-Host "2) Update ComfyUI"
-    Write-Host "3) Setup"
-    Write-Host "4) Uninstall ComfyUI"
-    Write-Host "5) Backup Custom Nodes"
-    Write-Host "6) Restore Custom Nodes"
-    Write-Host "7) Install aria2c (portable)"
-    Write-Host "8) Update security level"
+    Write-Host "s) Setup ComfyUI"
+    Write-Host "t) Tools"
     Write-Host "9) Download LLM"
-    Write-Host "a) Install FFmpeg"
     Write-Host "0) Exit`n"
 
     $choice = [System.Console]::ReadKey($true).KeyChar
 
     switch ($choice) {
         '1' { Start-ComfyUi }
-        '2' { Update-ComfyUi }
-        '3' { Install-All }
-        '4' { UnInstall-ComfyUI }
-        '5' { Backup-CustomNodes }
-        '6' { Restore-CustomNodes }
-        '7' { Install-Aria2c }
-        '8' { Update-SecurityLevel }
+        's' { Show-SetupMenu }
+        't' { Show-ToolsMenu }
         '9' { Download-LLM }
-        'a' { Install-FFmpeg }
         '0' { Exit-Process }
         default { Show-InvalidSelection }
     }
