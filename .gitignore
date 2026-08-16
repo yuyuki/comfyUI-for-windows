@@ -2,6 +2,7 @@ software
 venv
 Output
 Sources
+Scripts/tools
 
 # Ignore everything under ComfyUI except the requested custom node module
 ComfyUI/**

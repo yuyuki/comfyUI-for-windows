@@ -27,4 +27,6 @@ Write-Host "Validating the environment before launch..." -ForegroundColor Yellow
 $env:PYTORCH_CUDA_ALLOC_CONF = "expandable_segments:True"
 
 Write-Host "Launching ComfyUI..." -ForegroundColor Cyan
-python $MainPy --highvram --use-split-cross-attention
+# python $MainPy --highvram --use-split-cross-attention --disable-smart-memory --disable-pinned-memory
+# python $MainPy --disable-pinned-memory --disable-smart-memory
+python $MainPy

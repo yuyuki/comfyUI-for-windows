@@ -24,7 +24,9 @@ function Invoke-Script {
         Write-Host "Script not found: $full" -ForegroundColor Yellow
         return
     }
-    Write-Host "\n=== Running: $full ===\n"
+    Write-Host ""
+    Write-Host "=== Running: $full ==="
+    Write-Host ""
     & $full
 }
 
@@ -35,6 +37,11 @@ function Start-ComfyUi {
 
 function Update-ComfyUi {
     Invoke-Script (Join-Path 'Scripts' 'UpdateComfyUI.ps1')
+    Wait-ForKey
+}
+
+function Update-SecurityLevel {
+    Invoke-Script (Join-Path 'Scripts' 'update_security_level.ps1')
     Wait-ForKey
 }
 
@@ -53,18 +60,33 @@ function Exit-Process {
     exit
 }
 
-function Cleanup {
+function UnInstall-ComfyUI {
     Invoke-Script (Join-Path 'Scripts' 'cleanup.ps1')
     Wait-ForKey
 }
 
-function Backup {
+function Backup-CustomNodes {
     Invoke-Script (Join-Path 'Scripts' 'backup-custom-nodes.ps1')
     Wait-ForKey
 }
 
-function Restore {
+function Restore-CustomNodes {
     Invoke-Script (Join-Path 'Scripts' 'restore-custom-nodes.ps1')
+    Wait-ForKey
+}
+
+function Install-Aria2c {
+    Invoke-Script (Join-Path 'Scripts' 'install_aria2c.ps1')
+    Wait-ForKey
+}
+
+function Download-LLM {
+    Invoke-Script (Join-Path 'Scripts' 'download llm.ps1')
+    Wait-ForKey
+}
+
+function Install-FFmpeg {
+    Invoke-Script (Join-Path 'Scripts' 'install ffmpeg.ps1')
     Wait-ForKey
 }
 
@@ -74,9 +96,13 @@ while ($true) {
     Write-Host "1) Start ComfyUI"
     Write-Host "2) Update ComfyUI"
     Write-Host "3) Setup"
-    Write-Host "4) Cleanup"
-    Write-Host "5) Backup"
-    Write-Host "6) Restore"
+    Write-Host "4) Uninstall ComfyUI"
+    Write-Host "5) Backup Custom Nodes"
+    Write-Host "6) Restore Custom Nodes"
+    Write-Host "7) Install aria2c (portable)"
+    Write-Host "8) Update security level"
+    Write-Host "9) Download LLM"
+    Write-Host "a) Install FFmpeg"
     Write-Host "0) Exit`n"
 
     $choice = [System.Console]::ReadKey($true).KeyChar
@@ -85,7 +111,13 @@ while ($true) {
         '1' { Start-ComfyUi }
         '2' { Update-ComfyUi }
         '3' { Install-All }
-        '4' { Cleanup }
+        '4' { UnInstall-ComfyUI }
+        '5' { Backup-CustomNodes }
+        '6' { Restore-CustomNodes }
+        '7' { Install-Aria2c }
+        '8' { Update-SecurityLevel }
+        '9' { Download-LLM }
+        'a' { Install-FFmpeg }
         '0' { Exit-Process }
         default { Show-InvalidSelection }
     }
