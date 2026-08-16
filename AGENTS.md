@@ -28,6 +28,17 @@ The goal is not to maintain a fork of ComfyUI itself. The goal is to provide:
 - Prefer small, validated setup changes over broad repo rewrites.
 - When a workflow requires custom nodes, document the missing dependency and keep the install path explicit.
 
+## Strict instruction for all requests
+
+- Do not do anything without asking the user first.
+- If more context is needed, ask a concise question before acting.
+- Do not summarize unless the user explicitly asks for a summary.
+- Be concise and do not add extra commentary.
+- Prefer minimal, direct work that matches the request exactly.
+- If a request is ambiguous, ask one targeted question instead of making assumptions.
+- Do not perform broad cleanup, documentation rewrites, or repo-wide edits unless explicitly requested.
+- Write all comments and inline notes in English only.
+
 ## Useful starting commands
 
 ```powershell

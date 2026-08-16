@@ -91,3 +91,6 @@ while ($true) {
     }
 }
 
+Write-Host "Exiting ComfyUI Menu..."
+deactivate -nondestructive
+

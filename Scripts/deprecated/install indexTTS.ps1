@@ -3,10 +3,10 @@ $ErrorActionPreference = "Stop"
 Clear-Host
 
 # ==========================================
-# Installation IndexTTS pour ComfyUI
+# Install IndexTTS for ComfyUI
 # ==========================================
 
-Write-Host "=== Installation de IndexTTS pour ComfyUI ===" -ForegroundColor Cyan
+Write-Host "=== Installing IndexTTS for ComfyUI ===" -ForegroundColor Cyan
 
 # 🔧 CONFIGURATION
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
@@ -15,54 +15,54 @@ $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
 $IndexTTSDir = "$CustomNodesDir\ComfyUI-Index-TTS"
 $RepoURL = "https://github.com/chenpipi0807/ComfyUI-Index-TTS.git"
 
-# 🧪 Vérifications
+# 🧪 Checks
 if (!(Test-Path $ComfyUIRoot)) {
-    Write-Error "❌ ComfyUI introuvable dans $ComfyUIRoot"
+    Write-Error "❌ ComfyUI not found in $ComfyUIRoot"
     exit 1
 }
 
 if (!(Test-Path "$ComfyUIRoot\venv")) {
-    Write-Error "❌ Environnement virtuel (venv) introuvable. Active d'abord ComfyUI."
+    Write-Error "❌ Virtual environment (venv) not found. Activate ComfyUI first."
     exit 1
 }
 
 if (!(Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Error "❌ Git n'est pas installé"
+    Write-Error "❌ Git is not installed"
     exit 1
 }
 
-# 📁 Création dossier custom_nodes
+# 📁 Create custom_nodes folder
 New-Item -ItemType Directory -Force -Path $CustomNodesDir | Out-Null
 
-# 🧹 Nettoyage ancien IndexTTS
+# 🧹 Remove old IndexTTS
 if (Test-Path $IndexTTSDir) {
-    Write-Host "Ancienne version détectée, suppression..." -ForegroundColor Yellow
+    Write-Host "Previous version detected, removing..." -ForegroundColor Yellow
     Remove-Item $IndexTTSDir -Recurse -Force
 }
 
-# ⬇️ Clonage du dépôt IndexTTS
-Write-Host "Téléchargement de IndexTTS..." -ForegroundColor Yellow
+# ⬇️ Clone the IndexTTS repository
+Write-Host "Downloading IndexTTS..." -ForegroundColor Yellow
 git clone $RepoURL $IndexTTSDir
 
-# 🐍 Activation venv ComfyUI
-Write-Host "Activation de l'environnement virtuel ComfyUI..." -ForegroundColor Yellow
+# 🐍 Activate the ComfyUI virtual environment
+Write-Host "Activating the ComfyUI virtual environment..." -ForegroundColor Yellow
 & "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 
-# 📦 Installation dépendances Python
+# 📦 Install Python dependencies
 if (Test-Path "$IndexTTSDir\requirements.txt") {
-    Write-Host "Installation des dépendances Python IndexTTS..." -ForegroundColor Yellow
+    Write-Host "Installing IndexTTS Python dependencies..." -ForegroundColor Yellow
     pip install --upgrade pip
     pip install -r "$IndexTTSDir\requirements.txt"
 } else {
-    Write-Warning "requirements.txt non trouvé — dépendances ignorées"
+    Write-Warning "requirements.txt not found — dependencies skipped"
 }
 
 Set-Location $ParentDir
 
-Write-Host "✅ IndexTTS installé avec succès !" -ForegroundColor Green
+Write-Host "✅ IndexTTS installed successfully!" -ForegroundColor Green
 Write-Host ""
-Write-Host "👉 PROCHAINE ÉTAPE :" -ForegroundColor Cyan
-Write-Host "1) Redémarre ComfyUI"
-Write-Host "2) Ouvre un workflow"
-Write-Host "3) Cherche les noeuds 'IndexTTS'"
-Write-Host "4) Génère une voix depuis du texte 🎤"
+Write-Host "👉 NEXT STEP:" -ForegroundColor Cyan
+Write-Host "1) Restart ComfyUI"
+Write-Host "2) Open a workflow"
+Write-Host "3) Search for the 'IndexTTS' nodes"
+Write-Host "4) Generate voice from text 🎤"

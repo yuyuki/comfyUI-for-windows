@@ -2,51 +2,48 @@ $ErrorActionPreference = "Stop"
 
 Clear-Host
 
-Write-Host "=== Installation ComfyUI et configuration ==="
+Write-Host "=== ComfyUI installation and setup ==="
 
-# 📌 1. Variables d'installation
+# 📌 1. Installation variables
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $gitUrl = "https://github.com/comfyanonymous/ComfyUI.git"
 
-# 📌 2. Création du dossier AI si nécessaire
-Write-Host "Création du dossier d'installation..."
+# 📌 2. Create the AI folder if needed
+Write-Host "Creating the installation folder..."
 New-Item -ItemType Directory -Force -Path $ComfyUIRoot | Out-Null
 
-# 📌 3. Installer Git via winget si non installé
-Write-Host "Installation de Git s'il n'est pas présent..."
+# 📌 3. Install Git via winget if it is not already installed
+Write-Host "Installing Git if it is not present..."
 if (!(Get-Command git -ErrorAction SilentlyContinue)) {
     winget install Git.Git -e -h
-} else { Write-Host "Git déjà installé." }
+} else { Write-Host "Git is already installed." }
 
-# 📌 4. Installer Git LFS
-Write-Host "Installation de Git LFS..."
+# 📌 4. Install Git LFS
+Write-Host "Installing Git LFS..."
 git lfs install
 
-# 📌 5. Cloner le repo ComfyUI
-Write-Host "Clonage de ComfyUI..."
+# 📌 5. Clone the ComfyUI repository
+Write-Host "Cloning ComfyUI..."
 Set-Location $ComfyUIRoot
 git clone $gitUrl .
-Write-Host "ComfyUI téléchargé dans $ComfyUIRoot"
+Write-Host "ComfyUI downloaded to $ComfyUIRoot"
 
-# 📌 6. Création et activation de l'environnement virtuel Python
-Write-Host "Création de l'environnement virtuel Python..."
+# 📌 6. Create and activate the Python virtual environment
+Write-Host "Creating the Python virtual environment..."
 python -m venv venv
 $activate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
-Write-Host "Activation de l'environnement virtuel..."
+Write-Host "Activating the virtual environment..."
 . $activate
 
 # 📌 7. Update pip
 python.exe -m pip install --upgrade pip
 
-# 📌 8. Installation des dépendances Python requises pour ComfyUI
-Write-Host "Installation des dépendances (Torch, etc.)..." -ForegroundColor Yellow
-
-Write-Host ""
-Write-Host "Installation des dépendances ComfyUI..." -ForegroundColor Yellow
+# 📌 8. Install ComfyUI dependencies...
+Write-Host "Installing ComfyUI dependencies..." -ForegroundColor Yellow
 pip install -r requirements.txt
 
 Set-Location $ParentDir
 
 Write-Host ""
-Write-Host "✅ Installation terminée. 🎉" -ForegroundColor Green
+Write-Host "✅ Installation completed. 🎉" -ForegroundColor Green

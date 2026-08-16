@@ -11,15 +11,15 @@ $CustomNodesPath = Join-Path $ComfyUIRoot "custom_nodes"
 $NodesFile = "custom_nodes.txt"
 
 # ==========================
-# VÉRIFICATIONS
+# CHECKS
 # ==========================
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Error "Git n'est pas installé ou absent du PATH."
+    Write-Error "Git is not installed or missing from PATH."
     exit 1
 }
 
 if (-not (Test-Path $NodesFile)) {
-    Write-Error "Fichier introuvable : $NodesFile"
+    Write-Error "File not found: $NodesFile"
     exit 1
 }
 
@@ -28,12 +28,12 @@ if (-not (Test-Path $CustomNodesPath)) {
 }
 
 # ==========================
-# LECTURE DU FICHIER
+# READ FILE
 # ==========================
 $Nodes = Get-Content $NodesFile |
     Where-Object { $_.Trim() -and -not $_.Trim().StartsWith("#") }
 
-Write-Host "Custom nodes à synchroniser : $($Nodes.Count)" -ForegroundColor Cyan
+Write-Host "Custom nodes to synchronize: $($Nodes.Count)" -ForegroundColor Cyan
 Write-Host "--------------------------------------------"
 
 # ==========================
@@ -47,19 +47,19 @@ foreach ($repo in $Nodes) {
     if (Test-Path $targetPath) {
 
         if (Test-Path (Join-Path $targetPath ".git")) {
-            Write-Host "🔄 Mise à jour : $repoName" -ForegroundColor Yellow
+            Write-Host "🔄 Updating: $repoName" -ForegroundColor Yellow
             git -C $targetPath pull
         }
         else {
-            Write-Host "⚠ $repoName existe mais n'est pas un dépôt Git (ignoré)" -ForegroundColor Red
+            Write-Host "⚠ $repoName exists but is not a Git repository (ignored)" -ForegroundColor Red
         }
     }
     else {
-        Write-Host "⬇ Installation : $repoName" -ForegroundColor Green
+        Write-Host "⬇ Installing: $repoName" -ForegroundColor Green
         git clone $repo $targetPath
     }
 }
 
 Set-Location $ParentDir
 
-Write-Host "`n✅ Synchronisation terminée. Redémarre ComfyUI." -ForegroundColor Cyan
+Write-Host "`n✅ Synchronization complete. Restart ComfyUI." -ForegroundColor Cyan

@@ -14,15 +14,15 @@ $OutputFile = "custom_nodes.txt"
 $OutputPath = Join-Path $CurrentPath $OutputFile
 
 # ==========================
-# VÉRIFICATIONS
+# CHECKS
 # ==========================
 if (-not (Test-Path $CustomNodesPath)) {
-    Write-Error "Dossier custom_nodes introuvable : $CustomNodesPath"
+    Write-Error "Custom_nodes folder not found: $CustomNodesPath"
     exit 1
 }
 
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Error "Git n'est pas installé ou absent du PATH."
+    Write-Error "Git is not installed or is missing from PATH."
     exit 1
 }
 
@@ -31,7 +31,7 @@ if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
 # ==========================
 $exported = @()
 
-Write-Host "Analyse des custom nodes..." -ForegroundColor Cyan
+Write-Host "Analyzing custom nodes..." -ForegroundColor Cyan
 Write-Host "--------------------------------"
 
 Get-ChildItem -Path $CustomNodesPath -Directory | ForEach-Object {
@@ -47,27 +47,27 @@ Get-ChildItem -Path $CustomNodesPath -Directory | ForEach-Object {
             $exported += $repoUrl
         }
         else {
-            Write-Host "⚠ $($_.Name) (Git sans remote)" -ForegroundColor Yellow
+            Write-Host "⚠ $($_.Name) (Git without remote)" -ForegroundColor Yellow
         }
     }
     else {
-        Write-Host "• $($_.Name) (manuel – ignoré)" -ForegroundColor DarkGray
+        Write-Host "• $($_.Name) (manual – ignored)" -ForegroundColor DarkGray
         $exported += "# $($_.Name)"
     }
 }
 
 # ==========================
-# ÉCRITURE DU FICHIER
+# WRITE FILE
 # ==========================
 if ($exported.Count -gt 0) {
 
-    "# Custom nodes ComfyUI exportés le $(Get-Date -Format 'yyyy-MM-dd HH:mm')" |
+    "# Custom nodes exported from ComfyUI on $(Get-Date -Format 'yyyy-MM-dd HH:mm')" |
         Set-Content $OutputPath
 
     $exported | Sort-Object -Unique | Add-Content $OutputPath
 
-    Write-Host "`n📄 Fichier créé : $OutputPath" -ForegroundColor Cyan
+    Write-Host "`n📄 File created: $OutputPath" -ForegroundColor Cyan
 }
 else {
-    Write-Host "`n⚠ Aucun custom node Git trouvé." -ForegroundColor Yellow
+    Write-Host "`n⚠ No Git custom nodes found." -ForegroundColor Yellow
 }

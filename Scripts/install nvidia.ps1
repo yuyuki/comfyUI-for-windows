@@ -1,59 +1,58 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installation NVIDIA (Cu130, Torch, torchvision, torchaudio) ===" -ForegroundColor Cyan
+. (Join-Path $PSScriptRoot "validate-environment.ps1")
 
-# 📌 Variables
+Write-Host "=== NVIDIA install (Cu130, Torch, torchvision, torchaudio) ===" -ForegroundColor Cyan
+
+$TorchTargetVersion = "2.13.0"
+$TorchVisionTargetVersion = "0.28.0"
+$TorchAudioTargetVersion = "2.11.0"
+
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
-$ComfyUIRoot = "$ParentDir\ComfyUI"
+$ComfyUiRoot = Join-Path $ParentDir "ComfyUI"
 
-# 📌 Activer l'environnement virtuel
-$activate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
-Write-Host "Activation de l'environnement virtuel..."
+$activate = Join-Path $ComfyUiRoot "venv\Scripts\Activate.ps1"
+if (-not (Test-Path $activate)) {
+    throw "Virtual environment activation script not found: $activate"
+}
+
+Write-Host "Activating the virtual environment..." -ForegroundColor Yellow
 . $activate
 
-# 📌 Mettre à jour PyTorch et extensions
 Write-Host ""
-Write-Host "=== Installation PyTorch + CUDA ===" -ForegroundColor Yellow
-pip uninstall -y torch torchvision torchaudio
+Write-Host "=== PyTorch + CUDA installation ===" -ForegroundColor Yellow
 
-# $pytorchIndex = 'https://download.pytorch.org/whl/cu126'
-$pytorchIndex = 'https://download.pytorch.org/whl/cu130'
-pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorchIndex
-# pip install --no-cache-dir --upgrade "torch==2.6.0" "torchvision==0.21.0" "torchaudio==2.6.0" --index-url $pytorchIndex
+$torchCurrent = Get-PackageVersion -PackageName "torch"
+$visionCurrent = Get-PackageVersion -PackageName "torchvision"
+$audioCurrent = Get-PackageVersion -PackageName "torchaudio"
 
-# 📌 Installer le rasterizer Hunyuan3D compatible avec le support documenté par le wrapper
-# $wheelPath = Join-Path $ComfyUIRoot 'custom_nodes\ComfyUI-Hunyuan3DWrapper\wheels\custom_rasterizer-0.1.0+torch260.cuda126-cp312-cp312-win_amd64.whl'
-# if (Test-Path $wheelPath) {
-#     Write-Host ""
-#     Write-Host "=== Installation du rasterizer Hunyuan3D ===" -ForegroundColor Yellow
-#     pip install --force-reinstall $wheelPath
-# python -c "import custom_rasterizer, custom_rasterizer_kernel; print('rasterizer import OK')"
-# } else {
-#     Write-Warning "Wheel custom_rasterizer introuvable : $wheelPath"
-# }
+$shouldReinstallTorch = (-not (Test-IsVersionAtLeast -CurrentVersion $torchCurrent -TargetVersion $TorchTargetVersion)) -or
+    (-not (Test-IsVersionAtLeast -CurrentVersion $visionCurrent -TargetVersion $TorchVisionTargetVersion)) -or
+    (-not (Test-IsVersionAtLeast -CurrentVersion $audioCurrent -TargetVersion $TorchAudioTargetVersion))
 
-# 📌 Vérifier que l'extension charge bien
+if ($shouldReinstallTorch) {
+    pip uninstall -y torch torchvision torchaudio
+    $pytorchIndex = 'https://download.pytorch.org/whl/cu130'
+    pip install --no-cache-dir torch torchvision torchaudio --index-url $pytorchIndex
+} else {
+    Write-Host "Installed torch packages are already at or above the target version. Skipping uninstall and install." -ForegroundColor Green
+}
+
 Write-Host ""
-Write-Host "=== Vérification du rasterizer ===" -ForegroundColor Yellow
-python -c "import torch; print('torch', torch.__version__)"
-
-# 📌 Mettre à jour de sageattention
-Write-Host ""
-Write-Host "=== Mise à jour de sageattention ===" -ForegroundColor Yellow
+Write-Host "=== SageAttention update ===" -ForegroundColor Yellow
 pip install sageattention --upgrade
 
-# 📌 Mettre à jour de triton-windows
 Write-Host ""
-Write-Host "=== Mise à jour de triton-windows ===" -ForegroundColor Yellow
-pip uninstall triton-windows
-pip install -U "triton-windows==3.3.1.post19"
+Write-Host "=== NVIDIA dependency update ===" -ForegroundColor Yellow
+python -m pip install --upgrade pynvml
+python -m pip install --upgrade nvidia-ml-py3
 
-# 📌 Mettre à jour des dépendances NVIDIA
-Write-Host "Nettoyage des dépendances NVIDIA..." -ForegroundColor Yellow
-python -m pip uninstall pynvml -y
-python -m pip install nvidia-ml-py
-
-set-location $ParentDir
 
 Write-Host ""
-Write-Host "✅ Mise à jour terminée. 🎉" -ForegroundColor Green
+Write-Host "=== Environment validation ===" -ForegroundColor Yellow
+Test-Environment -ComfyUiRoot $ComfyUiRoot -VenvActivatePath $activate
+
+Set-Location $ParentDir
+
+Write-Host ""
+Write-Host "✅ Update complete. 🎉" -ForegroundColor Green
