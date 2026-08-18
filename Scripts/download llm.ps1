@@ -47,6 +47,8 @@ Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/dif
 
 Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_fp8_scaled.safetensors" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-Q5_K_M.gguf" -OutDir $outDir
+
 
 # =================================================================== VAE
 Write-Host "=== Download VAE ===" -ForegroundColor Cyan
@@ -66,6 +68,8 @@ Write-Host "Downloading qwen3vl_4b_int4_convrot.safetensors from Hugging Face to
 Download-File -Url "https://huggingface.co/Merserk/qwen3vl-4b-int4-convrot/resolve/main/qwen3vl_4b_int4_convrot.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4/resolve/main/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors" -OutDir $outDir
 
 # Write-Host "Downloading qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors from Hugging Face to ComfyUI\models\text_encoders"
 # Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors" -OutDir $outDir

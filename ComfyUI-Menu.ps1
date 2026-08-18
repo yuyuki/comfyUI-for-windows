@@ -55,11 +55,6 @@ function Show-InvalidSelection {
     Wait-ForKey
 }
 
-function Exit-Process {
-    Write-Host "Exiting ComfyUI Menu..."
-    exit
-}
-
 function UnInstall-ComfyUI {
     Invoke-Script (Join-Path 'Scripts' 'cleanup.ps1')
     Wait-ForKey
@@ -103,7 +98,7 @@ function Show-ToolsMenu {
         switch ($subchoice) {
             '1' { Install-Aria2c }
             '2' { Install-FFmpeg }
-            'b' { break }
+            'b' { return }
             default { Show-InvalidSelection }
         }
     }
@@ -130,33 +125,47 @@ function Show-SetupMenu {
             '4' { Backup-CustomNodes }
             '5' { Restore-CustomNodes }
             '6' { UnInstall-ComfyUI }
-            'b' { break }
+            'b' { return }
             default { Show-InvalidSelection }
         }
     }
 }
 
-while ($true) {
-    Clear-Host
-    Write-Host "ComfyUI Menu - Select an action:`n"
-    Write-Host "1) Start ComfyUI"
-    Write-Host "s) Setup ComfyUI"
-    Write-Host "t) Tools"
-    Write-Host "9) Download LLM"
-    Write-Host "0) Exit`n"
-
-    $choice = [System.Console]::ReadKey($true).KeyChar
-
-    switch ($choice) {
-        '1' { Start-ComfyUi }
-        's' { Show-SetupMenu }
-        't' { Show-ToolsMenu }
-        '9' { Download-LLM }
-        '0' { Exit-Process }
-        default { Show-InvalidSelection }
+function Deactivate-VirtualEnv {
+    if (Test-Path function:deactivate -ErrorAction SilentlyContinue) {
+        deactivate -nondestructive
     }
 }
 
-Write-Host "Exiting ComfyUI Menu..."
-deactivate -nondestructive
+function Show-MainMenu() {
+    while ($true) {
+        Clear-Host
+        Write-Host "ComfyUI Menu - Select an action:`n"
+        Write-Host "1) Start ComfyUI"
+        Write-Host "2) Setup ComfyUI"
+        Write-Host "3) Tools"
+        Write-Host "4) Download LLM"
+        Write-Host "0) Exit`n"
+        
+        $choice = [System.Console]::ReadKey($true).KeyChar
+        
+        switch ($choice) {
+            '1' { Start-ComfyUi }
+            '2' { Show-SetupMenu }
+            '3' { Show-ToolsMenu }
+            '4' { Download-LLM }
+            '0' { return }
+            default { Show-InvalidSelection }
+        }
+    }
+}
 
+try {
+    Show-MainMenu
+}
+catch {
+}
+
+Deactivate-VirtualEnv
+
+Write-Host "Exiting ComfyUI Menu..."
