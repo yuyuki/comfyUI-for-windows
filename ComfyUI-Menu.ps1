@@ -163,10 +163,14 @@ function Show-InstallCustomNodeMenu {
         }
         Write-Host "b) Back to main menu`n"
 
-        $subchoice = [System.Console]::ReadKey($true).KeyChar
+        [string]$subchoice = [System.Console]::ReadKey($true).KeyChar
+
+        Write-Host "choice: $subchoice"
 
         if ($subchoice -match '^[0-9]$') {
-            $selectedIndex = $subchoice.ToInt32() - 1
+            Write-Host "Selected index: $subchoice"
+            $selectedIndex = ([int]$subchoice) - 1
+            Write-Host "Selected index (zero-based): $selectedIndex"
             if ($selectedIndex -ge 0 -and $selectedIndex -lt $scripts.Count) {
                 & $scripts[$selectedIndex].path
                 Wait-ForKey
