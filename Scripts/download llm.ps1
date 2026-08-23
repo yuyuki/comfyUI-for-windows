@@ -100,6 +100,12 @@ $outDir = "ComfyUI\models\unet"
 
 Download-File -Url "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf" -OutDir $outDir
 
+# =================================================================== model_patches
+Write-Host "=== Download model_patches ===" -ForegroundColor Cyan
+$outDir = "ComfyUI\models\model_patches"
+
+Download-File -Url "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors" -OutDir $outDir
+
 # =================================================================== Copy LLM to LMStudio bundled-models
 # Uses the reusable function in Scripts/Copy-To-LMStudio.ps1 to copy downloaded models
 Write-Host "=== Copy Models to LMStudio ===" -ForegroundColor Cyan

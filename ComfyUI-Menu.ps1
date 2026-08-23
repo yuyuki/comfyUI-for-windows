@@ -114,6 +114,7 @@ function Show-SetupMenu {
         Write-Host "4) Backup Custom Nodes"
         Write-Host "5) Restore Custom Nodes"
         Write-Host "6) Update security level"
+        Write-Host "7) Fix NVML DLL location (copy System32\nvml.dll to Program Files NVSMI)"
         Write-Host "b) Back to main menu`n"
 
         $subchoice = [System.Console]::ReadKey($true).KeyChar
@@ -125,6 +126,7 @@ function Show-SetupMenu {
             '4' { Backup-CustomNodes }
             '5' { Restore-CustomNodes }
             '6' { UnInstall-ComfyUI }
+            '7' { Invoke-Script (Join-Path 'Scripts' 'fix_nvml_path.ps1') }
             'b' { return }
             default { Show-InvalidSelection }
         }
