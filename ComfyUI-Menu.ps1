@@ -133,6 +133,54 @@ function Show-SetupMenu {
     }
 }
 
+function Show-InstallCustomNodeMenu {
+    $customNodesDir = Join-Path $scriptRoot 'Scripts\CustomNodes'
+
+    $scripts = @()
+    if (Test-Path $customNodesDir) {
+        $scripts = Get-ChildItem -Path $customNodesDir -File -Filter 'install *.ps1' |
+            Sort-Object Name |
+            ForEach-Object {
+                [pscustomobject]@{
+                    label = ($_.BaseName -replace '^install\s+', '')
+                    path = $_.FullName
+                }
+            }
+    }
+
+    if ($scripts.Count -eq 0) {
+        Write-Host "No custom node install scripts found in $customNodesDir" -ForegroundColor Yellow
+        Wait-ForKey
+        return
+    }
+
+    while ($true) {
+        Clear-Host
+        Write-Host "Install Custom Node - Select a node to install:`n"
+        for ($i = 0; $i -lt $scripts.Count; $i++) {
+            $idx = $i + 1
+            Write-Host "$idx) $($scripts[$i].label)"
+        }
+        Write-Host "b) Back to main menu`n"
+
+        $subchoice = [System.Console]::ReadKey($true).KeyChar
+
+        if ($subchoice -match '^[0-9]$') {
+            $selectedIndex = $subchoice.ToInt32() - 1
+            if ($selectedIndex -ge 0 -and $selectedIndex -lt $scripts.Count) {
+                & $scripts[$selectedIndex].path
+                Wait-ForKey
+                continue
+            }
+        }
+
+        switch ($subchoice) {
+            'b' { return }
+            default { Show-InvalidSelection }
+        }
+    }
+}
+
 function Deactivate-VirtualEnv {
     if (Test-Path function:deactivate -ErrorAction SilentlyContinue) {
         deactivate -nondestructive
@@ -147,6 +195,7 @@ function Show-MainMenu() {
         Write-Host "2) Setup ComfyUI"
         Write-Host "3) Tools"
         Write-Host "4) Download LLM"
+        Write-Host "5) Install custom node"
         Write-Host "0) Exit`n"
         
         $choice = [System.Console]::ReadKey($true).KeyChar
@@ -156,6 +205,7 @@ function Show-MainMenu() {
             '2' { Show-SetupMenu }
             '3' { Show-ToolsMenu }
             '4' { Download-LLM }
+            '5' { Show-InstallCustomNodeMenu }
             '0' { return }
             default { Show-InvalidSelection }
         }

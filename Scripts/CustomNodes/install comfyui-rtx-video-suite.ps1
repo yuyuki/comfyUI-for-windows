@@ -1,11 +1,11 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: TTS-Audio-Suite ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-RTX-Video-Suite ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
 # ------------------------
-$ParentDir = Resolve-Path "$PSScriptRoot\.."
+$ParentDir = Resolve-Path "$PSScriptRoot\..\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
@@ -22,26 +22,26 @@ if (!(Test-Path $VenvActivate)) {
 & $VenvActivate
 
 # ------------------------
-# 4️⃣ Create custom_nodes folder
+# 3️⃣ Create custom_nodes folder
 # ------------------------
 if (!(Test-Path $CustomNodesDir)) {
     New-Item -ItemType Directory -Force -Path $CustomNodesDir | Out-Null
 }
 
 # ------------------------
-# 5️⃣ Install TTS-Audio-Suite
+# 4️⃣ Install ComfyUI-RTX-Video-Suite
 # ------------------------
-Write-Host "`n=== Installing TTS-Audio-Suite ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\TTS-Audio-Suite"
-$RepoUrl = "https://github.com/diodiogod/TTS-Audio-Suite.git"
+Write-Host "`n=== Installing ComfyUI-RTX-Video-Suite ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-RTX-Video-Suite"
+$RepoUrl = "https://github.com/uczensokratesa/ComfyUI-RTX-Video-Suite.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing TTS-Audio-Suite repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing ComfyUI-RTX-Video-Suite repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning TTS-Audio-Suite..."
+        Write-Warning "Update failed. Re-cloning ComfyUI-RTX-Video-Suite..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }

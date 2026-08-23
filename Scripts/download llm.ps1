@@ -99,6 +99,7 @@ Write-Host "=== Download GGUF ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\unet"
 
 Download-File -Url "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf" -OutDir $outDir
+Download-File -Url "https://huggingface.co/BennyDaBall/Z-Image-Engineer-V6-GGUF/resolve/main/Z-Image-Engineer-V6-Q8_0.gguf" -OutDir $outDir
 
 # =================================================================== model_patches
 Write-Host "=== Download model_patches ===" -ForegroundColor Cyan

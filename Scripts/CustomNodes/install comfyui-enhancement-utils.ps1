@@ -1,11 +1,11 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: ComfyUI-ClipProj ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-Enhancement-Utils ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
 # ------------------------
-$ParentDir = Resolve-Path "$PSScriptRoot\.."
+$ParentDir = Resolve-Path "$PSScriptRoot\..\.."
 $ComfyUIRoot = "$ParentDir\ComfyUI"
 $VenvActivate = "$ComfyUIRoot\venv\Scripts\Activate.ps1"
 $CustomNodesDir = "$ComfyUIRoot\custom_nodes"
@@ -29,19 +29,19 @@ if (!(Test-Path $CustomNodesDir)) {
 }
 
 # ------------------------
-# 5️⃣ Install ComfyUI-ClipProj
+# 5️⃣ Install ComfyUI-Enhancement-Utils
 # ------------------------
-Write-Host "`n=== Installing ComfyUI-ClipProj ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\ComfyUI-ClipProj"
-$RepoUrl = "https://github.com/nicolab28/ComfyUI-ClipProj.git"
+Write-Host "`n=== Installing ComfyUI-Enhancement-Utils ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-Enhancement-Utils"
+$RepoUrl = "https://github.com/phazei/ComfyUI-Enhancement-Utils.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing ComfyUI-ClipProj repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing ComfyUI-Enhancement-Utils repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning ComfyUI-ClipProj..."
+        Write-Warning "Update failed. Re-cloning ComfyUI-Enhancement-Utils..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }
