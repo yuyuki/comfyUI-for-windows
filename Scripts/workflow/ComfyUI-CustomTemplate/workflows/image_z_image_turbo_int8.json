@@ -1,8 +1,8 @@
 {
   "id": "9ae6082b-c7f4-433c-9971-7a8f65a3ea65",
   "revision": 0,
-  "last_node_id": 75,
-  "last_link_id": 110,
+  "last_node_id": 78,
+  "last_link_id": 114,
   "nodes": [
     {
       "id": 35,
@@ -37,15 +37,15 @@
       "id": 9,
       "type": "SaveImage",
       "pos": [
-        1107.3237141717186,
-        1315.0076801774674
+        1820.587013095831,
+        1316.6435996329276
       ],
       "size": [
         780,
         660
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -84,15 +84,15 @@
       "id": 57,
       "type": "f2fdebf6-dfaf-43b6-9eb2-7f70613cfdc1",
       "pos": [
-        667.3237141717184,
-        1315.0076801774674
+        1380.5870130958297,
+        1316.6435996329276
       ],
       "size": [
         400,
         470
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -102,7 +102,7 @@
           "widget": {
             "name": "text"
           },
-          "link": 109
+          "link": 114
         }
       ],
       "outputs": [
@@ -175,7 +175,7 @@
         398.90625
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -189,7 +189,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            109
+            113
           ]
         }
       ],
@@ -256,7 +256,7 @@
         254.09375
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -294,7 +294,7 @@
         153.90625
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -342,7 +342,7 @@
         85.9375
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -403,10 +403,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "The image shows a man standing in a T-position.\nHe is wearing a brown leather jacket, a white shirt, and khaki pants.\n\nHe has a black hat on his head and is holding a pistol in his right hand and a coiled sledgehammer in his left.\nHis expression is serious, and he is looking directly into the camera.\n\nThe background is white.\n\nThe entire image is for reference."
+        "The image shows a man standing in a T-shape.\n\nHe is wearing a brown leather jacket, a white shirt, and khaki pants.\n\nHe has a black fedora on his head and is holding a pistol in his right hand and a coiled whip in his left.\n\nHis face is both friendly and serious, and he is looking directly into the camera.\n\nThe background is entirely white."
       ],
       "widgets_values_named": {
-        "value": "The image shows a man standing in a T-position.\nHe is wearing a brown leather jacket, a white shirt, and khaki pants.\n\nHe has a black hat on his head and is holding a pistol in his right hand and a coiled sledgehammer in his left.\nHis expression is serious, and he is looking directly into the camera.\n\nThe background is white.\n\nThe entire image is for reference."
+        "value": "The image shows a man standing in a T-shape.\n\nHe is wearing a brown leather jacket, a white shirt, and khaki pants.\n\nHe has a black fedora on his head and is holding a pistol in his right hand and a coiled whip in his left.\n\nHis face is both friendly and serious, and he is looking directly into the camera.\n\nThe background is entirely white."
       }
     },
     {
@@ -421,7 +421,7 @@
         105.9375
       ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -454,6 +454,89 @@
       ],
       "widgets_values_named": {
         "switch": true
+      }
+    },
+    {
+      "id": 77,
+      "type": "ComfySwitchNode",
+      "pos": [
+        991.4287966933722,
+        1581.6310046717808
+      ],
+      "size": [
+        270,
+        105.9375
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "STRING",
+          "link": 113
+        },
+        {
+          "name": "on_true",
+          "type": "STRING",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "STRING",
+          "links": [
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        true
+      ],
+      "widgets_values_named": {
+        "switch": true
+      }
+    },
+    {
+      "id": 78,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -56.558623501767784,
+        2008.0402006809322
+      ],
+      "size": [
+        559.53125,
+        292.203125
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A polished cinematic image prompt centers on the exact objects, colors, counts, actions, and composition terms from the seed. The scene is arranged with clear foreground, midground, and background layers so the viewer's eye can travel naturally. Surface details like fabric weave, wood grain, metal patina, or wet stone are described rather than replaced. Softbox lighting, rim lights, and directional shadows shape the form without washing out the original objects. The lens choice affects perspective, shallow depth of field, and lens flares around bright highlights. Atmospheric haze, controlled color contrast, and subtle chromatic aberration keep the style cinematic. The overall mood is still, precise, and visually grounded. The final result is a single paragraph of 180-250 words that describes a single moment without distraction. The composition explicitly includes brown leather, white shirt, black fedora, looking directly. The visual design adds clear foreground, midground, and background separation, with controlled lighting falloff and a cohesive color palette that supports the main subject."
+      ],
+      "widgets_values_named": {
+        "value": "A polished cinematic image prompt centers on the exact objects, colors, counts, actions, and composition terms from the seed. The scene is arranged with clear foreground, midground, and background layers so the viewer's eye can travel naturally. Surface details like fabric weave, wood grain, metal patina, or wet stone are described rather than replaced. Softbox lighting, rim lights, and directional shadows shape the form without washing out the original objects. The lens choice affects perspective, shallow depth of field, and lens flares around bright highlights. Atmospheric haze, controlled color contrast, and subtle chromatic aberration keep the style cinematic. The overall mood is still, precise, and visually grounded. The final result is a single paragraph of 180-250 words that describes a single moment without distraction. The composition explicitly includes brown leather, white shirt, black fedora, looking directly. The visual design adds clear foreground, midground, and background separation, with controlled lighting falloff and a cohesive color palette that supports the main subject."
       }
     }
   ],
@@ -507,18 +590,34 @@
       "STRING"
     ],
     [
-      109,
-      64,
-      0,
-      57,
-      0,
-      "STRING"
-    ],
-    [
       110,
       68,
       0,
       75,
+      0,
+      "STRING"
+    ],
+    [
+      112,
+      78,
+      0,
+      77,
+      1,
+      "STRING"
+    ],
+    [
+      113,
+      64,
+      0,
+      77,
+      0,
+      "STRING"
+    ],
+    [
+      114,
+      77,
+      0,
+      57,
       0,
       "STRING"
     ]
@@ -554,8 +653,8 @@
       "bounding": [
         -75.09462757080075,
         1239.9966417963815,
-        686.3022955094668,
-        701.4843162667094
+        1346.5234242641727,
+        1070.2466838845507
       ],
       "color": "#3f789e",
       "flags": {}
@@ -564,8 +663,8 @@
       "id": 8,
       "title": "Generate image",
       "bounding": [
-        657.3237141717184,
-        1245.0076801774674,
+        1370.5870130958297,
+        1246.6435996329276,
         1240,
         740
       ],
@@ -580,8 +679,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 75,
-          "lastLinkId": 110,
+          "lastNodeId": 78,
+          "lastLinkId": 114,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1482,8 +1581,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 75,
-          "lastLinkId": 110,
+          "lastNodeId": 78,
+          "lastLinkId": 114,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1727,8 +1826,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 75,
-          "lastLinkId": 110,
+          "lastNodeId": 78,
+          "lastLinkId": 114,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1985,10 +2084,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9844647789585195,
+      "scale": 0.6724026903616696,
       "offset": [
-        1105.3496266767079,
-        -1108.758157373689
+        1676.5114176068573,
+        -1189.5674636933866
       ]
     },
     "frontendVersion": "1.49.6",
