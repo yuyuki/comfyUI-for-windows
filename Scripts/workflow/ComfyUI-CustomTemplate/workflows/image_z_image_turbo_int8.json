@@ -1,8 +1,8 @@
 {
   "id": "9ae6082b-c7f4-433c-9971-7a8f65a3ea65",
   "revision": 0,
-  "last_node_id": 78,
-  "last_link_id": 114,
+  "last_node_id": 80,
+  "last_link_id": 120,
   "nodes": [
     {
       "id": 35,
@@ -37,7 +37,7 @@
       "id": 9,
       "type": "SaveImage",
       "pos": [
-        1820.587013095831,
+        2674.2486336497477,
         1316.6435996329276
       ],
       "size": [
@@ -45,7 +45,7 @@
         660
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -84,7 +84,7 @@
       "id": 57,
       "type": "f2fdebf6-dfaf-43b6-9eb2-7f70613cfdc1",
       "pos": [
-        1380.5870130958297,
+        2234.2486336497473,
         1316.6435996329276
       ],
       "size": [
@@ -92,7 +92,7 @@
         470
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -102,7 +102,7 @@
           "widget": {
             "name": "text"
           },
-          "link": 114
+          "link": 119
         }
       ],
       "outputs": [
@@ -252,8 +252,8 @@
         1436.267061840012
       ],
       "size": [
-        566.671875,
-        254.09375
+        566.65625,
+        254.078125
       ],
       "flags": {},
       "order": 5,
@@ -290,7 +290,7 @@
         1309.9966417963815
       ],
       "size": [
-        225,
+        308.5625,
         153.90625
       ],
       "flags": {},
@@ -382,7 +382,7 @@
       ],
       "size": [
         559.53125,
-        292.21875
+        292.203125
       ],
       "flags": {},
       "order": 2,
@@ -440,7 +440,8 @@
           "name": "output",
           "type": "STRING",
           "links": [
-            106
+            106,
+            116
           ]
         }
       ],
@@ -460,8 +461,8 @@
       "id": 77,
       "type": "ComfySwitchNode",
       "pos": [
-        991.4287966933722,
-        1581.6310046717808
+        813.7690141168807,
+        1465.4257283393026
       ],
       "size": [
         270,
@@ -487,7 +488,7 @@
           "name": "output",
           "type": "STRING",
           "links": [
-            114
+            118
           ]
         }
       ],
@@ -512,7 +513,7 @@
       ],
       "size": [
         559.53125,
-        292.203125
+        292.1875
       ],
       "flags": {},
       "order": 3,
@@ -538,6 +539,100 @@
       "widgets_values_named": {
         "value": "A polished cinematic image prompt centers on the exact objects, colors, counts, actions, and composition terms from the seed. The scene is arranged with clear foreground, midground, and background layers so the viewer's eye can travel naturally. Surface details like fabric weave, wood grain, metal patina, or wet stone are described rather than replaced. Softbox lighting, rim lights, and directional shadows shape the form without washing out the original objects. The lens choice affects perspective, shallow depth of field, and lens flares around bright highlights. Atmospheric haze, controlled color contrast, and subtle chromatic aberration keep the style cinematic. The overall mood is still, precise, and visually grounded. The final result is a single paragraph of 180-250 words that describes a single moment without distraction. The composition explicitly includes brown leather, white shirt, black fedora, looking directly. The visual design adds clear foreground, midground, and background separation, with controlled lighting falloff and a cohesive color palette that supports the main subject."
       }
+    },
+    {
+      "id": 79,
+      "type": "StringConcatenate",
+      "pos": [
+        1176.5935881070986,
+        1598.2107717295964
+      ],
+      "size": [
+        400,
+        205.90625
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 118
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 116
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            119,
+            120
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": ""
+      }
+    },
+    {
+      "id": 80,
+      "type": "PreviewAny",
+      "pos": [
+        1139.745172984593,
+        1904.366941937656
+      ],
+      "size": [
+        500.96875,
+        486.515625
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
     }
   ],
   "links": [
@@ -614,10 +709,34 @@
       "STRING"
     ],
     [
-      114,
+      116,
+      75,
+      0,
+      79,
+      1,
+      "STRING"
+    ],
+    [
+      118,
       77,
       0,
+      79,
+      0,
+      "STRING"
+    ],
+    [
+      119,
+      79,
+      0,
       57,
+      0,
+      "STRING"
+    ],
+    [
+      120,
+      79,
+      0,
+      80,
       0,
       "STRING"
     ]
@@ -653,8 +772,8 @@
       "bounding": [
         -75.09462757080075,
         1239.9966417963815,
-        1346.5234242641727,
-        1070.2466838845507
+        1772.2369920680983,
+        1208.7990789709747
       ],
       "color": "#3f789e",
       "flags": {}
@@ -663,7 +782,7 @@
       "id": 8,
       "title": "Generate image",
       "bounding": [
-        1370.5870130958297,
+        2224.2486336497473,
         1246.6435996329276,
         1240,
         740
@@ -679,8 +798,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 78,
-          "lastLinkId": 114,
+          "lastNodeId": 80,
+          "lastLinkId": 120,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1581,8 +1700,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 78,
-          "lastLinkId": 114,
+          "lastNodeId": 80,
+          "lastLinkId": 120,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1826,8 +1945,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 8,
-          "lastNodeId": 78,
-          "lastLinkId": 114,
+          "lastNodeId": 80,
+          "lastLinkId": 120,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2086,8 +2205,8 @@
     "ds": {
       "scale": 0.6724026903616696,
       "offset": [
-        1676.5114176068573,
-        -1189.5674636933866
+        1559.61949487449,
+        -1065.9941710163473
       ]
     },
     "frontendVersion": "1.49.6",
