@@ -29,4 +29,4 @@ $env:PYTORCH_CUDA_ALLOC_CONF = "expandable_segments:True"
 Write-Host "Launching ComfyUI..." -ForegroundColor Cyan
 # python $MainPy --highvram --use-split-cross-attention --disable-smart-memory --disable-pinned-memory
 # python $MainPy --disable-pinned-memory --disable-smart-memory
-python $MainPy
+python $MainPy --use-sage-attention

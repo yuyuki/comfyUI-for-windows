@@ -43,9 +43,13 @@ Write-Host "=== SageAttention update ===" -ForegroundColor Yellow
 pip install sageattention --upgrade
 
 Write-Host ""
+Write-Host "=== Triton update ===" -ForegroundColor Yellow
+pip install triton-windows --upgrade
+
+Write-Host ""
 Write-Host "=== NVIDIA dependency update ===" -ForegroundColor Yellow
-python -m pip install --upgrade pynvml
-python -m pip install --upgrade nvidia-ml-py3
+python -m pip uninstall nvidia-ml-py3 pynvml -y
+python -m pip install --upgrade nvidia-ml-py
 
 
 Write-Host ""

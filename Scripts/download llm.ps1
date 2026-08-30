@@ -49,11 +49,13 @@ Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/dif
 
 Download-File -Url "https://huggingface.co/city96/FLUX.2-dev-gguf/resolve/main/flux2-dev-Q4_K_M.gguf" -OutDir $outDir
 
-Download-File -Url "https://huggingface.co/unsloth/Qwen2.5-VL-7B-Instruct-GGUF/resolve/main/Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf" -OutDir $outDir
+# Download-File -Url "https://huggingface.co/unsloth/Qwen2.5-VL-7B-Instruct-GGUF/resolve/main/Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors" -OutDir $outDir
 
-Download-File -Url "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-Q5_K_M.gguf" -OutDir $outDir
+# Download-File -Url "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-Q5_K_M.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/mradermacher/Qwen3-VL-8B-Instruct-Heretic-GGUF/resolve/main/Qwen3-VL-8B-Instruct-heretic.Q6_K.gguf" -OutDir $outDir
 
 # =================================================================== VAE
 Write-Host "=== Download VAE ===" -ForegroundColor Cyan
@@ -71,6 +73,10 @@ Write-Host "=== Download Text Encoder ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\text_encoders"
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct-GGUF/resolve/main/Qwen3VL-4B-Instruct-Q4_K_M.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/matrixportalx/Qwen3-VL-8B-Instruct-Q5_K_M-GGUF/resolve/main/qwen3-vl-8b-instruct-q5_k_m.gguf" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4/resolve/main/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors" -OutDir $outDir
 
@@ -109,16 +115,16 @@ Download-File -Url "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Control
 
 # =================================================================== Copy LLM to LMStudio bundled-models
 # Uses the reusable function in Scripts/Copy-To-LMStudio.ps1 to copy downloaded models
-Write-Host "=== Copy Models to LMStudio ===" -ForegroundColor Cyan
+# Write-Host "=== Copy Models to LMStudio ===" -ForegroundColor Cyan
 
-$copyScript = Join-Path $PSScriptRoot 'Copy-To-LMStudio.ps1'
-. $copyScript
+# $copyScript = Join-Path $PSScriptRoot 'Copy-To-LMStudio.ps1'
+# . $copyScript
 
-$sourceParent = Resolve-Path "$PSScriptRoot\.."
-$sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen3.8-27B-Uncensored-Q5_K_M.gguf"
-Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+# $sourceParent = Resolve-Path "$PSScriptRoot\.."
+# $sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen3.8-27B-Uncensored-Q5_K_M.gguf"
+# Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
 
-$sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf"
-Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+# $sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf"
+# Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green
