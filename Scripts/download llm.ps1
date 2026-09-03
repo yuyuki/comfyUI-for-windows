@@ -76,6 +76,14 @@ Download-File -Url "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_en
 
 Download-File -Url "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct-GGUF/resolve/main/Qwen3VL-4B-Instruct-Q4_K_M.gguf" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/mradermacher/Qwen3-VL-8B-Instruct-Heretic-GGUF/resolve/main/Qwen3-VL-8B-Instruct-Heretic.Q4_K_M.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/HauhauCS/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/HauhauCS/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q8_0.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/LuffyTheFox/Qwen3-Uncensored-TextEncoders-Klein-Z-Image-Anima-GGUF/resolve/main/Qwen3-8B-heretic-Genesis.Q8_0.gguf" -OutDir $outDir
+
 Download-File -Url "https://huggingface.co/matrixportalx/Qwen3-VL-8B-Instruct-Q5_K_M-GGUF/resolve/main/qwen3-vl-8b-instruct-q5_k_m.gguf" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4/resolve/main/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors" -OutDir $outDir

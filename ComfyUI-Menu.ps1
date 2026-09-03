@@ -154,27 +154,34 @@ function Show-InstallCustomNodeMenu {
         return
     }
 
+    $selectionWidth = [Math]::Max(2, $scripts.Count.ToString().Length)
+
     while ($true) {
         Clear-Host
         Write-Host "Install Custom Node - Select a node to install:`n"
         for ($i = 0; $i -lt $scripts.Count; $i++) {
             $idx = $i + 1
-            Write-Host "$idx) $($scripts[$i].label)"
+            $displayIndex = "{0:D$selectionWidth}" -f $idx
+            Write-Host "$displayIndex) $($scripts[$i].label)"
         }
         Write-Host "b) Back to main menu`n"
 
         [string]$subchoice = [System.Console]::ReadKey($true).KeyChar
 
-        Write-Host "choice: $subchoice"
-
         if ($subchoice -match '^[0-9]$') {
-            Write-Host "Selected index: $subchoice"
-            $selectedIndex = ([int]$subchoice) - 1
-            Write-Host "Selected index (zero-based): $selectedIndex"
-            if ($selectedIndex -ge 0 -and $selectedIndex -lt $scripts.Count) {
-                & $scripts[$selectedIndex].path
-                Wait-ForKey
-                continue
+            for ($digit = 1; $digit -lt $selectionWidth; $digit++) {
+                $subchoice += [System.Console]::ReadKey($true).KeyChar
+            }
+
+            write-Host "subchoice: $subchoice"
+
+            if ($subchoice -match "^\d{2}$") {
+                $selectedIndex = ([int]$subchoice) - 1
+                if ($selectedIndex -ge 0 -and $selectedIndex -lt $scripts.Count) {
+                    & $scripts[$selectedIndex].path
+                    Wait-ForKey
+                    continue
+                }
             }
         }
 
