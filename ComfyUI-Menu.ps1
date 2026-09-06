@@ -108,8 +108,8 @@ function Show-SetupMenu {
     while ($true) {
         Clear-Host
         Write-Host "Setup ComfyUI - Select an action:`n"
-        Write-Host "1) Update ComfyUI"
-        Write-Host "2) Setup (full install)"
+        Write-Host "1) Setup (full install)"
+        Write-Host "2) Update ComfyUI"
         Write-Host "3) Uninstall ComfyUI"
         Write-Host "4) Backup Custom Nodes"
         Write-Host "5) Restore Custom Nodes"
@@ -122,10 +122,10 @@ function Show-SetupMenu {
         switch ($subchoice) {
             '1' { Install-All }
             '2' { Update-ComfyUi }
-            '3' { Update-SecurityLevel }
+            '3' { UnInstall-ComfyUI }
             '4' { Backup-CustomNodes }
             '5' { Restore-CustomNodes }
-            '6' { UnInstall-ComfyUI }
+            '6' { Update-SecurityLevel }
             '7' { Invoke-Script (Join-Path 'Scripts' 'fix_nvml_path.ps1') }
             'b' { return }
             default { Show-InvalidSelection }
