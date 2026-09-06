@@ -125,18 +125,18 @@ $outDir = "ComfyUI\models\model_patches"
 
 Download-File -Url "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/SandLogicTechnologies/translategemma-4b-it-GGUF/resolve/main/translategemma-4b_Q5_K_M.gguf" -OutDir $outDir
+
 # =================================================================== Copy LLM to LMStudio bundled-models
 # Uses the reusable function in Scripts/Copy-To-LMStudio.ps1 to copy downloaded models
-# Write-Host "=== Copy Models to LMStudio ===" -ForegroundColor Cyan
+Write-Host "=== Copy Models to LMStudio ===" -ForegroundColor Cyan
 
-# $copyScript = Join-Path $PSScriptRoot 'Copy-To-LMStudio.ps1'
-# . $copyScript
+$copyScript = Join-Path $PSScriptRoot 'Copy-To-LMStudio.ps1'
+. $copyScript
 
-# $sourceParent = Resolve-Path "$PSScriptRoot\.."
-# $sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen3.8-27B-Uncensored-Q5_K_M.gguf"
-# Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+$sourceParent = Resolve-Path "$PSScriptRoot\.."
 
-# $sourceFile = Join-Path $sourceParent "ComfyUI\models\diffusion_models\Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf"
-# Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\clip\Z-Image-Engineer-V6-Q8_0.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Z-Image"
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green
