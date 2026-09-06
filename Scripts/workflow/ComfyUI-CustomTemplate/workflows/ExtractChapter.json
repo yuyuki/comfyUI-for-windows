@@ -1,22 +1,22 @@
 {
   "id": "912cd687-a627-4693-9e89-c27b05b083d5",
   "revision": 0,
-  "last_node_id": 81,
-  "last_link_id": 136,
+  "last_node_id": 82,
+  "last_link_id": 139,
   "nodes": [
     {
       "id": 63,
       "type": "GenerateH3PromptsNode",
       "pos": [
-        1475.6598267758704,
-        1771.0825672900733
+        1534.593099823054,
+        1581.7782409244269
       ],
       "size": [
         400,
-        573.671875
+        574
       ],
       "flags": {},
-      "order": 8,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -28,6 +28,11 @@
           "name": "lmstudio_config",
           "type": "MINIMAX_LMSTUDIO_CONFIG",
           "link": 119
+        },
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "link": 139
         }
       ],
       "outputs": [
@@ -51,8 +56,8 @@
         "aux_id": "yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline"
       },
       "widgets_values": [
-        "minimax_h3_novel/chapter 3 - Copy.md",
-        "minimax_h3_novel/chapter 3 - Copy.md",
+        "minimax_h3_novel/chapter 1.md",
+        "minimax_h3_novel/chapter 1.md",
         8,
         14000,
         2,
@@ -63,47 +68,48 @@
         4,
         0.38,
         8000,
-        2,
-        false,
-        "h3_prompts"
+        2
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/chapter 3 - Copy.md",
-        "saved_chapter": "minimax_h3_novel/chapter 3 - Copy.md",
-        "duration": 8,
-        "chunk_chars": 14000,
-        "overlap_paragraphs": 2,
-        "scenes_per_chunk": 4,
-        "max_scenes": 0,
-        "max_pictures": 8,
-        "max_pictures_per_subject": 4,
-        "max_audio": 4,
-        "temperature": 0.38,
-        "max_tokens": 8000,
-        "repair_attempts": 2,
-        "force": false,
-        "out_dir": "h3_prompts"
+        "duration": "minimax_h3_novel/chapter 1.md",
+        "chunk_chars": "minimax_h3_novel/chapter 1.md",
+        "overlap_paragraphs": 8,
+        "scenes_per_chunk": 14000,
+        "max_scenes": 2,
+        "max_pictures": 4,
+        "max_pictures_per_subject": 0,
+        "max_audio": 8,
+        "temperature": 4,
+        "max_tokens": 4,
+        "repair_attempts": 0.38,
+        "force": 8000,
+        "out_dir": 2
       }
     },
     {
       "id": 64,
       "type": "ExtractChapterReferencesNode",
       "pos": [
-        -276.4081346707576,
-        1858.6994572895803
+        -96.96940017694601,
+        1653.7782409244269
       ],
       "size": [
         400,
-        405.78125
+        430
       ],
       "flags": {},
-      "order": 5,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
           "name": "lmstudio_config",
           "type": "MINIMAX_LMSTUDIO_CONFIG",
           "link": 121
+        },
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "link": 138
         }
       ],
       "outputs": [
@@ -127,41 +133,37 @@
         "aux_id": "yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline"
       },
       "widgets_values": [
-        "minimax_h3_novel/chapter 3 - Copy.md",
-        "minimax_h3_novel/chapter 3 - Copy.md",
-        5500,
+        "minimax_h3_novel/chapter 1.md",
+        "minimax_h3_novel/chapter 1.md",
+        3000,
         2,
         0.18,
         8000,
-        true,
-        "chapter_catalogs",
-        6
+        false
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/chapter 3 - Copy.md",
-        "saved_chapter": "minimax_h3_novel/chapter 3 - Copy.md",
-        "chunk_chars": 5500,
-        "overlap_paragraphs": 2,
-        "temperature": 0.18,
-        "max_tokens": 8000,
-        "force": true,
-        "out_dir": "chapter_catalogs",
-        "merge_batch_size": 6
+        "chunk_chars": "minimax_h3_novel/chapter 1.md",
+        "overlap_paragraphs": "minimax_h3_novel/chapter 1.md",
+        "temperature": 3000,
+        "max_tokens": 2,
+        "force": 0.18,
+        "out_dir": 8000,
+        "merge_batch_size": false
       }
     },
     {
       "id": 65,
       "type": "ConsolidateReferencesNode",
       "pos": [
-        691.5449903292424,
-        1794.7541447895803
+        748.030599823054,
+        1477.7782409244269
       ],
       "size": [
         341.5625,
-        533.671875
+        534
       ],
       "flags": {},
-      "order": 7,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -231,12 +233,12 @@
       "id": 67,
       "type": "GetNode",
       "pos": [
-        347.7949903292424,
-        2018.6213322895803
+        443.030599823054,
+        1701.7782409244269
       ],
       "size": [
         225,
-        85.9375
+        86
       ],
       "flags": {},
       "order": 0,
@@ -267,12 +269,12 @@
       "id": 68,
       "type": "GetNode",
       "pos": [
-        1173.1074903292424,
-        2018.6213322895803
+        1229.593099823054,
+        1742.7782409244269
       ],
       "size": [
         225,
-        85.9375
+        86
       ],
       "flags": {},
       "order": 1,
@@ -303,12 +305,12 @@
       "id": 69,
       "type": "GetNode",
       "pos": [
-        -581.4081346707576,
-        2018.6213322895803
+        -401.969400176946,
+        1742.7782409244269
       ],
       "size": [
         225,
-        85.9375
+        86
       ],
       "flags": {},
       "order": 2,
@@ -339,15 +341,15 @@
       "id": 70,
       "type": "SetNode",
       "pos": [
-        -222.4862596707576,
-        1456.8947697895803
+        5.24153732305399,
+        1250.9110534244269
       ],
       "size": [
-        391.53125,
-        93.921875
+        294.9375,
+        96.03125
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -380,8 +382,8 @@
       "id": 71,
       "type": "LMStudioConfigurationNode",
       "pos": [
-        -626.8612596707576,
-        1319.0119572895803
+        -399.133462676946,
+        1114.0907409244269
       ],
       "size": [
         324.375,
@@ -414,9 +416,7 @@
       "widgets_values": [
         "http://127.0.0.1:1234/v1",
         false,
-        3500,
         2,
-        3600,
         20,
         0,
         1.05
@@ -424,9 +424,7 @@
       "widgets_values_named": {
         "api_url": "http://127.0.0.1:1234/v1",
         "thinking": false,
-        "qwen35_max_output_tokens": 3500,
         "qwen35_length_retries": 2,
-        "qwen35_safe_chunk_chars": 3600,
         "qwen35_top_k": 20,
         "qwen35_min_p": 0,
         "qwen35_repeat_penalty": 1.05
@@ -436,15 +434,15 @@
       "id": 72,
       "type": "SaveText",
       "pos": [
-        1988.1074903292424,
-        1945.6525822895803
+        2044.593099823054,
+        1752.7782409244269
       ],
       "size": [
         270,
-        201.875
+        202
       ],
       "flags": {},
-      "order": 9,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -478,16 +476,16 @@
       "id": 75,
       "type": "LoadConsolidatedReferencesNode",
       "pos": [
-        309.0449903292424,
-        2184.55883228958
+        443.030599823054,
+        2141.778240924427
       ],
       "size": [
         302.5,
-        93.921875
+        118
       ],
       "flags": {},
       "order": 4,
-      "mode": 0,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
@@ -507,6 +505,157 @@
       ],
       "widgets_values_named": {
         "consolidated_path": "references"
+      }
+    },
+    {
+      "id": 79,
+      "type": "SelectChaptersNode",
+      "pos": [
+        -401.969400176946,
+        2253.778240924427
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": [
+            137
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "761980695923b058069e1be7cad48cb25f77c616",
+        "Node name for S&R": "SelectChaptersNode"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "chapter_paths": "",
+        "saved_chapter": ""
+      }
+    },
+    {
+      "id": 80,
+      "type": "SetNode",
+      "pos": [
+        78.03059982305399,
+        2306.786053424427
+      ],
+      "size": [
+        225,
+        93.984375
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MINIMAX_CHAPTER_SELECTION",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MINIMAX_CHAPTER_SELECTION",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": null
+        }
+      ],
+      "title": "Set_SelectedChapter",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes",
+        "previousName": "SelectedChapter"
+      },
+      "widgets_values": [
+        "SelectedChapter"
+      ],
+      "widgets_values_named": {
+        "Constant": "SelectedChapter"
+      }
+    },
+    {
+      "id": 81,
+      "type": "GetNode",
+      "pos": [
+        -401.969400176946,
+        1908.7782409244269
+      ],
+      "size": [
+        225,
+        86
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_CHAPTER_SELECTION",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": [
+            138
+          ]
+        }
+      ],
+      "title": "Get_SelectedChapter",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "SelectedChapter"
+      ],
+      "widgets_values_named": {
+        "Constant": "SelectedChapter"
+      }
+    },
+    {
+      "id": 82,
+      "type": "GetNode",
+      "pos": [
+        1229.593099823054,
+        1908.7782409244269
+      ],
+      "size": [
+        225,
+        86
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_CHAPTER_SELECTION",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "title": "Get_SelectedChapter",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "SelectedChapter"
+      ],
+      "widgets_values_named": {
+        "Constant": "SelectedChapter"
       }
     }
   ],
@@ -566,6 +715,30 @@
       63,
       0,
       "MINIMAX_REGISTRY"
+    ],
+    [
+      137,
+      79,
+      0,
+      80,
+      0,
+      "MINIMAX_CHAPTER_SELECTION"
+    ],
+    [
+      138,
+      81,
+      0,
+      64,
+      1,
+      "MINIMAX_CHAPTER_SELECTION"
+    ],
+    [
+      139,
+      82,
+      0,
+      63,
+      2,
+      "MINIMAX_CHAPTER_SELECTION"
     ]
   ],
   "groups": [
@@ -573,10 +746,10 @@
       "id": 1,
       "title": "Consolidate",
       "bounding": [
-        279.0449903292424,
-        1704.7541447895803,
-        784.0625,
-        653.671875
+        413.030599823054,
+        1387.7782409244269,
+        706.5625,
+        902
       ],
       "color": "#3f789e",
       "flags": {}
@@ -585,10 +758,10 @@
       "id": 2,
       "title": "Generate",
       "bounding": [
-        1143.1074903292424,
-        1684.7541447895803,
+        1199.593099823054,
+        1491.7782409244269,
         765,
-        693.671875
+        694
       ],
       "color": "#3f789e",
       "flags": {}
@@ -597,9 +770,9 @@
       "id": 3,
       "title": "LM Studio Config",
       "bounding": [
-        -656.8612596707576,
-        1229.0119572895803,
-        855.90625,
+        -429.133462676946,
+        1024.0907409244269,
+        759.328125,
         489.6875
       ],
       "color": "#3f789e",
@@ -609,10 +782,22 @@
       "id": 4,
       "title": "Extract",
       "bounding": [
-        -611.4081346707576,
-        1768.6994572895803,
+        -431.969400176946,
+        1563.7782409244269,
         765,
-        525.78125
+        550
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Chapter selection",
+      "bounding": [
+        -431.969400176946,
+        2163.778240924427,
+        765,
+        320
       ],
       "color": "#3f789e",
       "flags": {}
@@ -621,13 +806,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0875279451628093,
+      "scale": 0.5850799797429261,
       "offset": [
-        249.56985502820615,
-        -1378.2139713846925
+        1269.9385189586972,
+        -924.5605550645732
       ]
     },
-    "frontendVersion": "1.49.6"
+    "frontendVersion": "1.51.9"
   },
   "version": 0.4
 }
