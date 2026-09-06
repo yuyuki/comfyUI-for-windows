@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: ComfyUI-RTX-Video-Suite ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-Minimax_H3_Novel_Pipeline ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
@@ -22,26 +22,26 @@ if (!(Test-Path $VenvActivate)) {
 & $VenvActivate
 
 # ------------------------
-# 3️⃣ Create custom_nodes folder
+# 4️⃣ Create custom_nodes folder
 # ------------------------
 if (!(Test-Path $CustomNodesDir)) {
     New-Item -ItemType Directory -Force -Path $CustomNodesDir | Out-Null
 }
 
 # ------------------------
-# 4️⃣ Install ComfyUI-RTX-Video-Suite
+# 5️⃣ Install ComfyUI-GGUF
 # ------------------------
-Write-Host "`n=== Installing ComfyUI-RTX-Video-Suite ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\ComfyUI-RTX-Video-Suite"
-$RepoUrl = "https://github.com/uczensokratesa/ComfyUI-RTX-Video-Suite.git"
+Write-Host "`n=== Installing ComfyUI-Minimax_H3_Novel_Pipeline ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-Minimax_H3_Novel_Pipeline"
+$RepoUrl = "https://github.com/yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing ComfyUI-RTX-Video-Suite repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing ComfyUI-Minimax_H3_Novel_Pipeline repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning ComfyUI-RTX-Video-Suite..."
+        Write-Warning "Update failed. Re-cloning ComfyUI-Minimax_H3_Novel_Pipeline..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }

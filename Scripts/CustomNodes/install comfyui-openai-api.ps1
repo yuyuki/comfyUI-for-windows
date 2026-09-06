@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: ComfyUI-Florence2 ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-OpenAI-Api ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
@@ -31,17 +31,17 @@ if (!(Test-Path $CustomNodesDir)) {
 # ------------------------
 # 5️⃣ Install ComfyUI-GGUF
 # ------------------------
-Write-Host "`n=== Installing ComfyUI-Florence2 ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\ComfyUI-Florence2"
-$RepoUrl = "https://github.com/kijai/ComfyUI-Florence2.git"
+Write-Host "`n=== Installing ComfyUI-OpenAI-Api ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-OpenAI-Api"
+$RepoUrl = "https://github.com/hekmon/comfyui-openai-api.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing ComfyUI-Florence2 repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing ComfyUI-OpenAI-Api repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning ComfyUI-Florence2..."
+        Write-Warning "Update failed. Re-cloning ComfyUI-OpenAI-Api..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }
