@@ -47,15 +47,9 @@ Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/dif
 
 Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_fl2va_pruned_fp8_scaled.safetensors" -OutDir $outDir
 
-Download-File -Url "https://huggingface.co/city96/FLUX.2-dev-gguf/resolve/main/flux2-dev-Q4_K_M.gguf" -OutDir $outDir
-
-# Download-File -Url "https://huggingface.co/unsloth/Qwen2.5-VL-7B-Instruct-GGUF/resolve/main/Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf" -OutDir $outDir
-
 Download-File -Url "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors" -OutDir $outDir
 
-# Download-File -Url "https://huggingface.co/JonathanColetti/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-Q5_K_M.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/mradermacher/Qwen3-VL-8B-Instruct-Heretic-GGUF/resolve/main/Qwen3-VL-8B-Instruct-heretic.Q6_K.gguf" -OutDir $outDir
+Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors" -OutDir $outDir
 
 # =================================================================== VAE
 Write-Host "=== Download VAE ===" -ForegroundColor Cyan
@@ -67,6 +61,8 @@ Write-Host "Downloading minimax_h3_audio_vae_fp32.safetensors from Hugging Face 
 Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors" -OutDir $outDir -FileName "z_image_turbo_vae.safetensors"
+
+Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors" -OutDir $outDir
 
 # =================================================================== Text Encoder
 Write-Host "=== Download Text Encoder ===" -ForegroundColor Cyan
@@ -92,6 +88,8 @@ Download-File -Url "https://huggingface.co/matrixportalx/Qwen3-VL-8B-Instruct-Q5
 
 Download-File -Url "https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4/resolve/main/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
+
 # =================================================================== Clip
 Write-Host "=== Download Clip ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\clip"
@@ -112,12 +110,16 @@ $outDir = "ComfyUI\models\loras"
 
 Download-File -Url "https://huggingface.co/Heartsync/Flux-NSFW-uncensored/resolve/main/lora.safetensors" -OutDir $outDir
 Download-File -Url "https://huggingface.co/thutes-gbr25/NSFW-MASTER-Z-IMAGE-TURBO/resolve/main/NSFW_master_ZIT_000008766.safetensors" -OutDir $outDir
+Download-File -Url "https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/resolve/main/Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors" -OutDir $outDir
+Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/loras/Qwen-Image-Edit-2509-Light-Migration.safetensors" -OutDir $outDir
 
 # =================================================================== UNET (GGUF)
 Write-Host "=== Download GGUF ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\unet"
 
+Download-File -Url "https://huggingface.co/city96/FLUX.2-dev-gguf/resolve/main/flux2-dev-Q4_K_M.gguf" -OutDir $outDir
 Download-File -Url "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf" -OutDir $outDir
+Download-File -Url "https://huggingface.co/unsloth/Qwen-Image-2512-GGUF/resolve/main/qwen-image-2512-Q5_K_M.gguf" -OutDir $outDir
 
 # =================================================================== model_patches
 Write-Host "=== Download model_patches ===" -ForegroundColor Cyan
@@ -138,5 +140,8 @@ $sourceParent = Resolve-Path "$PSScriptRoot\.."
 
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\clip\Z-Image-Engineer-V6-Q8_0.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Z-Image"
+
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\model_patches\translategemma-4b_Q5_K_M.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "translategemma-"
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green

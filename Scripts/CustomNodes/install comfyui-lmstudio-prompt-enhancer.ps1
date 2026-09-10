@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: TTS-Audio-Suite ===" -ForegroundColor Cyan
+Write-Host "=== Installing: comfyui-lmstudio-prompt-enhancer ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
@@ -31,17 +31,17 @@ if (!(Test-Path $CustomNodesDir)) {
 # ------------------------
 # 5️⃣ Install TTS-Audio-Suite
 # ------------------------
-Write-Host "`n=== Installing TTS-Audio-Suite ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\TTS-Audio-Suite"
-$RepoUrl = "https://github.com/diodiogod/TTS-Audio-Suite.git"
+Write-Host "`n=== Installing comfyui-lmstudio-prompt-enhancer ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\comfyui-lmstudio-prompt-enhancer"
+$RepoUrl = "https://github.com/AllenCraigBarnard/comfyui-lmstudio-prompt-enhancer.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing TTS-Audio-Suite repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing comfyui-lmstudio-prompt-enhancer repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning TTS-Audio-Suite..."
+        Write-Warning "Update failed. Re-cloning comfyui-lmstudio-prompt-enhancer..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }
@@ -49,8 +49,6 @@ if (Test-Path $RepoDir) {
 else {
     git clone $RepoUrl $RepoDir
 }
-
-python.exe "$RepoDir\install.py"
 
 # Install requirements if they exist
 if (Test-Path "$RepoDir\requirements.txt") {

@@ -70,6 +70,11 @@ function Restore-CustomNodes {
     Wait-ForKey
 }
 
+function Copy-CustomTemplate {
+    Invoke-Script (Join-Path 'Scripts' 'copy ComfyUI-CustomTemplate.ps1')
+    Wait-ForKey
+}
+
 function Install-Aria2c {
     Invoke-Script (Join-Path 'Scripts' 'install_aria2c.ps1')
     Wait-ForKey
@@ -111,10 +116,11 @@ function Show-SetupMenu {
         Write-Host "1) Setup (full install)"
         Write-Host "2) Update ComfyUI"
         Write-Host "3) Uninstall ComfyUI"
-        Write-Host "4) Backup Custom Nodes"
-        Write-Host "5) Restore Custom Nodes"
-        Write-Host "6) Update security level"
-        Write-Host "7) Fix NVML DLL location (copy System32\nvml.dll to Program Files NVSMI)"
+        Write-Host "4) Copy ComfyUI Custom Template"
+        Write-Host "5) Backup Custom Nodes"
+        Write-Host "6) Restore Custom Nodes"
+        Write-Host "7) Update security level"
+        Write-Host "8) Fix NVML DLL location (copy System32\nvml.dll to Program Files NVSMI)"
         Write-Host "b) Back to main menu`n"
 
         $subchoice = [System.Console]::ReadKey($true).KeyChar
@@ -123,10 +129,11 @@ function Show-SetupMenu {
             '1' { Install-All }
             '2' { Update-ComfyUi }
             '3' { UnInstall-ComfyUI }
-            '4' { Backup-CustomNodes }
-            '5' { Restore-CustomNodes }
-            '6' { Update-SecurityLevel }
-            '7' { Invoke-Script (Join-Path 'Scripts' 'fix_nvml_path.ps1') }
+            '4' { Copy-CustomTemplate }
+            '5' { Backup-CustomNodes }
+            '6' { Restore-CustomNodes }
+            '7' { Update-SecurityLevel }
+            '8' { Invoke-Script (Join-Path 'Scripts' 'fix_nvml_path.ps1') }
             'b' { return }
             default { Show-InvalidSelection }
         }
