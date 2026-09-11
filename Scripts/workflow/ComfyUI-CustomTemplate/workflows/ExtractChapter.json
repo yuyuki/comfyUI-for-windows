@@ -1,87 +1,9 @@
 {
   "id": "912cd687-a627-4693-9e89-c27b05b083d5",
   "revision": 0,
-  "last_node_id": 84,
-  "last_link_id": 146,
+  "last_node_id": 90,
+  "last_link_id": 151,
   "nodes": [
-    {
-      "id": 65,
-      "type": "ConsolidateReferencesNode",
-      "pos": [
-        860.1594852123425,
-        1349.0582092203772
-      ],
-      "size": [
-        341.5625,
-        534
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "chapter_catalogs",
-          "type": "MINIMAX_CHAPTERS",
-          "link": 142
-        },
-        {
-          "name": "lmstudio_config",
-          "type": "MINIMAX_LMSTUDIO_CONFIG",
-          "link": 118
-        }
-      ],
-      "outputs": [
-        {
-          "name": "consolidated_references",
-          "type": "MINIMAX_REGISTRY",
-          "links": [
-            146
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "minimax_h3_novel_pipeline",
-        "ver": "943ed714d427f9bbe250fd7a9456c4005d2662ec",
-        "Node name for S&R": "ConsolidateReferencesNode",
-        "aux_id": "yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline"
-      },
-      "widgets_values": [
-        12,
-        35,
-        "recommended",
-        "recommended",
-        4,
-        3,
-        2,
-        16,
-        false,
-        false,
-        120,
-        0.12,
-        8500,
-        "references",
-        0.68,
-        24
-      ],
-      "widgets_values_named": {
-        "candidate_count": 12,
-        "include_all_below": 35,
-        "picture_threshold": "recommended",
-        "audio_threshold": "recommended",
-        "max_character_base_views": 4,
-        "max_location_base_views": 3,
-        "max_object_base_views": 2,
-        "asset_batch_size": 16,
-        "no_variants": false,
-        "no_audit": false,
-        "audit_max_entities": 120,
-        "temperature": 0.12,
-        "max_tokens": 8500,
-        "out_dir": "references",
-        "audit_similarity": 0.68,
-        "audit_cluster_size": 24
-      }
-    },
     {
       "id": 67,
       "type": "GetNode",
@@ -102,7 +24,7 @@
           "name": "MINIMAX_LMSTUDIO_CONFIG",
           "type": "MINIMAX_LMSTUDIO_CONFIG",
           "links": [
-            118
+            149
           ]
         }
       ],
@@ -198,17 +120,17 @@
         1196.2222717203772
       ],
       "size": [
-        391.515625,
+        391.53125,
         96
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
           "name": "MINIMAX_LMSTUDIO_CONFIG",
           "type": "MINIMAX_LMSTUDIO_CONFIG",
-          "link": 123
+          "link": 147
         }
       ],
       "outputs": [
@@ -232,100 +154,6 @@
       }
     },
     {
-      "id": 71,
-      "type": "LMStudioConfigurationNode",
-      "pos": [
-        -432.5436397876575,
-        1059.3785217203772
-      ],
-      "size": [
-        324.375,
-        369.6875
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "lmstudio_config",
-          "type": "MINIMAX_LMSTUDIO_CONFIG",
-          "links": [
-            123
-          ]
-        },
-        {
-          "name": "configuration_status",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "minimax_h3_novel_pipeline",
-        "ver": "943ed714d427f9bbe250fd7a9456c4005d2662ec",
-        "Node name for S&R": "LMStudioConfigurationNode",
-        "aux_id": "yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline"
-      },
-      "widgets_values": [
-        "http://127.0.0.1:1234/v1",
-        false,
-        2,
-        20,
-        0,
-        1.05
-      ],
-      "widgets_values_named": {
-        "api_url": "http://127.0.0.1:1234/v1",
-        "thinking": false,
-        "qwen35_length_retries": 2,
-        "qwen35_top_k": 20,
-        "qwen35_min_p": 0,
-        "qwen35_repeat_penalty": 1.05
-      }
-    },
-    {
-      "id": 72,
-      "type": "SaveText",
-      "pos": [
-        2040.9094852123426,
-        1639.0582092203772
-      ],
-      "size": [
-        270,
-        202
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 145
-        }
-      ],
-      "outputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "SaveText"
-      },
-      "widgets_values": [
-        "prompt",
-        "json"
-      ],
-      "widgets_values_named": {
-        "filename_prefix": "prompt",
-        "format": "json"
-      }
-    },
-    {
       "id": 75,
       "type": "LoadConsolidatedReferencesNode",
       "pos": [
@@ -337,7 +165,7 @@
         118
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -372,7 +200,7 @@
         200
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -390,12 +218,12 @@
         "Node name for S&R": "SelectChaptersNode"
       },
       "widgets_values": [
-        "minimax_h3_novel/chapter 1.md",
-        "minimax_h3_novel/chapter 1.md"
+        "minimax_h3_novel/PROLOGUE.md",
+        "minimax_h3_novel/PROLOGUE.md"
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/chapter 1.md",
-        "saved_chapter": "minimax_h3_novel/chapter 1.md"
+        "chapter_paths": "minimax_h3_novel/PROLOGUE.md",
+        "saved_chapter": "minimax_h3_novel/PROLOGUE.md"
       }
     },
     {
@@ -406,11 +234,11 @@
         2104.058209220377
       ],
       "size": [
-        419.5,
+        419.53125,
         93.984375
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -451,7 +279,7 @@
         86
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -487,7 +315,7 @@
         86
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -523,7 +351,7 @@
         281.984375
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -542,7 +370,7 @@
           "name": "chapter_catalogs",
           "type": "MINIMAX_CHAPTERS",
           "links": [
-            142
+            148
           ]
         },
         {
@@ -593,7 +421,7 @@
         {
           "name": "consolidated_references",
           "type": "MINIMAX_REGISTRY",
-          "link": 146
+          "link": 151
         },
         {
           "name": "lmstudio_config",
@@ -616,8 +444,13 @@
           "name": "prompt_text",
           "type": "STRING",
           "links": [
-            145
+            150
           ]
+        },
+        {
+          "name": "image_prompt_text",
+          "type": "STRING",
+          "links": null
         }
       ],
       "properties": {
@@ -655,25 +488,179 @@
         "force": false,
         "out_dir": "h3_prompts"
       }
+    },
+    {
+      "id": 85,
+      "type": "LMStudioConfigurationNode",
+      "pos": [
+        -444.72431074314125,
+        1088.7388553425294
+      ],
+      "size": [
+        351.5,
+        253.984375
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "links": [
+            147
+          ]
+        },
+        {
+          "name": "configuration_status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "2cf5115aeb8d679d2fbe6984196e68e0907a942e",
+        "Node name for S&R": "LMStudioConfigurationNode"
+      },
+      "widgets_values": [
+        "http://127.0.0.1:1234/v1",
+        false,
+        2,
+        20,
+        0,
+        1.05
+      ],
+      "widgets_values_named": {
+        "api_url": "http://127.0.0.1:1234/v1",
+        "thinking": false,
+        "qwen35_length_retries": 2,
+        "qwen35_top_k": 20,
+        "qwen35_min_p": 0,
+        "qwen35_repeat_penalty": 1.05
+      }
+    },
+    {
+      "id": 88,
+      "type": "ConsolidateReferencesNode",
+      "pos": [
+        846.5975964542355,
+        1360.7020648279506
+      ],
+      "size": [
+        341.625,
+        625.96875
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "chapter_catalogs",
+          "type": "MINIMAX_CHAPTERS",
+          "link": 148
+        },
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "consolidated_references",
+          "type": "MINIMAX_REGISTRY",
+          "links": [
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "2cf5115aeb8d679d2fbe6984196e68e0907a942e",
+        "Node name for S&R": "ConsolidateReferencesNode"
+      },
+      "widgets_values": [
+        12,
+        35,
+        "recommended",
+        "recommended",
+        4,
+        3,
+        2,
+        4,
+        false,
+        false,
+        120,
+        0.12,
+        8500,
+        "references",
+        0.68,
+        24,
+        "realistic photographic",
+        "",
+        "all entities"
+      ],
+      "widgets_values_named": {
+        "candidate_count": 12,
+        "include_all_below": 35,
+        "picture_threshold": "recommended",
+        "audio_threshold": "recommended",
+        "max_character_base_views": 4,
+        "max_location_base_views": 3,
+        "max_object_base_views": 2,
+        "asset_batch_size": 4,
+        "no_variants": false,
+        "no_audit": false,
+        "audit_max_entities": 120,
+        "temperature": 0.12,
+        "max_tokens": 8500,
+        "out_dir": "references",
+        "audit_similarity": 0.68,
+        "audit_cluster_size": 24,
+        "image_style": "realistic photographic",
+        "visual_designs_path": "",
+        "image_asset_scope": "all entities"
+      }
+    },
+    {
+      "id": 90,
+      "type": "PreviewAny",
+      "pos": [
+        2037.5127021005435,
+        1506.1566102824975
+      ],
+      "size": [
+        225,
+        138
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
     }
   ],
   "links": [
-    [
-      118,
-      67,
-      0,
-      65,
-      1,
-      "MINIMAX_LMSTUDIO_CONFIG"
-    ],
-    [
-      123,
-      71,
-      0,
-      70,
-      0,
-      "MINIMAX_LMSTUDIO_CONFIG"
-    ],
     [
       137,
       79,
@@ -699,14 +686,6 @@
       "MINIMAX_CHAPTER_SELECTION"
     ],
     [
-      142,
-      83,
-      0,
-      65,
-      0,
-      "MINIMAX_CHAPTERS"
-    ],
-    [
       143,
       68,
       0,
@@ -723,16 +702,40 @@
       "MINIMAX_CHAPTER_SELECTION"
     ],
     [
-      145,
+      147,
+      85,
+      0,
+      70,
+      0,
+      "MINIMAX_LMSTUDIO_CONFIG"
+    ],
+    [
+      148,
+      83,
+      0,
+      88,
+      0,
+      "MINIMAX_CHAPTERS"
+    ],
+    [
+      149,
+      67,
+      0,
+      88,
+      1,
+      "MINIMAX_LMSTUDIO_CONFIG"
+    ],
+    [
+      150,
       84,
       1,
-      72,
+      90,
       0,
       "STRING"
     ],
     [
-      146,
-      65,
+      151,
+      88,
       0,
       84,
       0,
@@ -804,10 +807,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5318908906753875,
+      "scale": 1.1,
       "offset": [
-        1030.3097290166052,
-        -720.8602671484553
+        -297.4417903883402,
+        -1222.0134322316267
       ]
     },
     "frontendVersion": "1.51.9"
