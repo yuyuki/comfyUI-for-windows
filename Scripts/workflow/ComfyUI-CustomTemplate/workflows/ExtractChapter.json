@@ -1,15 +1,15 @@
 {
   "id": "912cd687-a627-4693-9e89-c27b05b083d5",
   "revision": 0,
-  "last_node_id": 90,
-  "last_link_id": 151,
+  "last_node_id": 97,
+  "last_link_id": 160,
   "nodes": [
     {
       "id": 67,
       "type": "GetNode",
       "pos": [
-        555.1594852123425,
-        1573.0582092203772
+        878.4347157262716,
+        2025.3415205491149
       ],
       "size": [
         225,
@@ -44,8 +44,8 @@
       "id": 68,
       "type": "GetNode",
       "pos": [
-        1342.8469852123426,
-        1614.0582092203772
+        2016.1847157262716,
+        1855.3493330491149
       ],
       "size": [
         225,
@@ -80,8 +80,8 @@
       "id": 69,
       "type": "GetNode",
       "pos": [
-        -339.5905147876575,
-        1614.0582092203772
+        -222.69028427372837,
+        1758.3571455491149
       ],
       "size": [
         225,
@@ -116,15 +116,15 @@
       "id": 70,
       "type": "SetNode",
       "pos": [
-        -28.168639787657526,
-        1196.2222717203772
+        277.30190322627163,
+        1374.4196455491149
       ],
       "size": [
-        391.53125,
+        391.5,
         96
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -154,53 +154,18 @@
       }
     },
     {
-      "id": 75,
-      "type": "LoadConsolidatedReferencesNode",
-      "pos": [
-        555.1594852123425,
-        2013.0582092203772
-      ],
-      "size": [
-        302.5,
-        118
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 4,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "consolidated_references",
-          "type": "MINIMAX_REGISTRY",
-          "links": []
-        }
-      ],
-      "properties": {
-        "cnr_id": "minimax_h3_novel_pipeline",
-        "ver": "943ed714d427f9bbe250fd7a9456c4005d2662ec",
-        "Node name for S&R": "LoadConsolidatedReferencesNode",
-        "aux_id": "yuyuki/ComfyUI-Minimax_H3_Novel_Pipeline"
-      },
-      "widgets_values": [
-        "references"
-      ],
-      "widgets_values_named": {
-        "consolidated_path": "references"
-      }
-    },
-    {
       "id": 79,
       "type": "SelectChaptersNode",
       "pos": [
-        -484.3405147876575,
-        2051.050396720377
+        -192.44809677372837,
+        2401.3102705491146
       ],
       "size": [
         400,
         200
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -230,15 +195,15 @@
       "id": 80,
       "type": "SetNode",
       "pos": [
-        -4.340514787657526,
-        2104.058209220377
+        287.55190322627163,
+        2454.3180830491146
       ],
       "size": [
-        419.53125,
+        419.5,
         93.984375
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -271,15 +236,15 @@
       "id": 81,
       "type": "GetNode",
       "pos": [
-        -340.7155147876575,
-        1780.0582092203772
+        -223.81528427372837,
+        1924.3571455491149
       ],
       "size": [
         227.25,
         86
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -307,15 +272,15 @@
       "id": 82,
       "type": "GetNode",
       "pos": [
-        1341.7219852123426,
-        1780.0582092203772
+        2015.0597157262716,
+        2021.3493330491149
       ],
       "size": [
         227.25,
         86
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -343,15 +308,15 @@
       "id": 83,
       "type": "ExtractChapterReferencesNode",
       "pos": [
-        -33.465514787657526,
-        1599.0660217203772
+        83.43471572627163,
+        1731.3883955491149
       ],
       "size": [
         305,
-        281.984375
+        305.9375
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -370,13 +335,15 @@
           "name": "chapter_catalogs",
           "type": "MINIMAX_CHAPTERS",
           "links": [
-            148
+            156
           ]
         },
         {
           "name": "catalog_summary",
           "type": "STRING",
-          "links": null
+          "links": [
+            153
+          ]
         }
       ],
       "properties": {
@@ -407,21 +374,21 @@
       "id": 84,
       "type": "GenerateH3PromptsNode",
       "pos": [
-        1648.9719852123426,
-        1505.0660217203772
+        2322.309715726272,
+        1746.3571455491149
       ],
       "size": [
         311.9375,
         469.984375
       ],
       "flags": {},
-      "order": 12,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
           "name": "consolidated_references",
           "type": "MINIMAX_REGISTRY",
-          "link": 151
+          "link": 158
         },
         {
           "name": "lmstudio_config",
@@ -493,15 +460,15 @@
       "id": 85,
       "type": "LMStudioConfigurationNode",
       "pos": [
-        -444.72431074314125,
-        1088.7388553425294
+        -154.19809677372837,
+        1283.4508955491149
       ],
       "size": [
         351.5,
-        253.984375
+        277.9375
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -544,21 +511,21 @@
       "id": 88,
       "type": "ConsolidateReferencesNode",
       "pos": [
-        846.5975964542355,
-        1360.7020648279506
+        1183.4347157262716,
+        1755.3571455491149
       ],
       "size": [
         341.625,
         625.96875
       ],
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
           "name": "chapter_catalogs",
           "type": "MINIMAX_CHAPTERS",
-          "link": 148
+          "link": 154
         },
         {
           "name": "lmstudio_config",
@@ -571,7 +538,14 @@
           "name": "consolidated_references",
           "type": "MINIMAX_REGISTRY",
           "links": [
-            151
+            157
+          ]
+        },
+        {
+          "name": "registry_summary",
+          "type": "STRING",
+          "links": [
+            160
           ]
         }
       ],
@@ -597,8 +571,8 @@
         "references",
         0.68,
         24,
-        "realistic photographic",
-        "",
+        "cinematic photographic",
+        "20260911184539\\references\\visual_designs.json",
         "all entities"
       ],
       "widgets_values_named": {
@@ -618,8 +592,8 @@
         "out_dir": "references",
         "audit_similarity": 0.68,
         "audit_cluster_size": 24,
-        "image_style": "realistic photographic",
-        "visual_designs_path": "",
+        "image_style": "cinematic photographic",
+        "visual_designs_path": "20260911184539\\references\\visual_designs.json",
         "image_asset_scope": "all entities"
       }
     },
@@ -627,12 +601,89 @@
       "id": 90,
       "type": "PreviewAny",
       "pos": [
-        2037.5127021005435,
-        1506.1566102824975
+        2714.247215726272,
+        1749.8180830491149
+      ],
+      "size": [
+        287.5,
+        463.0625
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 91,
+      "type": "LoadChapterCatalogsNode",
+      "pos": [
+        100.93471572627163,
+        2117.3258955491146
+      ],
+      "size": [
+        270,
+        113.984375
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "chapter_catalogs",
+          "type": "MINIMAX_CHAPTERS",
+          "links": [
+            155
+          ]
+        },
+        {
+          "name": "catalog_summary",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "2cf5115aeb8d679d2fbe6984196e68e0907a942e",
+        "Node name for S&R": "LoadChapterCatalogsNode"
+      },
+      "widgets_values": [
+        "20260911180034\\chapter_catalogs\\"
+      ],
+      "widgets_values_named": {
+        "catalog_path": "20260911180034\\chapter_catalogs\\"
+      }
+    },
+    {
+      "id": 92,
+      "type": "PreviewAny",
+      "pos": [
+        490.93471572627163,
+        1801.0133955491149
       ],
       "size": [
         225,
-        138
+        146.6875
       ],
       "flags": {},
       "order": 13,
@@ -641,7 +692,177 @@
         {
           "name": "source",
           "type": "*",
-          "link": 150
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 94,
+      "type": "ComfySwitchNode",
+      "pos": [
+        468.43471572627163,
+        2111.3180830491146
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "MINIMAX_CHAPTERS",
+          "link": 156
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "MINIMAX_CHAPTERS",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "MINIMAX_CHAPTERS",
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
+    },
+    {
+      "id": 95,
+      "type": "ComfySwitchNode",
+      "pos": [
+        1605.0597157262716,
+        1585.3649580491149
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "MINIMAX_REGISTRY",
+          "link": 157
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "MINIMAX_REGISTRY",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "MINIMAX_REGISTRY",
+          "links": [
+            158
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
+    },
+    {
+      "id": 96,
+      "type": "LoadConsolidatedReferencesNode",
+      "pos": [
+        1202.9347157262716,
+        1581.3727705491149
+      ],
+      "size": [
+        302.625,
+        93.984375
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "consolidated_references",
+          "type": "MINIMAX_REGISTRY",
+          "links": [
+            159
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "c358700b4903719a1e22419b29849efc09520cf2",
+        "Node name for S&R": "LoadConsolidatedReferencesNode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "consolidated_path": ""
+      }
+    },
+    {
+      "id": 97,
+      "type": "PreviewAny",
+      "pos": [
+        1627.5597157262716,
+        2009.3415205491149
+      ],
+      "size": [
+        225,
+        138
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 160
         }
       ],
       "outputs": [
@@ -710,14 +931,6 @@
       "MINIMAX_LMSTUDIO_CONFIG"
     ],
     [
-      148,
-      83,
-      0,
-      88,
-      0,
-      "MINIMAX_CHAPTERS"
-    ],
-    [
       149,
       67,
       0,
@@ -734,12 +947,68 @@
       "STRING"
     ],
     [
-      151,
+      153,
+      83,
+      1,
+      92,
+      0,
+      "STRING"
+    ],
+    [
+      154,
+      94,
+      0,
       88,
+      0,
+      "MINIMAX_CHAPTERS"
+    ],
+    [
+      155,
+      91,
+      0,
+      94,
+      1,
+      "MINIMAX_CHAPTERS"
+    ],
+    [
+      156,
+      83,
+      0,
+      94,
+      0,
+      "MINIMAX_CHAPTERS"
+    ],
+    [
+      157,
+      88,
+      0,
+      95,
+      0,
+      "MINIMAX_REGISTRY"
+    ],
+    [
+      158,
+      95,
       0,
       84,
       0,
       "MINIMAX_REGISTRY"
+    ],
+    [
+      159,
+      96,
+      0,
+      95,
+      1,
+      "MINIMAX_REGISTRY"
+    ],
+    [
+      160,
+      88,
+      1,
+      97,
+      0,
+      "STRING"
     ]
   ],
   "groups": [
@@ -747,10 +1016,10 @@
       "id": 1,
       "title": "Consolidate",
       "bounding": [
-        525.1594852123425,
-        1259.0582092203772,
-        706.5625,
-        902
+        848.4347157262716,
+        1491.3727705491149,
+        1056.625,
+        919.953125
       ],
       "color": "#3f789e",
       "flags": {}
@@ -759,9 +1028,9 @@
       "id": 2,
       "title": "Generate",
       "bounding": [
-        1311.7219852123426,
-        1415.0660217203772,
-        1029.1875,
+        1985.0597157262716,
+        1656.3571455491149,
+        1046.6875,
         589.984375
       ],
       "color": "#3f789e",
@@ -771,10 +1040,10 @@
       "id": 3,
       "title": "LM Studio Config",
       "bounding": [
-        -462.5436397876575,
-        969.3785217203773,
-        855.90625,
-        489.6875
+        -184.19809677372837,
+        1193.4508955491149,
+        883.015625,
+        397.9375
       ],
       "color": "#3f789e",
       "flags": {}
@@ -783,10 +1052,10 @@
       "id": 4,
       "title": "Extract",
       "bounding": [
-        -370.7155147876575,
-        1509.0660217203772,
-        672.25,
-        401.984375
+        -253.81528427372837,
+        1641.3883955491149,
+        1022.25,
+        619.921875
       ],
       "color": "#3f789e",
       "flags": {}
@@ -795,9 +1064,9 @@
       "id": 5,
       "title": "Chapter selection",
       "bounding": [
-        -514.3405147876575,
-        1961.0503967203772,
-        959.5,
+        -222.44809677372837,
+        2311.3102705491146,
+        959.515625,
         320
       ],
       "color": "#3f789e",
@@ -807,10 +1076,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.1,
+      "scale": 0.5644739300537777,
       "offset": [
-        -297.4417903883402,
-        -1222.0134322316267
+        493.6010036965227,
+        -1002.2448133513636
       ]
     },
     "frontendVersion": "1.51.9"

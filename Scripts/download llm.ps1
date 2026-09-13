@@ -68,27 +68,17 @@ Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/
 Write-Host "=== Download Text Encoder ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\text_encoders"
 
-Download-File -Url "https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct-GGUF/resolve/main/Qwen3VL-4B-Instruct-Q4_K_M.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/mradermacher/Qwen3-VL-8B-Instruct-Heretic-GGUF/resolve/main/Qwen3-VL-8B-Instruct-Heretic.Q4_K_M.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/HauhauCS/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/HauhauCS/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3-4B-2507-Instruct-Uncensored-HauhauCS-Aggressive-Q8_0.gguf" -OutDir $outDir
-
 Download-File -Url "https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive/resolve/main/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q8_0.gguf" -OutDir $outDir
 
-Download-File -Url "https://huggingface.co/LuffyTheFox/Qwen3-Uncensored-TextEncoders-Klein-Z-Image-Anima-GGUF/resolve/main/Qwen3-8B-heretic-Genesis.Q8_0.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/matrixportalx/Qwen3-VL-8B-Instruct-Q5_K_M-GGUF/resolve/main/qwen3-vl-8b-instruct-q5_k_m.gguf" -OutDir $outDir
-
-Download-File -Url "https://huggingface.co/sakamakismile/Qwen3-VL-32B-Heretic-MiniMax-H3-NVFP4/resolve/main/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors" -OutDir $outDir
+Download-File -Url "https://huggingface.co/petruhonk/Qwen3.8-9B-Distill-uncensored-heretic-GGUF/resolve/main/Qwen3.8-9B-Distill-Heretic-Uncensored-Q8_0.gguf" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/llmfan46/Mistral-Small-3.2-24B-Instruct-2506-ultra-uncensored-heretic-GGUF/resolve/main/Mistral-Small-3.2-24B-Instruct-2506-ultra-uncensored-heretic-Q5_K_M.gguf" -OutDir $outDir
 
 # =================================================================== Clip
 Write-Host "=== Download Clip ===" -ForegroundColor Cyan
@@ -141,7 +131,13 @@ $sourceParent = Resolve-Path "$PSScriptRoot\.."
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\clip\Z-Image-Engineer-V6-Q8_0.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Z-Image"
 
-$sourceFile = Join-Path $sourceParent "ComfyUI\models\model_patches\translategemma-4b_Q5_K_M.gguf"
-Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "translategemma-"
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Qwen3.5-9B-Uncensored-HauhauCS-Aggressive-Q6_K.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Mistral-Small-3.2-24B-Instruct-2506-ultra-uncensored-heretic-Q5_K_M.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Qwen3.8-9B-Distill-Heretic-Uncensored-Q8_0.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green
