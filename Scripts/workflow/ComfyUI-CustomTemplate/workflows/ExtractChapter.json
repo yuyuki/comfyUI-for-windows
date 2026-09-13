@@ -1,15 +1,15 @@
 {
   "id": "912cd687-a627-4693-9e89-c27b05b083d5",
   "revision": 0,
-  "last_node_id": 97,
+  "last_node_id": 102,
   "last_link_id": 160,
   "nodes": [
     {
       "id": 67,
       "type": "GetNode",
       "pos": [
-        878.4347157262716,
-        2025.3415205491149
+        876.2448306490461,
+        2028.9965369964839
       ],
       "size": [
         225,
@@ -44,8 +44,8 @@
       "id": 68,
       "type": "GetNode",
       "pos": [
-        2016.1847157262716,
-        1855.3493330491149
+        2042.557330649046,
+        1859.0043494964839
       ],
       "size": [
         225,
@@ -80,8 +80,8 @@
       "id": 69,
       "type": "GetNode",
       "pos": [
-        -222.69028427372837,
-        1758.3571455491149
+        -249.5676693509539,
+        1762.0121619964839
       ],
       "size": [
         225,
@@ -116,11 +116,11 @@
       "id": 70,
       "type": "SetNode",
       "pos": [
-        277.30190322627163,
-        1374.4196455491149
+        262.7604556490461,
+        1376.0512244964839
       ],
       "size": [
-        391.5,
+        391.515625,
         96
       ],
       "flags": {},
@@ -157,8 +157,8 @@
       "id": 79,
       "type": "SelectChaptersNode",
       "pos": [
-        -192.44809677372837,
-        2401.3102705491146
+        -206.9895443509539,
+        2404.965286996484
       ],
       "size": [
         400,
@@ -183,23 +183,23 @@
         "Node name for S&R": "SelectChaptersNode"
       },
       "widgets_values": [
-        "minimax_h3_novel/PROLOGUE.md",
-        "minimax_h3_novel/PROLOGUE.md"
+        "minimax_h3_novel/test.md",
+        "minimax_h3_novel/test.md"
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/PROLOGUE.md",
-        "saved_chapter": "minimax_h3_novel/PROLOGUE.md"
+        "chapter_paths": "minimax_h3_novel/test.md",
+        "saved_chapter": "minimax_h3_novel/test.md"
       }
     },
     {
       "id": 80,
       "type": "SetNode",
       "pos": [
-        287.55190322627163,
-        2454.3180830491146
+        273.0104556490461,
+        2457.973099496484
       ],
       "size": [
-        419.5,
+        419.515625,
         93.984375
       ],
       "flags": {},
@@ -236,8 +236,8 @@
       "id": 81,
       "type": "GetNode",
       "pos": [
-        -223.81528427372837,
-        1924.3571455491149
+        -250.6926693509539,
+        1928.0121619964839
       ],
       "size": [
         227.25,
@@ -272,8 +272,8 @@
       "id": 82,
       "type": "GetNode",
       "pos": [
-        2015.0597157262716,
-        2021.3493330491149
+        2041.432330649046,
+        2025.0043494964839
       ],
       "size": [
         227.25,
@@ -308,8 +308,8 @@
       "id": 83,
       "type": "ExtractChapterReferencesNode",
       "pos": [
-        83.43471572627163,
-        1731.3883955491149
+        56.557330649046094,
+        1735.0434119964839
       ],
       "size": [
         305,
@@ -355,27 +355,27 @@
         5500,
         2,
         0.18,
-        2200,
-        false,
+        8192,
+        true,
         "chapter_catalogs",
-        6
+        2
       ],
       "widgets_values_named": {
         "chunk_chars": 5500,
         "overlap_paragraphs": 2,
         "temperature": 0.18,
-        "max_tokens": 2200,
-        "force": false,
+        "max_tokens": 8192,
+        "force": true,
         "out_dir": "chapter_catalogs",
-        "merge_batch_size": 6
+        "merge_batch_size": 2
       }
     },
     {
       "id": 84,
       "type": "GenerateH3PromptsNode",
       "pos": [
-        2322.309715726272,
-        1746.3571455491149
+        2348.682330649046,
+        1750.0121619964839
       ],
       "size": [
         311.9375,
@@ -460,12 +460,12 @@
       "id": 85,
       "type": "LMStudioConfigurationNode",
       "pos": [
-        -154.19809677372837,
-        1283.4508955491149
+        -168.7395443509539,
+        1283.0590369964839
       ],
       "size": [
         351.5,
-        277.9375
+        281.984375
       ],
       "flags": {},
       "order": 6,
@@ -496,7 +496,8 @@
         2,
         20,
         0,
-        1.05
+        1.05,
+        "Qwen"
       ],
       "widgets_values_named": {
         "api_url": "http://127.0.0.1:1234/v1",
@@ -504,15 +505,16 @@
         "qwen35_length_retries": 2,
         "qwen35_top_k": 20,
         "qwen35_min_p": 0,
-        "qwen35_repeat_penalty": 1.05
+        "qwen35_repeat_penalty": 1.05,
+        "model_family": "Qwen"
       }
     },
     {
       "id": 88,
       "type": "ConsolidateReferencesNode",
       "pos": [
-        1183.4347157262716,
-        1755.3571455491149
+        1181.244830649046,
+        1759.0121619964839
       ],
       "size": [
         341.625,
@@ -572,7 +574,7 @@
         0.68,
         24,
         "cinematic photographic",
-        "20260911184539\\references\\visual_designs.json",
+        "",
         "all entities"
       ],
       "widgets_values_named": {
@@ -593,7 +595,7 @@
         "audit_similarity": 0.68,
         "audit_cluster_size": 24,
         "image_style": "cinematic photographic",
-        "visual_designs_path": "20260911184539\\references\\visual_designs.json",
+        "visual_designs_path": "",
         "image_asset_scope": "all entities"
       }
     },
@@ -601,8 +603,8 @@
       "id": 90,
       "type": "PreviewAny",
       "pos": [
-        2714.247215726272,
-        1749.8180830491149
+        2740.619830649046,
+        1753.4730994964839
       ],
       "size": [
         287.5,
@@ -637,8 +639,8 @@
       "id": 91,
       "type": "LoadChapterCatalogsNode",
       "pos": [
-        100.93471572627163,
-        2117.3258955491146
+        74.0573306490461,
+        2120.980911996484
       ],
       "size": [
         270,
@@ -668,22 +670,22 @@
         "Node name for S&R": "LoadChapterCatalogsNode"
       },
       "widgets_values": [
-        "20260911180034\\chapter_catalogs\\"
+        "20260912110946\\chapter_catalogs\\"
       ],
       "widgets_values_named": {
-        "catalog_path": "20260911180034\\chapter_catalogs\\"
+        "catalog_path": "20260912110946\\chapter_catalogs\\"
       }
     },
     {
       "id": 92,
       "type": "PreviewAny",
       "pos": [
-        490.93471572627163,
-        1801.0133955491149
+        441.5573306490461,
+        1787.2621619964839
       ],
       "size": [
-        225,
-        146.6875
+        294.6875,
+        181.5
       ],
       "flags": {},
       "order": 13,
@@ -714,8 +716,8 @@
       "id": 94,
       "type": "ComfySwitchNode",
       "pos": [
-        468.43471572627163,
-        2111.3180830491146
+        453.9010806490461,
+        2114.973099496484
       ],
       "size": [
         270,
@@ -753,18 +755,18 @@
         "Node name for S&R": "ComfySwitchNode"
       },
       "widgets_values": [
-        false
+        true
       ],
       "widgets_values_named": {
-        "switch": false
+        "switch": true
       }
     },
     {
       "id": 95,
       "type": "ComfySwitchNode",
       "pos": [
-        1605.0597157262716,
-        1585.3649580491149
+        1617.151080649046,
+        1589.0199744964839
       ],
       "size": [
         270,
@@ -812,8 +814,8 @@
       "id": 96,
       "type": "LoadConsolidatedReferencesNode",
       "pos": [
-        1202.9347157262716,
-        1581.3727705491149
+        1200.744830649046,
+        1585.0277869964839
       ],
       "size": [
         302.625,
@@ -848,12 +850,12 @@
       "id": 97,
       "type": "PreviewAny",
       "pos": [
-        1627.5597157262716,
-        2009.3415205491149
+        1602.869830649046,
+        1967.0277869964839
       ],
       "size": [
-        225,
-        138
+        298.5625,
+        229.9375
       ],
       "flags": {},
       "order": 16,
@@ -1016,9 +1018,9 @@
       "id": 1,
       "title": "Consolidate",
       "bounding": [
-        848.4347157262716,
-        1491.3727705491149,
-        1056.625,
+        846.2448306490461,
+        1495.0277869964839,
+        1085.1875,
         919.953125
       ],
       "color": "#3f789e",
@@ -1028,8 +1030,8 @@
       "id": 2,
       "title": "Generate",
       "bounding": [
-        1985.0597157262716,
-        1656.3571455491149,
+        2011.432330649046,
+        1660.0121619964839,
         1046.6875,
         589.984375
       ],
@@ -1040,10 +1042,10 @@
       "id": 3,
       "title": "LM Studio Config",
       "bounding": [
-        -184.19809677372837,
-        1193.4508955491149,
-        883.015625,
-        397.9375
+        -198.7395443509539,
+        1193.0590369964839,
+        883.03125,
+        401.984375
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1052,9 +1054,9 @@
       "id": 4,
       "title": "Extract",
       "bounding": [
-        -253.81528427372837,
-        1641.3883955491149,
-        1022.25,
+        -280.6926693509539,
+        1645.0434119964839,
+        1046.9375,
         619.921875
       ],
       "color": "#3f789e",
@@ -1064,9 +1066,9 @@
       "id": 5,
       "title": "Chapter selection",
       "bounding": [
-        -222.44809677372837,
-        2311.3102705491146,
-        959.515625,
+        -236.9895443509539,
+        2314.965286996484,
+        959.53125,
         320
       ],
       "color": "#3f789e",
@@ -1076,10 +1078,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537777,
+      "scale": 0.6830134553650705,
       "offset": [
-        493.6010036965227,
-        -1002.2448133513636
+        390.35735027308044,
+        -1242.5920254412772
       ]
     },
     "frontendVersion": "1.51.9"
