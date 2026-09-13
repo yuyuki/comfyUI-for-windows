@@ -120,7 +120,7 @@
         1376.0512244964839
       ],
       "size": [
-        391.515625,
+        391.53125,
         96
       ],
       "flags": {},
@@ -183,12 +183,12 @@
         "Node name for S&R": "SelectChaptersNode"
       },
       "widgets_values": [
-        "minimax_h3_novel/test.md",
-        "minimax_h3_novel/test.md"
+        "minimax_h3_novel/00_PROLOGUE.md\nminimax_h3_novel/01_Chapter 01.md",
+        ""
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/test.md",
-        "saved_chapter": "minimax_h3_novel/test.md"
+        "chapter_paths": "minimax_h3_novel/00_PROLOGUE.md\nminimax_h3_novel/01_Chapter 01.md",
+        "saved_chapter": ""
       }
     },
     {
@@ -199,7 +199,7 @@
         2457.973099496484
       ],
       "size": [
-        419.515625,
+        419.53125,
         93.984375
       ],
       "flags": {},
@@ -465,7 +465,7 @@
       ],
       "size": [
         351.5,
-        281.984375
+        305.9375
       ],
       "flags": {},
       "order": 6,
@@ -492,7 +492,7 @@
       },
       "widgets_values": [
         "http://127.0.0.1:1234/v1",
-        false,
+        true,
         2,
         20,
         0,
@@ -501,7 +501,7 @@
       ],
       "widgets_values_named": {
         "api_url": "http://127.0.0.1:1234/v1",
-        "thinking": false,
+        "thinking": true,
         "qwen35_length_retries": 2,
         "qwen35_top_k": 20,
         "qwen35_min_p": 0,
@@ -670,10 +670,10 @@
         "Node name for S&R": "LoadChapterCatalogsNode"
       },
       "widgets_values": [
-        "20260912110946\\chapter_catalogs\\"
+        ""
       ],
       "widgets_values_named": {
-        "catalog_path": "20260912110946\\chapter_catalogs\\"
+        "catalog_path": ""
       }
     },
     {
@@ -755,10 +755,10 @@
         "Node name for S&R": "ComfySwitchNode"
       },
       "widgets_values": [
-        true
+        false
       ],
       "widgets_values_named": {
-        "switch": true
+        "switch": false
       }
     },
     {
@@ -840,10 +840,10 @@
         "Node name for S&R": "LoadConsolidatedReferencesNode"
       },
       "widgets_values": [
-        ""
+        "20260913111625\\references\\"
       ],
       "widgets_values_named": {
-        "consolidated_path": ""
+        "consolidated_path": "20260913111625\\references\\"
       }
     },
     {
@@ -1080,8 +1080,8 @@
     "ds": {
       "scale": 0.6830134553650705,
       "offset": [
-        390.35735027308044,
-        -1242.5920254412772
+        540.2811143157439,
+        -1241.4207633135918
       ]
     },
     "frontendVersion": "1.51.9"
