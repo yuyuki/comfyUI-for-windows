@@ -74,6 +74,8 @@ Download-File -Url "https://huggingface.co/petruhonk/Qwen3.8-9B-Distill-uncensor
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/Comfy-Org/gemma-4/resolve/main/text_encoders/gemma4_e4b_it_fp8_scaled.safetensors" -OutDir $outDir
+
 # =================================================================== Clip
 Write-Host "=== Download Clip ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\clip"
@@ -104,6 +106,7 @@ $outDir = "ComfyUI\models\unet"
 Download-File -Url "https://huggingface.co/city96/FLUX.2-dev-gguf/resolve/main/flux2-dev-Q4_K_M.gguf" -OutDir $outDir
 Download-File -Url "https://huggingface.co/city96/FLUX.1-dev-gguf/resolve/main/flux1-dev-Q8_0.gguf" -OutDir $outDir
 Download-File -Url "https://huggingface.co/unsloth/Qwen-Image-2512-GGUF/resolve/main/qwen-image-2512-Q5_K_M.gguf" -OutDir $outDir
+Download-File -Url "https://huggingface.co/unsloth/Qwen-Image-2512-GGUF/resolve/main/qwen-image-2512-Q6_K.gguf" -OutDir $outDir
 
 # =================================================================== model_patches
 Write-Host "=== Download model_patches ===" -ForegroundColor Cyan
@@ -112,6 +115,12 @@ $outDir = "ComfyUI\models\model_patches"
 Download-File -Url "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/SandLogicTechnologies/translategemma-4b-it-GGUF/resolve/main/translategemma-4b_Q5_K_M.gguf" -OutDir $outDir
+
+# =================================================================== checkpoints
+Write-Host "=== Download checkpoints ===" -ForegroundColor Cyan
+$outDir = "ComfyUI\models\checkpoints"
+# Download-File -Url "https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_bf16.safetensors" -OutDir $outDir
+Download-File -Url "https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_dev_fp8_scaled.safetensors" -OutDir $outDir
 
 # =================================================================== Copy LLM to LMStudio bundled-models
 # Uses the reusable function in Scripts/Copy-To-LMStudio.ps1 to copy downloaded models

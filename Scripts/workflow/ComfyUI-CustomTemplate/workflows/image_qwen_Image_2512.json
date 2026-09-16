@@ -41,15 +41,15 @@
       "id": 60,
       "type": "SaveImage",
       "pos": [
-        699.9997512165859,
-        49.9999399941413
+        1001.5997268025234,
+        53.19995220117255
       ],
       "size": [
-        520,
-        550
+        984,
+        652.75
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -130,8 +130,8 @@
         39.999959266095914
       ],
       "size": [
-        400,
-        560
+        532,
+        560.75
       ],
       "flags": {},
       "order": 2,
@@ -182,450 +182,26 @@
         ]
       },
       "widgets_values": [
-        "realistic photographic image of Indiana Jones. Male adventurer; wears a backpack with side pockets; carries a mallet, pickaxe, and a four-pronged torch holder. Young woman; assistant to Doumas (implied role as torch-bearer). Suspended by a fraying rope Holding a lit torch between teeth Wearing a backpack with side pockets Young woman Holding a lit torch on a rope Base visual design: age appearance: Young adult male with a rugged, weathered appearance suggesting physical exertion and adventure; skin: Tanned complexion with visible sweat beads and slight grime on the forehead and neck; facial features: Strong jawline, prominent nose, and a grimacing expression showing teeth clenched around a torch; hair: Short, tousled brown hair that appears slightly damp from sweat; eyes: Deep-set hazel eyes with focused intensity, showing strain and determination; build: Athletic and lean build, capable of supporting significant weight while suspended; default outfit: Dark brown leather jacket over a dark shirt, paired with durable cargo pants and a heavy-duty backpack strapped securely to the back; footwear: Sturdy brown leather hiking boots with thick soles designed for rugged terrain. Front-facing head-and-shoulders identity portrait, face clearly visible. Centered composition against a plain unobtrusive background, with soft even lighting and sharp facial detail. Single image, single view. No added captions or watermark.",
+        "Image photographique de style cinématographique. \nYeux noisette, cicatrice au menton, regard déterminé, larges épaules de joueur de football américain, charme sauvage.\nAventurier équipé d'un sac à dos, d'un piolet et d'un maillet.\nPorte un carnet dans une poche latérale.\nSuspendu par une corde passant autour de la poitrine et sous les aisselles.\nPorte un sac à dos avec une poche latérale.\nÉquipé d'un piolet et d'un maillet. \nSue abondamment au niveau du front.\nTient une lampe torche entre les dents.\n\nConception visuelle de base : cheveux : brun foncé, texture légèrement ébouriffée et ondulation naturelle ; peau : teint hâlé et marqué par les intempéries, témoignant d'une exposition au soleil ; \n\ntenue par défaut : \nun pantalon sombre et une chemise blanche à col ; chaussures : bottes en cuir marron éraflées, adaptées à l'exploration de terrains accidentés ; \n\naccessoires : \nsac à dos en cuir avec poche latérale visible contenant un carnet et des outils. \n\nPortrait d'identité (tête et épaules) de face, visage clairement visible. Portrait centré sur fond uni et discret, avec un éclairage doux et uniforme et des détails du visage nets. Image unique, vue unique. Sans légendes ni filigrane.",
         1664,
         928,
-        true,
-        859001186010485,
+        false,
+        217533070788193,
         "qwen_image_2512_fp8_e4m3fn.safetensors",
         "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "qwen_image_vae.safetensors",
         "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors"
       ],
       "widgets_values_named": {
-        "text": "realistic photographic image of Indiana Jones. Male adventurer; wears a backpack with side pockets; carries a mallet, pickaxe, and a four-pronged torch holder. Young woman; assistant to Doumas (implied role as torch-bearer). Suspended by a fraying rope Holding a lit torch between teeth Wearing a backpack with side pockets Young woman Holding a lit torch on a rope Base visual design: age appearance: Young adult male with a rugged, weathered appearance suggesting physical exertion and adventure; skin: Tanned complexion with visible sweat beads and slight grime on the forehead and neck; facial features: Strong jawline, prominent nose, and a grimacing expression showing teeth clenched around a torch; hair: Short, tousled brown hair that appears slightly damp from sweat; eyes: Deep-set hazel eyes with focused intensity, showing strain and determination; build: Athletic and lean build, capable of supporting significant weight while suspended; default outfit: Dark brown leather jacket over a dark shirt, paired with durable cargo pants and a heavy-duty backpack strapped securely to the back; footwear: Sturdy brown leather hiking boots with thick soles designed for rugged terrain. Front-facing head-and-shoulders identity portrait, face clearly visible. Centered composition against a plain unobtrusive background, with soft even lighting and sharp facial detail. Single image, single view. No added captions or watermark.",
+        "text": "Image photographique de style cinématographique. \nYeux noisette, cicatrice au menton, regard déterminé, larges épaules de joueur de football américain, charme sauvage.\nAventurier équipé d'un sac à dos, d'un piolet et d'un maillet.\nPorte un carnet dans une poche latérale.\nSuspendu par une corde passant autour de la poitrine et sous les aisselles.\nPorte un sac à dos avec une poche latérale.\nÉquipé d'un piolet et d'un maillet. \nSue abondamment au niveau du front.\nTient une lampe torche entre les dents.\n\nConception visuelle de base : cheveux : brun foncé, texture légèrement ébouriffée et ondulation naturelle ; peau : teint hâlé et marqué par les intempéries, témoignant d'une exposition au soleil ; \n\ntenue par défaut : \nun pantalon sombre et une chemise blanche à col ; chaussures : bottes en cuir marron éraflées, adaptées à l'exploration de terrains accidentés ; \n\naccessoires : \nsac à dos en cuir avec poche latérale visible contenant un carnet et des outils. \n\nPortrait d'identité (tête et épaules) de face, visage clairement visible. Portrait centré sur fond uni et discret, avec un éclairage doux et uniforme et des détails du visage nets. Image unique, vue unique. Sans légendes ni filigrane.",
         "width": 1664,
         "height": 928,
-        "value": true,
-        "seed": 859001186010485,
+        "value": false,
+        "seed": 217533070788193,
         "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
         "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "vae_name": "qwen_image_vae.safetensors",
         "lora_name": "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors"
-      }
-    },
-    {
-      "id": 264,
-      "type": "LMStudioPromptEnhancer",
-      "pos": [
-        -437.5693753625618,
-        1052.2600277519944
-      ],
-      "size": [
-        1123.625,
-        580.8125
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "prompt",
-          "type": "STRING",
-          "link": 380
-        },
-        {
-          "name": "input_image_1",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "name": "input_image_2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "enhanced_prompt",
-          "type": "STRING",
-          "links": [
-            379
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "lmstudio-prompt-enhancer",
-        "ver": "c75b850b255922387d6d1d52053167373ae3917b",
-        "Node name for S&R": "LMStudioPromptEnhancer"
-      },
-      "widgets_values": [
-        "Image generation prompt",
-        "Enhance prompts for image or video generation. The user specifies the mode. Preserve subject, intent, constraints, and visible evidence. Return only one positive prompt as one paragraph.\n\nImage: describe subject, composition, framing, camera/lens when useful, lighting, color, materials, texture, environment, depth, mood, and key details. In image mode, input_image_1 is the base image and input_image_2 is the reference image.\n\nVideo: describe subject and scene, camera framing/movement, subject and environmental motion, timing, pacing, continuity, lighting, atmosphere, and shot evolution. In video mode, input_image_1 is the first frame and input_image_2 is the last frame.\n\nUse attached images as visual evidence. Do not contradict them or the user's prompt. No negative prompt, markdown, explanation, or unrelated detail. Do not introduce artist names, celebrities, copyrighted characters, or trademarked IP unless the user supplied them.",
-        "cinematic",
-        "http://127.0.0.1:1234/v1",
-        "",
-        "auto",
-        0.7,
-        500,
-        true,
-        0
-      ],
-      "widgets_values_named": {
-        "generation_mode": "Image generation prompt",
-        "system_prompt": "Enhance prompts for image or video generation. The user specifies the mode. Preserve subject, intent, constraints, and visible evidence. Return only one positive prompt as one paragraph.\n\nImage: describe subject, composition, framing, camera/lens when useful, lighting, color, materials, texture, environment, depth, mood, and key details. In image mode, input_image_1 is the base image and input_image_2 is the reference image.\n\nVideo: describe subject and scene, camera framing/movement, subject and environmental motion, timing, pacing, continuity, lighting, atmosphere, and shot evolution. In video mode, input_image_1 is the first frame and input_image_2 is the last frame.\n\nUse attached images as visual evidence. Do not contradict them or the user's prompt. No negative prompt, markdown, explanation, or unrelated detail. Do not introduce artist names, celebrities, copyrighted characters, or trademarked IP unless the user supplied them.",
-        "style": "cinematic",
-        "lmstudio_base_url": "http://127.0.0.1:1234/v1",
-        "lmstudio_api_key": "",
-        "model": "auto",
-        "temperature": 0.7,
-        "max_tokens": 500,
-        "enable_llm": true,
-        "cache_buster": 0
-      }
-    },
-    {
-      "id": 265,
-      "type": "OAIAPI_Client",
-      "pos": [
-        898.7106334043062,
-        914.2236501052878
-      ],
-      "size": [
-        410.75,
-        244
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "API Client",
-          "type": "OAIAPI_CLIENT",
-          "links": [
-            376
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "openai-api",
-        "ver": "efb68c42291ae77df665423e02d6885a3f556bd1",
-        "Node name for S&R": "OAIAPI_Client"
-      },
-      "widgets_values": [
-        "http://127.0.0.1:1234/v1",
-        2,
-        600,
-        "-"
-      ],
-      "widgets_values_named": {
-        "base_url": "http://127.0.0.1:1234/v1",
-        "max_retries": 2,
-        "timeout": 600,
-        "api_key": "-"
-      }
-    },
-    {
-      "id": 266,
-      "type": "OAIAPI_ChatCompletion",
-      "pos": [
-        1374.5107443773177,
-        885.1327410143789
-      ],
-      "size": [
-        983.375,
-        353.125
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "client",
-          "type": "OAIAPI_CLIENT",
-          "link": 376
-        },
-        {
-          "name": "history",
-          "shape": 7,
-          "type": "OAIAPI_HISTORY",
-          "link": null
-        },
-        {
-          "name": "options",
-          "shape": 7,
-          "type": "OAIAPI_OPTIONS",
-          "link": 382
-        },
-        {
-          "name": "images",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Response",
-          "type": "STRING",
-          "links": [
-            381
-          ]
-        },
-        {
-          "name": "History",
-          "type": "OAIAPI_HISTORY",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "openai-api",
-        "ver": "efb68c42291ae77df665423e02d6885a3f556bd1",
-        "Node name for S&R": "OAIAPI_ChatCompletion"
-      },
-      "widgets_values": [
-        "auto",
-        false,
-        "<Subject 1> is a well-built, muscular man with an agile mountaineer-like movement style and a strong, athletic silhouette, defined by <Picture 1> which provides the full-body front view showing his muscular build and rope rolls hanging from his belt, and <Picture 2> which provides the three-quarter view emphasizing his dynamic posture and physique.",
-        "Enhance prompts for image or video generation. The user specifies the mode. Preserve subject, intent, constraints, and visible evidence. Return only one positive prompt as one paragraph.\n\nImage: describe subject, composition, framing, camera/lens when useful, lighting, color, materials, texture, environment, depth, mood, and key details. In image mode, input_image_1 is the base image and input_image_2 is the reference image.\n\nVideo: describe subject and scene, camera framing/movement, subject and environmental motion, timing, pacing, continuity, lighting, atmosphere, and shot evolution. In video mode, input_image_1 is the first frame and input_image_2 is the last frame.\n\nUse attached images as visual evidence. Do not contradict them or the user's prompt. No negative prompt, markdown, explanation, or unrelated detail. Do not introduce artist names, celebrities, copyrighted characters, or trademarked IP unless the user supplied them."
-      ],
-      "widgets_values_named": {
-        "model": "auto",
-        "force_regen": false,
-        "prompt": "<Subject 1> is a well-built, muscular man with an agile mountaineer-like movement style and a strong, athletic silhouette, defined by <Picture 1> which provides the full-body front view showing his muscular build and rope rolls hanging from his belt, and <Picture 2> which provides the three-quarter view emphasizing his dynamic posture and physique.",
-        "system_prompt": "Enhance prompts for image or video generation. The user specifies the mode. Preserve subject, intent, constraints, and visible evidence. Return only one positive prompt as one paragraph.\n\nImage: describe subject, composition, framing, camera/lens when useful, lighting, color, materials, texture, environment, depth, mood, and key details. In image mode, input_image_1 is the base image and input_image_2 is the reference image.\n\nVideo: describe subject and scene, camera framing/movement, subject and environmental motion, timing, pacing, continuity, lighting, atmosphere, and shot evolution. In video mode, input_image_1 is the first frame and input_image_2 is the last frame.\n\nUse attached images as visual evidence. Do not contradict them or the user's prompt. No negative prompt, markdown, explanation, or unrelated detail. Do not introduce artist names, celebrities, copyrighted characters, or trademarked IP unless the user supplied them."
-      }
-    },
-    {
-      "id": 268,
-      "type": "PreviewAny",
-      "pos": [
-        1392.7178033705707,
-        1294.7400197341938
-      ],
-      "size": [
-        977.375,
-        259.375
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source",
-          "type": "*",
-          "link": 381
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.34.0",
-        "Node name for S&R": "PreviewAny"
-      },
-      "widgets_values": [],
-      "widgets_values_named": {}
-    },
-    {
-      "id": 269,
-      "type": "PreviewAny",
-      "pos": [
-        -263.7811016284611,
-        1692.6238444846053
-      ],
-      "size": [
-        914.125,
-        297.625
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source",
-          "type": "*",
-          "link": 379
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.34.0",
-        "Node name for S&R": "PreviewAny"
-      },
-      "widgets_values": [],
-      "widgets_values_named": {}
-    },
-    {
-      "id": 270,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1059.1783824870286,
-        1075.5169074317257
-      ],
-      "size": [
-        400,
-        200
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            380
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.34.0",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "<Subject 1> is a well-built, muscular man with an agile mountaineer-like movement style and a strong, athletic silhouette, defined by <Picture 1> which provides the full-body front view showing his muscular build and rope rolls hanging from his belt, and <Picture 2> which provides the three-quarter view emphasizing his dynamic posture and physique."
-      ],
-      "widgets_values_named": {
-        "value": "<Subject 1> is a well-built, muscular man with an agile mountaineer-like movement style and a strong, athletic silhouette, defined by <Picture 1> which provides the full-body front view showing his muscular build and rope rolls hanging from his belt, and <Picture 2> which provides the three-quarter view emphasizing his dynamic posture and physique."
-      }
-    },
-    {
-      "id": 271,
-      "type": "OAIAPI_Temperature",
-      "pos": [
-        893.2566594833185,
-        1248.0397971365076
-      ],
-      "size": [
-        273.875,
-        86
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "other_options",
-          "shape": 7,
-          "type": "OAIAPI_OPTIONS",
-          "link": 383
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Options",
-          "type": "OAIAPI_OPTIONS",
-          "links": [
-            382
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "openai-api",
-        "ver": "efb68c42291ae77df665423e02d6885a3f556bd1",
-        "Node name for S&R": "OAIAPI_Temperature"
-      },
-      "widgets_values": [
-        0.7
-      ],
-      "widgets_values_named": {
-        "temperature": 0.7
-      }
-    },
-    {
-      "id": 272,
-      "type": "OAIAPI_MaxTokens",
-      "pos": [
-        902.9687554305837,
-        1383.559870989046
-      ],
-      "size": [
-        270,
-        86
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "other_options",
-          "shape": 7,
-          "type": "OAIAPI_OPTIONS",
-          "link": 384
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Options",
-          "type": "OAIAPI_OPTIONS",
-          "links": [
-            383
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "openai-api",
-        "ver": "efb68c42291ae77df665423e02d6885a3f556bd1",
-        "Node name for S&R": "OAIAPI_MaxTokens"
-      },
-      "widgets_values": [
-        500
-      ],
-      "widgets_values_named": {
-        "max_tokens": 500
-      }
-    },
-    {
-      "id": 273,
-      "type": "OAIAPI_Seed",
-      "pos": [
-        909.7447258895687,
-        1521.9838266775223
-      ],
-      "size": [
-        270,
-        86
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "other_options",
-          "shape": 7,
-          "type": "OAIAPI_OPTIONS",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Options",
-          "type": "OAIAPI_OPTIONS",
-          "links": [
-            384
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "openai-api",
-        "ver": "efb68c42291ae77df665423e02d6885a3f556bd1",
-        "Node name for S&R": "OAIAPI_Seed"
-      },
-      "widgets_values": [
-        1371,
-        "randomize"
-      ],
-      "widgets_values_named": {
-        "seed": 1371,
-        "control_after_generate": "randomize"
       }
     }
   ],
@@ -637,62 +213,6 @@
       60,
       0,
       "IMAGE"
-    ],
-    [
-      376,
-      265,
-      0,
-      266,
-      0,
-      "OAIAPI_CLIENT"
-    ],
-    [
-      379,
-      264,
-      0,
-      269,
-      0,
-      "STRING"
-    ],
-    [
-      380,
-      270,
-      0,
-      264,
-      0,
-      "STRING"
-    ],
-    [
-      381,
-      266,
-      0,
-      268,
-      0,
-      "STRING"
-    ],
-    [
-      382,
-      271,
-      0,
-      266,
-      2,
-      "OAIAPI_OPTIONS"
-    ],
-    [
-      383,
-      272,
-      0,
-      271,
-      0,
-      "OAIAPI_OPTIONS"
-    ],
-    [
-      384,
-      273,
-      0,
-      272,
-      0,
-      "OAIAPI_OPTIONS"
     ]
   ],
   "groups": [],
@@ -2416,10 +1936,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9090909090909091,
+      "scale": 0.9090909090909095,
       "offset": [
-        461.20991072236245,
-        135.97965213543557
+        87.42195516454893,
+        -12.637937988433631
       ]
     },
     "frontendVersion": "1.51.9",
