@@ -51,18 +51,23 @@ Download-File -Url "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/Comfy-Org/SeedVR2/resolve/main/diffusion_models/seedvr2_3b_int8_convrot.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/Comfy-Org/SeedVR2/resolve/main/diffusion_models/seedvr2_7b_int8_convrot.safetensors" -OutDir $outDir
+
 # =================================================================== VAE
 Write-Host "=== Download VAE ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\vae"
 
 Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors" -OutDir $outDir
 
-Write-Host "Downloading minimax_h3_audio_vae_fp32.safetensors from Hugging Face to ComfyUI\models\vae"
 Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors" -OutDir $outDir -FileName "z_image_turbo_vae.safetensors"
 
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/Comfy-Org/SeedVR2/resolve/main/vae/seedvr2_ema_vae_fp16.safetensors" -OutDir $outDir
 
 # =================================================================== Text Encoder
 Write-Host "=== Download Text Encoder ===" -ForegroundColor Cyan
@@ -75,6 +80,8 @@ Download-File -Url "https://huggingface.co/petruhonk/Qwen3.8-9B-Distill-uncensor
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/gemma-4/resolve/main/text_encoders/gemma4_e4b_it_fp8_scaled.safetensors" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors" -OutDir $outDir
 
 # =================================================================== Clip
 Write-Host "=== Download Clip ===" -ForegroundColor Cyan
@@ -98,6 +105,7 @@ Download-File -Url "https://huggingface.co/Heartsync/Flux-NSFW-uncensored/resolv
 Download-File -Url "https://huggingface.co/thutes-gbr25/NSFW-MASTER-Z-IMAGE-TURBO/resolve/main/NSFW_master_ZIT_000008766.safetensors" -OutDir $outDir
 Download-File -Url "https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/resolve/main/Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors" -OutDir $outDir
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/loras/Qwen-Image-Edit-2509-Light-Migration.safetensors" -OutDir $outDir
+Download-File -Url "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors" -OutDir $outDir
 
 # =================================================================== UNET (GGUF)
 Write-Host "=== Download GGUF ===" -ForegroundColor Cyan
@@ -121,6 +129,12 @@ Write-Host "=== Download checkpoints ===" -ForegroundColor Cyan
 $outDir = "ComfyUI\models\checkpoints"
 # Download-File -Url "https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_bf16.safetensors" -OutDir $outDir
 Download-File -Url "https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_dev_fp8_scaled.safetensors" -OutDir $outDir
+
+# =================================================================== upscale_models
+Write-Host "=== Download upscale_models ===" -ForegroundColor Cyan
+$outDir = "ComfyUI\models\upscale_models"
+
+Download-File -Url "https://huggingface.co/Comfy-Org/Real-ESRGAN_repackaged/resolve/main/RealESRGAN_x4plus.safetensors" -OutDir $outDir
 
 # =================================================================== Copy LLM to LMStudio bundled-models
 # Uses the reusable function in Scripts/Copy-To-LMStudio.ps1 to copy downloaded models

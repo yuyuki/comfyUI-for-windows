@@ -205,7 +205,7 @@
         "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "qwen_image_vae.safetensors",
         "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
-        false
+        true
       ],
       "widgets_values_named": {
         "text": "Full-body rear view, head to toe, head and body facing directly away, only rear surfaces visible. cinematic photographic image of Indy. He possesses a lean, athletic build with dark brown hair cut short on the sides and longer on top, swept back. He wears a worn olive-green field jacket over a dark t-shirt, paired with cargo pants featuring multiple pockets and sturdy hiking boots. A leather utility belt holds various tools around his waist, while a backpack rests on his back containing a side pocket alongside a hammer, pickaxe, and a torch holder fitted with four prongs. Rear view composition with no facial detail or eye contact, simple background and neutral even lighting to clearly show the figure's silhouette from behind. Single image, single view. No added captions or watermark.",
@@ -217,7 +217,7 @@
         "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "vae_name": "qwen_image_vae.safetensors",
         "lora_name": "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
-        "switch": false
+        "switch": true
       }
     },
     {
@@ -1120,7 +1120,7 @@
               "cfg": 4,
               "sampler_name": "euler",
               "scheduler": "simple",
-              "denoise": 1
+              "denoise": 0.65
             }
           },
           {
