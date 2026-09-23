@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: Custom Nodes Manager ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-Manager ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
@@ -29,29 +29,30 @@ if (!(Test-Path $CustomNodesDir)) {
 }
 
 # ------------------------
-# 5️⃣ Install Custom Nodes Manager
+# 5️⃣ Install ComfyUI-Z-Engineer
 # ------------------------
-Write-Host "`n=== Installing Custom Nodes Manager ===" -ForegroundColor Yellow
-$CNMDir = "$CustomNodesDir\ComfyUI-CustomNodesManager"
+Write-Host "`n=== Installing ComfyUI-Manager ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-Manager"
+$RepoUrl = "https://github.com/Comfy-Org/ComfyUI-Manager.git"
 
-if (Test-Path $CNMDir) {
+if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing Custom Nodes Manager repo..." -ForegroundColor Yellow
-        git -C "$CNMDir" pull --ff-only
+        Write-Host "Updating existing ComfyUI-Manager repo..." -ForegroundColor Yellow
+        git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning Custom Nodes Manager..."
-        Remove-Item $CNMDir -Recurse -Force
-        git clone https://github.com/Comfy-Org/ComfyUI-Manager.git $CNMDir
+        Write-Warning "Update failed. Re-cloning ComfyUI-Manager..."
+        Remove-Item $RepoDir -Recurse -Force
+        git clone $RepoUrl $RepoDir
     }
 }
 else {
-    git clone https://github.com/Comfy-Org/ComfyUI-Manager.git $CNMDir
+    git clone $RepoUrl $RepoDir
 }
 
 # Install requirements if they exist
-if (Test-Path "$CNMDir\requirements.txt") {
-    pip install -r "$CNMDir\requirements.txt"
+if (Test-Path "$RepoDir\requirements.txt") {
+    pip install -r "$RepoDir\requirements.txt"
 }
 
 Set-Location $ParentDir

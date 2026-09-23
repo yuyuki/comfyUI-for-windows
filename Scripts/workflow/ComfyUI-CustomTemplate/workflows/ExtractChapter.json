@@ -183,12 +183,12 @@
         "Node name for S&R": "SelectChaptersNode"
       },
       "widgets_values": [
-        "minimax_h3_novel/00_PROLOGUE.md\nminimax_h3_novel/01_Chapter 01.md",
-        ""
+        "minimax_h3_novel/test.md",
+        "minimax_h3_novel/test.md"
       ],
       "widgets_values_named": {
-        "chapter_paths": "minimax_h3_novel/00_PROLOGUE.md\nminimax_h3_novel/01_Chapter 01.md",
-        "saved_chapter": ""
+        "chapter_paths": "minimax_h3_novel/test.md",
+        "saved_chapter": "minimax_h3_novel/test.md"
       }
     },
     {
@@ -200,7 +200,7 @@
       ],
       "size": [
         419.53125,
-        93.984375
+        94
       ],
       "flags": {},
       "order": 9,
@@ -240,7 +240,7 @@
         1928.0121619964839
       ],
       "size": [
-        227.25,
+        227.265625,
         86
       ],
       "flags": {},
@@ -276,7 +276,7 @@
         2025.0043494964839
       ],
       "size": [
-        227.25,
+        227.265625,
         86
       ],
       "flags": {},
@@ -313,7 +313,7 @@
       ],
       "size": [
         305,
-        305.9375
+        306
       ],
       "flags": {},
       "order": 10,
@@ -379,7 +379,7 @@
       ],
       "size": [
         311.9375,
-        469.984375
+        470
       ],
       "flags": {},
       "order": 17,
@@ -429,7 +429,7 @@
         8,
         14000,
         2,
-        4,
+        8,
         0,
         8,
         4,
@@ -444,7 +444,7 @@
         "duration": 8,
         "chunk_chars": 14000,
         "overlap_paragraphs": 2,
-        "scenes_per_chunk": 4,
+        "scenes_per_chunk": 8,
         "max_scenes": 0,
         "max_pictures": 8,
         "max_pictures_per_subject": 4,
@@ -518,7 +518,7 @@
       ],
       "size": [
         341.625,
-        625.96875
+        626
       ],
       "flags": {},
       "order": 14,
@@ -644,7 +644,7 @@
       ],
       "size": [
         270,
-        113.984375
+        114
       ],
       "flags": {},
       "order": 7,
@@ -819,7 +819,7 @@
       ],
       "size": [
         302.625,
-        93.984375
+        94
       ],
       "flags": {},
       "order": 8,
@@ -1078,10 +1078,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6830134553650705,
+      "scale": 0.5107491856677526,
       "offset": [
-        540.2811143157439,
-        -1241.4207633135918
+        604.262750989679,
+        -1231.893822310991
       ]
     },
     "frontendVersion": "1.51.9"

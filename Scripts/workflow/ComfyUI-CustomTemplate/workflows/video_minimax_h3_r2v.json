@@ -1,22 +1,22 @@
 {
   "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
   "revision": 0,
-  "last_node_id": 148,
-  "last_link_id": 296,
+  "last_node_id": 160,
+  "last_link_id": 306,
   "nodes": [
     {
       "id": 92,
       "type": "SaveVideo",
       "pos": [
-        1179.7172813202135,
-        5138.2573257589975
+        -96.38980614045909,
+        6782.253235637018
       ],
       "size": [
-        1145.890625,
-        126
+        748.40625,
+        587.484375
       ],
       "flags": {},
-      "order": 24,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -39,11 +39,13 @@
       "widgets_values": [
         "video/MiniMax_H3",
         "auto",
+        "auto",
         "auto"
       ],
       "widgets_values_named": {
         "filename_prefix": "video/MiniMax_H3",
         "format": "auto",
+        "format.codec": "auto",
         "codec": "auto"
       }
     },
@@ -51,8 +53,8 @@
       "id": 115,
       "type": "ResolutionSelector",
       "pos": [
-        -1480,
-        5610
+        -1483.3426966540605,
+        6189.8768360089625
       ],
       "size": [
         270,
@@ -62,7 +64,14 @@
       "order": 0,
       "mode": 0,
       "showAdvanced": false,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "preview",
+          "shape": 7,
+          "type": "RESOLUTION_PREVIEW",
+          "link": null
+        }
+      ],
       "outputs": [
         {
           "name": "width",
@@ -87,12 +96,12 @@
       },
       "widgets_values": [
         "16:9 (Widescreen)",
-        0.3,
+        0.2,
         32
       ],
       "widgets_values_named": {
         "aspect_ratio": "16:9 (Widescreen)",
-        "megapixels": 0.3,
+        "megapixels": 0.2,
         "multiple": 32
       },
       "color": "#322",
@@ -107,7 +116,7 @@
       ],
       "size": [
         450,
-        889.6875
+        890
       ],
       "flags": {},
       "order": 1,
@@ -134,7 +143,7 @@
       ],
       "size": [
         440,
-        740
+        931.6875
       ],
       "flags": {},
       "order": 2,
@@ -144,10 +153,10 @@
       "title": "Note: Model Links",
       "properties": {},
       "widgets_values": [
-        "## Model Links\n[🤗 Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_ref2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_ref2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
+        "## Model Links\n[🤗 Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_ref2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n**loras**\n\n- 4 steps: [minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors)\n\n**embeddings**\n\n- [10 style embeddings](https://huggingface.co/Comfy-Org/MiniMax-H3/tree/main/embeddings) (`minimaxh3_*.safetensors`), for example `minimaxh3_art_is_explosion`\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_ref2va_pruned_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n│   ├── 📂 loras/\n│   │   └── minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors\n│   └── 📂 embeddings/\n│       └── minimaxh3_art_is_explosion.safetensors\n```\n\n## Using Prompt Embeddings\n\nPrompt embeddings (supported since [ComfyUI#15697](https://github.com/Comfy-Org/ComfyUI/pull/15697)) add reusable style tokens to your prompt. Download one or more embeddings from the folder above into `ComfyUI/models/embeddings/`, then reference one in the prompt text with the `embedding:` prefix and the filename without its extension, for example:\n\n`embedding:minimaxh3_art_is_explosion`\n\nUsing an embedding is optional and the template runs fine without one.\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
       ],
       "widgets_values_named": {
-        "text": "## Model Links\n[🤗 Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_ref2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_ref2va_pruned_int8_convrot.safetensors\n│   └── 📂 text_encoders/\n│       └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n```\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
+        "text": "## Model Links\n[🤗 Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3)\n\n**vae**\n\n- [minimax_h3_video_vae_fp16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors)\n- [minimax_h3_audio_vae_fp32.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors)\n\n**diffusion_models**\n\n- [minimax_h3_ref2va_pruned_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors)\n\n**loras**\n\n- 4 steps: [minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors](https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors)\n\n**embeddings**\n\n- [10 style embeddings](https://huggingface.co/Comfy-Org/MiniMax-H3/tree/main/embeddings) (`minimaxh3_*.safetensors`), for example `minimaxh3_art_is_explosion`\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 vae/\n│   │   ├── minimax_h3_video_vae_fp16.safetensors\n│   │   └── minimax_h3_audio_vae_fp32.safetensors\n│   ├── 📂 diffusion_models/\n│   │   └── minimax_h3_ref2va_pruned_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors\n│   ├── 📂 loras/\n│   │   └── minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors\n│   └── 📂 embeddings/\n│       └── minimaxh3_art_is_explosion.safetensors\n```\n\n## Using Prompt Embeddings\n\nPrompt embeddings (supported since [ComfyUI#15697](https://github.com/Comfy-Org/ComfyUI/pull/15697)) add reusable style tokens to your prompt. Download one or more embeddings from the folder above into `ComfyUI/models/embeddings/`, then reference one in the prompt text with the `embedding:` prefix and the filename without its extension, for example:\n\n`embedding:minimaxh3_art_is_explosion`\n\nUsing an embedding is optional and the template runs fine without one.\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -156,8 +165,8 @@
       "id": 119,
       "type": "VAELoader",
       "pos": [
-        -1491.9457743721568,
-        5319.617246489999
+        -1490,
+        5490
       ],
       "size": [
         640,
@@ -173,7 +182,8 @@
           "type": "VAE",
           "links": [
             251,
-            273
+            273,
+            299
           ]
         }
       ],
@@ -200,8 +210,8 @@
       "id": 120,
       "type": "VAELoader",
       "pos": [
-        -1496.810210302549,
-        5432.1052771405875
+        -1490,
+        5630
       ],
       "size": [
         650,
@@ -217,7 +227,8 @@
           "type": "VAE",
           "links": [
             250,
-            274
+            274,
+            300
           ]
         }
       ],
@@ -244,8 +255,8 @@
       "id": 121,
       "type": "VAEDecodeAudio",
       "pos": [
-        465.8489136570413,
-        5238.3732311647045
+        20,
+        5750
       ],
       "size": [
         230,
@@ -254,7 +265,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 22,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -287,8 +298,8 @@
       "id": 122,
       "type": "VAEDecode",
       "pos": [
-        465.8489136570413,
-        5118.3732311647045
+        20,
+        5650
       ],
       "size": [
         230,
@@ -297,7 +308,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 21,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -330,8 +341,8 @@
       "id": 123,
       "type": "KSamplerSelect",
       "pos": [
-        -260,
-        5190
+        667.6626227907989,
+        5167.602593678746
       ],
       "size": [
         370,
@@ -366,21 +377,29 @@
       "id": 124,
       "type": "BasicScheduler",
       "pos": [
-        -260,
-        5310
+        667.6626227907989,
+        5287.602593678746
       ],
       "size": [
         370,
         130
       ],
       "flags": {},
-      "order": 16,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
           "link": 252
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 289
         }
       ],
       "outputs": [
@@ -412,15 +431,15 @@
       "id": 125,
       "type": "SamplerCustomAdvanced",
       "pos": [
-        150,
-        5110
+        1077.6626227907996,
+        5087.602593678746
       ],
       "size": [
         230,
         140
       ],
       "flags": {},
-      "order": 20,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -474,26 +493,26 @@
       "id": 126,
       "type": "BasicGuider",
       "pos": [
-        -260,
-        5080
+        667.6626227907989,
+        5057.602593678746
       ],
       "size": [
         360,
         60
       ],
       "flags": {},
-      "order": 19,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 257
+          "link": 288
         },
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 270
+          "link": 297
         }
       ],
       "outputs": [
@@ -516,7 +535,7 @@
       "type": "UNETLoader",
       "pos": [
         -1490,
-        4940
+        4980
       ],
       "size": [
         640,
@@ -532,7 +551,8 @@
           "type": "MODEL",
           "links": [
             252,
-            257
+            285,
+            287
           ]
         }
       ],
@@ -558,18 +578,65 @@
       }
     },
     {
+      "id": 128,
+      "type": "CLIPLoader",
+      "pos": [
+        -1490,
+        5300
+      ],
+      "size": [
+        640,
+        120
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            272
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    {
       "id": 129,
       "type": "RandomNoise",
       "pos": [
-        -260,
-        4940
+        667.6626227907989,
+        4917.602593678746
       ],
       "size": [
         360,
         90
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -587,11 +654,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        49981124677467,
+        1041943299371886,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 49981124677467,
+        "noise_seed": 1041943299371886,
         "control_after_generate": "randomize"
       }
     },
@@ -599,15 +666,15 @@
       "id": 130,
       "type": "CreateVideo",
       "pos": [
-        775.8489136570413,
-        5148.3732311647045
+        330,
+        5650
       ],
       "size": [
         270,
-        110
+        138
       ],
       "flags": {},
-      "order": 23,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -638,28 +705,30 @@
       },
       "widgets_values": [
         24,
-        8
+        8,
+        "sRGB"
       ],
       "widgets_values_named": {
         "fps": 24,
-        "bit_depth": 8
+        "bit_depth": 8,
+        "color_space": "sRGB"
       }
     },
     {
       "id": 131,
       "type": "ComfyMathExpression",
       "pos": [
-        -1450,
-        5940
+        -1483.3426966540605,
+        6569.8768360089625
       ],
       "size": [
         225,
-        0
+        74
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -669,7 +738,6 @@
           "link": 261
         },
         {
-          "label": "b",
           "name": "values.b",
           "shape": 7,
           "type": "FLOAT,INT,BOOLEAN",
@@ -711,15 +779,15 @@
       "id": 132,
       "type": "PrimitiveFloat",
       "pos": [
-        -1480,
-        5830
+        -1483.3426966540605,
+        6429.8768360089625
       ],
       "size": [
         270,
         70
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -750,29 +818,31 @@
       "id": 136,
       "type": "MiniMaxH3ReferenceToVideo",
       "pos": [
-        -750,
-        4940
+        -633.6910846890831,
+        5449.093486416042
       ],
       "size": [
-        410,
-        530
+        400,
+        454
       ],
       "flags": {},
-      "order": 18,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 294
+          "link": 272
         },
         {
           "name": "vae",
+          "shape": 7,
           "type": "VAE",
           "link": 273
         },
         {
           "name": "audio_vae",
+          "shape": 7,
           "type": "VAE",
           "link": 274
         },
@@ -781,18 +851,34 @@
           "name": "ref_images.ref_image_0",
           "shape": 7,
           "type": "IMAGE",
-          "link": 291
+          "link": 278
         },
         {
-          "label": "ref_image_1",
           "name": "ref_images.ref_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 282
+        },
+        {
+          "name": "ref_images.ref_image_2",
           "shape": 7,
           "type": "IMAGE",
           "link": 292
         },
         {
-          "label": "ref_image_2",
-          "name": "ref_images.ref_image_2",
+          "name": "ref_images.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 293
+        },
+        {
+          "name": "ref_images.ref_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 294
+        },
+        {
+          "name": "ref_images.ref_image_5",
           "shape": 7,
           "type": "IMAGE",
           "link": null
@@ -814,6 +900,12 @@
         {
           "label": "ref_audio_0",
           "name": "ref_audios.ref_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 295
+        },
+        {
+          "name": "ref_audios.ref_audio_1",
           "shape": 7,
           "type": "AUDIO",
           "link": null
@@ -856,14 +948,15 @@
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            270
+            296
           ]
         },
         {
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            271
+            271,
+            298
           ]
         }
       ],
@@ -891,15 +984,15 @@
       "id": 137,
       "type": "LoadImage",
       "pos": [
-        -930,
-        5630
+        -1159.500947512835,
+        6089.8768360089625
       ],
       "size": [
-        290,
-        350
+        406.15625,
+        354.34375
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -907,7 +1000,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            291
+            278
           ]
         },
         {
@@ -922,11 +1015,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "red_superboy_on_city_roof[1].png",
+        "pic_loc_001_wide_establishing.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "red_superboy_on_city_roof[1].png",
+        "image": "pic_loc_001_wide_establishing.png",
         "upload": "image"
       }
     },
@@ -934,15 +1027,15 @@
       "id": 138,
       "type": "PrimitiveStringMultiline",
       "pos": [
-        -1480,
-        6000
+        -1485.8363142638646,
+        6681.0475127334985
       ],
       "size": [
-        370,
-        390
+        770.625,
+        695.125
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -961,28 +1054,383 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Bold comic-book ink style, heavy linework, red and blue-black palette, night city. Use <Picture 2> and <Picture 1> as reference frames and <Audio 1> exactly as it is.\nThe characters are speaking French, with natural French lip-sync.\nAudible French dialogue spoken by the actors.\n\"All on-screen text, signs, and labels are written in French.\nCUT 1: top-down view of the little boy superhero on the rooftop — red cape fluttering in the wind, hands planted on his hips, freckles and a cocky grin as he looks straight up into the camera. The camera slowly descends toward him as he delivers his line — as he speaks, comic-book graphic overlay text word by word in sync with his voice: \"Enfin, on se rencontre\" - \"Prépare-toi\" — \"ton heure à sonné\" — huge jagged comic lettering, white with heavy black outlines and red drop shadows, tilted at scrappy angles, until the three words hang stacked in the air above him between his face and the lens.\nTRANSITION: a violent WHIP PAN off the rooftop that SMEARS the floating words away with it, motion-streaked —\nCUT 2: low hero angle on the colossal black mech-kaiju towering over the skyline as it rears back and unleashes a GIANT terrifying ROAR — jaws wide with fangs, red eyes and chest-core flaring blinding bright, blue lightning arcing off its head, the roar's shockwave rippling dust and rattling windows down the buildings, comic-style speed-lines and ink splatter bursting from the impact of the sound. It leans INTO the camera as the roar peaks. Hold on the roar."
+        "subject_definitions :\n<Subject 1> The Crevasse (location) — defined by <Image 1> a wide establishing shot showing the scale of the deep rock fissure with vertical walls and a narrow opening at the top, creating an oppressive darkness punctuated only by a faint glow filtering down from above.\n<Subject 2> Indy (character) — defined by <Image 2> a full-body frontal shot showing his complete silhouette: backpack with side pocket, mallet, pickaxe, four-pronged torch holder, and—crucially—the rope passing under his armpits, causing visible bruising on his skin.\n\nsummary :\n[reference generation] A continuous long take establishes the setting of the Crevasse and then reveals Indy suspended by a rope wrapped around his chest and passing under his armpits; bruises are visible on his skin as he looks up into the darkness, where a faint light twinkles like a distant star above the crevasse opening.\n\npreservation_analysis :\n<Subject 1> fully_preserved — <Image 1> the wide establishing shot provides the complete environmental context (vertical rock walls and narrow top opening) throughout the shot.\n<Subject 2> partially_preserved — <Image 2> the full-body frontal shot anchors the arrangement of Indy's gear (backpack, mallet, pickaxe, torch holder), while the rope marks on his chest and armpits are highlighted as a newly visible detail not fully captured in the reference image. Detailed description:\n[Shot 1] The camera opens on a wide, sweeping shot of the Crevasse, <Image 1> revealing the full scale of the place: towering, vertical rock faces plunge into deep darkness—their surfaces rough and striated by time—while at the top, a narrow opening allows a faint, pale glimmer to filter through, resembling a distant star suspended in the abyss. Shadow dominates the frame; the crevasse walls recede into impenetrable blackness on either side, creating a sense of crushing isolation and vertical depth that underscores the smallness and vulnerability of any figure within it. Slowly, the camera tilts downward, following the trajectory of the rope; its taut line cuts through the darkness like a lifeline cast from above. As the camera movement concludes, Indy appears on screen <Image 2>, centered in a full-body shot: he is suspended by a thick hemp rope looped under his armpits; friction has left visible bruises on his skin where the fibers pressed against him. His backpack weighs heavily on his shoulders, its side pocket clearly visible; a mallet and pickaxe rest on either side of his body, their metal heads catching faint glimmers from above. A four-pronged torch holder hangs unused at his hip—a silent reminder of what he once brought into this place.\n\nIndy’s head is tilted upward, his eyes fixed on the narrow opening where a faint light flickers like a dying star; his expression betrays a bewildered stupor—he hears voices echoing from above but cannot grasp their meaning or their source. The rope sways gently in time with his breathing, creaking slightly against the rock walls, while distant, muffled sounds drift down through the stone like whispers trying to reach him. The camera remains fixed on this suspended moment, allowing the composition to breathe: Indy is centered in the lower third of the frame, the rope stretching upward out of shot toward that thin strip of light, surrounded on all sides by the vast darkness of the crevasse. The shot holds without a cut or movement—save for the initial tilt and the slight swaying—allowing the viewer to grasp the full weight of his predicament: trapped between the oppressive walls below and the unreachable light above, battered by the very thing keeping him from sinking further into the darkness.\n\noverall_soundscape:\nDeep cavern atmosphere with low, rumbling echoes; distant, muffled voices resonating from above like whispers through the stone; subtle sounds of dripping water; a faint gust of wind swirling in the narrow opening at the top. The rope creaks softly under the tension as Indy sways slightly.\n\nnon_diegetic_music:\nN/A"
       ],
       "widgets_values_named": {
-        "value": "Bold comic-book ink style, heavy linework, red and blue-black palette, night city. Use <Picture 2> and <Picture 1> as reference frames and <Audio 1> exactly as it is.\nThe characters are speaking French, with natural French lip-sync.\nAudible French dialogue spoken by the actors.\n\"All on-screen text, signs, and labels are written in French.\nCUT 1: top-down view of the little boy superhero on the rooftop — red cape fluttering in the wind, hands planted on his hips, freckles and a cocky grin as he looks straight up into the camera. The camera slowly descends toward him as he delivers his line — as he speaks, comic-book graphic overlay text word by word in sync with his voice: \"Enfin, on se rencontre\" - \"Prépare-toi\" — \"ton heure à sonné\" — huge jagged comic lettering, white with heavy black outlines and red drop shadows, tilted at scrappy angles, until the three words hang stacked in the air above him between his face and the lens.\nTRANSITION: a violent WHIP PAN off the rooftop that SMEARS the floating words away with it, motion-streaked —\nCUT 2: low hero angle on the colossal black mech-kaiju towering over the skyline as it rears back and unleashes a GIANT terrifying ROAR — jaws wide with fangs, red eyes and chest-core flaring blinding bright, blue lightning arcing off its head, the roar's shockwave rippling dust and rattling windows down the buildings, comic-style speed-lines and ink splatter bursting from the impact of the sound. It leans INTO the camera as the roar peaks. Hold on the roar."
+        "value": "subject_definitions :\n<Subject 1> The Crevasse (location) — defined by <Image 1> a wide establishing shot showing the scale of the deep rock fissure with vertical walls and a narrow opening at the top, creating an oppressive darkness punctuated only by a faint glow filtering down from above.\n<Subject 2> Indy (character) — defined by <Image 2> a full-body frontal shot showing his complete silhouette: backpack with side pocket, mallet, pickaxe, four-pronged torch holder, and—crucially—the rope passing under his armpits, causing visible bruising on his skin.\n\nsummary :\n[reference generation] A continuous long take establishes the setting of the Crevasse and then reveals Indy suspended by a rope wrapped around his chest and passing under his armpits; bruises are visible on his skin as he looks up into the darkness, where a faint light twinkles like a distant star above the crevasse opening.\n\npreservation_analysis :\n<Subject 1> fully_preserved — <Image 1> the wide establishing shot provides the complete environmental context (vertical rock walls and narrow top opening) throughout the shot.\n<Subject 2> partially_preserved — <Image 2> the full-body frontal shot anchors the arrangement of Indy's gear (backpack, mallet, pickaxe, torch holder), while the rope marks on his chest and armpits are highlighted as a newly visible detail not fully captured in the reference image. Detailed description:\n[Shot 1] The camera opens on a wide, sweeping shot of the Crevasse, <Image 1> revealing the full scale of the place: towering, vertical rock faces plunge into deep darkness—their surfaces rough and striated by time—while at the top, a narrow opening allows a faint, pale glimmer to filter through, resembling a distant star suspended in the abyss. Shadow dominates the frame; the crevasse walls recede into impenetrable blackness on either side, creating a sense of crushing isolation and vertical depth that underscores the smallness and vulnerability of any figure within it. Slowly, the camera tilts downward, following the trajectory of the rope; its taut line cuts through the darkness like a lifeline cast from above. As the camera movement concludes, Indy appears on screen <Image 2>, centered in a full-body shot: he is suspended by a thick hemp rope looped under his armpits; friction has left visible bruises on his skin where the fibers pressed against him. His backpack weighs heavily on his shoulders, its side pocket clearly visible; a mallet and pickaxe rest on either side of his body, their metal heads catching faint glimmers from above. A four-pronged torch holder hangs unused at his hip—a silent reminder of what he once brought into this place.\n\nIndy’s head is tilted upward, his eyes fixed on the narrow opening where a faint light flickers like a dying star; his expression betrays a bewildered stupor—he hears voices echoing from above but cannot grasp their meaning or their source. The rope sways gently in time with his breathing, creaking slightly against the rock walls, while distant, muffled sounds drift down through the stone like whispers trying to reach him. The camera remains fixed on this suspended moment, allowing the composition to breathe: Indy is centered in the lower third of the frame, the rope stretching upward out of shot toward that thin strip of light, surrounded on all sides by the vast darkness of the crevasse. The shot holds without a cut or movement—save for the initial tilt and the slight swaying—allowing the viewer to grasp the full weight of his predicament: trapped between the oppressive walls below and the unreachable light above, battered by the very thing keeping him from sinking further into the darkness.\n\noverall_soundscape:\nDeep cavern atmosphere with low, rumbling echoes; distant, muffled voices resonating from above like whispers through the stone; subtle sounds of dripping water; a faint gust of wind swirling in the narrow opening at the top. The rope creaks softly under the tension as Indy sways slightly.\n\nnon_diegetic_music:\nN/A"
       },
-      "color": "#322",
-      "bgcolor": "#533"
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 139,
       "type": "LoadImage",
       "pos": [
-        -285.70162621127906,
-        5633.5315804854645
+        -740.180678208585,
+        6089.8768360089625
       ],
       "size": [
-        290,
-        350
+        390,
+        370
       ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            282
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pic_char_001_00_prologue_full_body_front.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "pic_char_001_00_prologue_full_body_front.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 140,
+      "type": "MarkdownNote",
+      "pos": [
+        -1880,
+        6070
+      ],
+      "size": [
+        300,
+        520
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Size Settings Reference",
+      "properties": {},
+      "widgets_values": [
+        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 (official 768p) |"
+      ],
+      "widgets_values_named": {
+        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 (official 768p) |"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 141,
+      "type": "ComfySwitchNode",
+      "pos": [
+        -730,
+        4940
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 287
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "MODEL",
+          "link": 286
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "MODEL",
+          "links": [
+            288
+          ]
+        }
+      ],
+      "title": "If/Else Switch (model)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
+    },
+    {
+      "id": 142,
+      "type": "ComfySwitchNode",
+      "pos": [
+        -390,
+        5110
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "INT",
+          "link": 284
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "INT",
+          "link": 283
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 291
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "INT",
+          "links": [
+            289
+          ]
+        }
+      ],
+      "title": "If/Else Switch (Steps)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
+    },
+    {
+      "id": 143,
+      "type": "PrimitiveInt",
+      "pos": [
+        -730,
+        5090
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            284
+          ]
+        }
+      ],
+      "title": "Int (Full)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        20,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "value": 20,
+        "fixed": "fixed"
+      }
+    },
+    {
+      "id": 144,
+      "type": "PrimitiveInt",
+      "pos": [
+        -730,
+        5220
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            283
+          ]
+        }
+      ],
+      "title": "Int (Lightning LoRA)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        4,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "value": 4,
+        "fixed": "fixed"
+      }
+    },
+    {
+      "id": 145,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -1490,
+        5140
+      ],
+      "size": [
+        640,
+        90
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 285
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            286
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "models": [
+          {
+            "name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+            "directory": "loras"
+          }
+        ]
+      },
+      "widgets_values": [
+        "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "strength_model": 1
+      }
+    },
+    {
+      "id": 146,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -1483.3426966540605,
+        6069.8768360089625
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            290,
+            291
+          ]
+        }
+      ],
+      "title": "Boolean (Enable Lightning LoRA)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "value": false
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 147,
+      "type": "LoadImage",
+      "pos": [
+        -343.870397524543,
+        6093.74352162955
+      ],
+      "size": [
+        337.75,
+        363.71875
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
@@ -1004,175 +1452,337 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "mecha_dragon_lightning[1].png",
+        "pic_loc_001_key_detail.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "mecha_dragon_lightning[1].png",
+        "image": "pic_loc_001_key_detail.png",
         "upload": "image"
       }
     },
     {
-      "id": 140,
-      "type": "MarkdownNote",
+      "id": 148,
+      "type": "LoadImage",
       "pos": [
-        -1890,
-        5830
+        10.172120446797948,
+        6102.923606491219
       ],
       "size": [
-        300,
-        520
+        329.34375,
+        349.65625
       ],
       "flags": {},
-      "order": 12,
-      "mode": 0,
+      "order": 18,
+      "mode": 4,
       "inputs": [],
-      "outputs": [],
-      "title": "Note: Size Settings Reference",
-      "properties": {},
-      "widgets_values": [
-        "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      ],
-      "widgets_values_named": {
-        "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
-      },
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 144,
-      "type": "ResizeImageMaskNode",
-      "pos": [
-        460.51308796161914,
-        4919.534586133795
-      ],
-      "size": [
-        270,
-        174
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "input",
-          "type": "IMAGE,MASK",
-          "link": null
-        }
-      ],
       "outputs": [
         {
-          "name": "resized",
-          "type": "*",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
           "links": null
         }
       ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.33.0",
-        "Node name for S&R": "ResizeImageMaskNode"
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "scale dimensions",
-        608,
-        0,
-        "center",
-        "area"
+        "pic_char_001_00_prologue_face_front.png",
+        "image"
       ],
       "widgets_values_named": {
-        "resize_type": "scale dimensions",
-        "resize_type.width": 608,
-        "resize_type.height": 0,
-        "resize_type.crop": "center",
-        "scale_method": "area"
+        "image": "pic_char_001_00_prologue_face_front.png",
+        "upload": "image"
       }
     },
     {
-      "id": 145,
-      "type": "ClipProjLoader",
+      "id": 149,
+      "type": "LoadImage",
       "pos": [
-        -1490.641109122527,
-        5074.6642620904795
+        359.1728047595508,
+        6102.923606491218
       ],
       "size": [
-        633.515625,
-        198
+        330.25,
+        348.71875
       ],
       "flags": {},
-      "order": 14,
-      "mode": 0,
+      "order": 19,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
-          "name": "CLIP",
-          "type": "CLIP",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
             294
           ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
         }
       ],
-      "title": "1. Encoder + projection  (replaces the 15.7 GB 32B)",
       "properties": {
-        "cnr_id": "comfyui-clipproj",
-        "ver": "0.1.13",
-        "Node name for S&R": "ClipProjLoader"
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "qwen3vl_4b_int4_convrot.safetensors",
-        "auto",
-        "mmh3-4b-ClipProj-v3.1-mlp.safetensors",
-        "cuda:0",
-        "resident"
+        "pic_char_002_full_body_front.png",
+        "image"
       ],
       "widgets_values_named": {
-        "clip_name": "qwen3vl_4b_int4_convrot.safetensors",
-        "type": "auto",
-        "projection": "mmh3-4b-ClipProj-v3.1-mlp.safetensors",
-        "device": "cuda:0",
-        "mode": "resident"
+        "image": "pic_char_002_full_body_front.png",
+        "upload": "image"
       }
     },
     {
-      "id": 148,
-      "type": "ClipProjLoader",
+      "id": 150,
+      "type": "LoadAudio",
       "pos": [
-        981.1063310785621,
-        4853.747100608104
+        26.68037546987849,
+        6509.200113853082
       ],
       "size": [
-        374.734375,
-        222
+        282.78125,
+        138
       ],
       "flags": {},
-      "order": 15,
-      "mode": 0,
+      "order": 20,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": []
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            295
+          ]
         }
       ],
-      "title": "1. Encoder + projection  (replaces the 15.7 GB 32B)",
       "properties": {
-        "cnr_id": "comfyui-clipproj",
-        "ver": "0.1.13",
-        "Node name for S&R": "ClipProjLoader"
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "LoadAudio"
       },
       "widgets_values": [
-        "qwen3vl_4b_int4_convrot.safetensors",
-        "auto",
-        "mmh3-4b-ClipProj-v3.1-mlp.safetensors",
-        "cuda:0",
-        "resident"
+        "Indy (Donald Reignoux).mp3",
+        null,
+        null
       ],
       "widgets_values_named": {
-        "clip_name": "qwen3vl_4b_int4_convrot.safetensors",
-        "type": "auto",
-        "projection": "mmh3-4b-ClipProj-v3.1-mlp.safetensors",
-        "device": "cuda:0",
-        "mode": "resident"
+        "audio": "Indy (Donald Reignoux).mp3",
+        "upload": null
+      }
+    },
+    {
+      "id": 151,
+      "type": "MiniMaxH3AddGuide",
+      "pos": [
+        1617.2816973698268,
+        6378.349556070542
+      ],
+      "size": [
+        274.625,
+        162
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 296
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 298
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 299
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 300
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 306
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            297
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "MiniMaxH3AddGuide"
+      },
+      "widgets_values": [
+        0
+      ],
+      "widgets_values_named": {
+        "frame_idx": 0
+      }
+    },
+    {
+      "id": 156,
+      "type": "VideoFrameExtractor",
+      "pos": [
+        745.2105400882812,
+        6057.592408316619
+      ],
+      "size": [
+        520,
+        1064
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Clipped Frames",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "Reversed Clipped Frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "First Frame",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "Last Frame",
+          "type": "IMAGE",
+          "links": [
+            305
+          ]
+        },
+        {
+          "name": "Filename Prefix (no extension)",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "Width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "Height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "Original FPS",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "Clipped Frames at Target FPS",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "Target FPS",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-video-frame-extractor",
+        "ver": "1.3.0",
+        "Node name for S&R": "VideoFrameExtractor"
+      },
+      "widgets_values": [
+        "MiniMax_H3_00001_.mp4",
+        null,
+        0,
+        123,
+        124,
+        24,
+        "image"
+      ],
+      "widgets_values_named": {
+        "video": "MiniMax_H3_00001_.mp4",
+        "video_timeline_widget": null,
+        "start_frame": 0,
+        "end_frame": 123,
+        "num_frames": 124,
+        "target_fps": 24,
+        "upload": "image"
+      }
+    },
+    {
+      "id": 158,
+      "type": "PreviewImage",
+      "pos": [
+        1341.9263789922338,
+        6373.114672874339
+      ],
+      "size": [
+        225,
+        266
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 305
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            306
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "PreviewImage"
       }
     }
   ],
@@ -1234,14 +1844,6 @@
       "SIGMAS"
     ],
     [
-      257,
-      127,
-      0,
-      126,
-      0,
-      "MODEL"
-    ],
-    [
       258,
       122,
       0,
@@ -1274,20 +1876,20 @@
       "FLOAT"
     ],
     [
-      270,
-      136,
-      0,
-      126,
-      1,
-      "CONDITIONING"
-    ],
-    [
       271,
       136,
       1,
       125,
       4,
       "LATENT"
+    ],
+    [
+      272,
+      128,
+      0,
+      136,
+      0,
+      "CLIP"
     ],
     [
       273,
@@ -1310,7 +1912,7 @@
       131,
       1,
       136,
-      12,
+      16,
       "INT"
     ],
     [
@@ -1318,7 +1920,7 @@
       115,
       0,
       136,
-      10,
+      14,
       "INT"
     ],
     [
@@ -1326,15 +1928,23 @@
       115,
       1,
       136,
-      11,
+      15,
       "INT"
+    ],
+    [
+      278,
+      137,
+      0,
+      136,
+      3,
+      "IMAGE"
     ],
     [
       279,
       138,
       0,
       136,
-      9,
+      13,
       "STRING"
     ],
     [
@@ -1354,15 +1964,7 @@
       "LATENT"
     ],
     [
-      291,
-      137,
-      0,
-      136,
-      3,
-      "IMAGE"
-    ],
-    [
-      292,
+      282,
       139,
       0,
       136,
@@ -1370,12 +1972,164 @@
       "IMAGE"
     ],
     [
-      294,
+      283,
+      144,
+      0,
+      142,
+      1,
+      "INT"
+    ],
+    [
+      284,
+      143,
+      0,
+      142,
+      0,
+      "INT"
+    ],
+    [
+      285,
+      127,
+      0,
       145,
       0,
+      "MODEL"
+    ],
+    [
+      286,
+      145,
+      0,
+      141,
+      1,
+      "MODEL"
+    ],
+    [
+      287,
+      127,
+      0,
+      141,
+      0,
+      "MODEL"
+    ],
+    [
+      288,
+      141,
+      0,
+      126,
+      0,
+      "MODEL"
+    ],
+    [
+      289,
+      142,
+      0,
+      124,
+      1,
+      "INT"
+    ],
+    [
+      290,
+      146,
+      0,
+      141,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      291,
+      146,
+      0,
+      142,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      292,
+      147,
+      0,
+      136,
+      5,
+      "IMAGE"
+    ],
+    [
+      293,
+      148,
+      0,
+      136,
+      6,
+      "IMAGE"
+    ],
+    [
+      294,
+      149,
+      0,
+      136,
+      7,
+      "IMAGE"
+    ],
+    [
+      295,
+      150,
+      0,
+      136,
+      11,
+      "AUDIO"
+    ],
+    [
+      296,
       136,
       0,
-      "CLIP"
+      151,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      297,
+      151,
+      0,
+      126,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      298,
+      136,
+      1,
+      151,
+      1,
+      "LATENT"
+    ],
+    [
+      299,
+      119,
+      0,
+      151,
+      2,
+      "VAE"
+    ],
+    [
+      300,
+      120,
+      0,
+      151,
+      3,
+      "VAE"
+    ],
+    [
+      305,
+      156,
+      3,
+      158,
+      0,
+      "IMAGE"
+    ],
+    [
+      306,
+      158,
+      0,
+      151,
+      4,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1385,8 +2139,8 @@
       "bounding": [
         -1520,
         4840,
-        700,
-        670
+        714.143734031365,
+        1110.8640048752186
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1395,22 +2149,22 @@
       "id": 2,
       "title": "Sampling",
       "bounding": [
-        -280,
-        4840,
+        637.6626227907989,
+        4807.602593678746,
         690,
-        670
+        700
       ],
       "color": "#3f789e",
       "flags": {}
     },
     {
       "id": 3,
-      "title": "Conditioning",
+      "title": "Switch Model and Settings",
       "bounding": [
         -790,
         4840,
-        480,
-        670
+        730,
+        490
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1419,10 +2173,10 @@
       "id": 4,
       "title": "Decoding and create video",
       "bounding": [
-        440,
-        4840,
-        670,
-        670
+        -30,
+        5570,
+        717.0015242378563,
+        384.72124776332384
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1431,10 +2185,34 @@
       "id": 5,
       "title": "User Inputs",
       "bounding": [
-        -1520,
-        5540,
-        1930,
-        900
+        -1513.3426966540605,
+        5989.8768360089625,
+        2226.2520425249986,
+        1417.368055207403
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Conditioning",
+      "bounding": [
+        -790,
+        5350,
+        754.429872022715,
+        609.8644344763015
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Group",
+      "bounding": [
+        735.2105400882812,
+        5987.592408316618,
+        1508.3811183548944,
+        1131.9518278691876
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1443,13 +2221,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7722527459016418,
+      "scale": 0.4418927570252857,
       "offset": [
-        2123.5994708632734,
-        -4642.861155492185
+        2054.078914792627,
+        -5763.76250795846
       ]
     },
-    "frontendVersion": "1.49.6",
+    "frontendVersion": "1.51.9",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,

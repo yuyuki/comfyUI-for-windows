@@ -1,0 +1,165 @@
+{
+  "id": "25dd78d8-c65f-4dd0-8f7d-466b66c130a1",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "LoadAudio",
+      "pos": [
+        221.1884820571579,
+        5994.829432738825
+      ],
+      "size": [
+        648.75,
+        139.90625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "Emmanuel Curtil aka la voix française de Jim Carrey et Simba 🤩 - Konbini (youtube).mp3",
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "Emmanuel Curtil aka la voix française de Jim Carrey et Simba 🤩 - Konbini (youtube).mp3",
+        "upload": ""
+      }
+    },
+    {
+      "id": 3,
+      "type": "TrimAudioDuration",
+      "pos": [
+        949.9384820571579,
+        6019.782557738825
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0",
+        "Node name for S&R": "TrimAudioDuration"
+      },
+      "widgets_values": [
+        40,
+        16
+      ],
+      "widgets_values_named": {
+        "start_index": 40,
+        "duration": 16
+      }
+    },
+    {
+      "id": 5,
+      "type": "SaveAudioAdvanced",
+      "pos": [
+        1299.938482057158,
+        5967.782557738825
+      ],
+      "size": [
+        631.90625,
+        194
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.34.0"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "mp3",
+        "128k"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/ComfyUI",
+        "format": "mp3",
+        "format.quality": "128k"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7828399745284705,
+      "offset": [
+        535.4823006742495,
+        -5551.344490912946
+      ]
+    },
+    "frontendVersion": "1.51.9"
+  },
+  "version": 0.4
+}

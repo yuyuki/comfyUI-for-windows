@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-Write-Host "=== Installing: ComfyUI-ClipProj ===" -ForegroundColor Cyan
+Write-Host "=== Installing: ComfyUI-Video-Frame-Extractor ===" -ForegroundColor Cyan
 
 # ------------------------
 # 1️⃣ Working directory
@@ -29,19 +29,19 @@ if (!(Test-Path $CustomNodesDir)) {
 }
 
 # ------------------------
-# 5️⃣ Install ComfyUI-ClipProj
+# 5️⃣ Install ComfyUI-Video-Frame-Extractor
 # ------------------------
-Write-Host "`n=== Installing ComfyUI-ClipProj ===" -ForegroundColor Yellow
-$RepoDir = "$CustomNodesDir\ComfyUI-ClipProj"
-$RepoUrl = "https://github.com/nicolab28/ComfyUI-ClipProj.git"
+Write-Host "`n=== Installing ComfyUI-Video-Frame-Extractor ===" -ForegroundColor Yellow
+$RepoDir = "$CustomNodesDir\ComfyUI-Video-Frame-Extractor"
+$RepoUrl = "https://github.com/comfyuiattic-989/ComfyUI-Video-Frame-Extractor.git"
 
 if (Test-Path $RepoDir) {
     try {
-        Write-Host "Updating existing ComfyUI-ClipProj repo..." -ForegroundColor Yellow
+        Write-Host "Updating existing ComfyUI-Video-Frame-Extractor repo..." -ForegroundColor Yellow
         git -C "$RepoDir" pull --ff-only
     }
     catch {
-        Write-Warning "Update failed. Re-cloning ComfyUI-ClipProj..."
+        Write-Warning "Update failed. Re-cloning ComfyUI-Video-Frame-Extractor..."
         Remove-Item $RepoDir -Recurse -Force
         git clone $RepoUrl $RepoDir
     }
