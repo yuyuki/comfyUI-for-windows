@@ -1,0 +1,176 @@
+{
+  "id": "225e5345-6fde-4103-b42e-f57ba98928d5",
+  "revision": 0,
+  "last_node_id": 3,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadVideo",
+      "pos": [
+        -1167.509619050364,
+        6115.134400074728
+      ],
+      "size": [
+        282.798828125,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.2",
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "scene_001_Indy_Suspended_in_Darkness_prompt.mp4",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "scene_001_Indy_Suspended_in_Darkness_prompt.mp4",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 2,
+      "type": "VideoTrim",
+      "pos": [
+        -834.7107909253641,
+        6115.134400074728
+      ],
+      "size": [
+        1451.3344042660185,
+        1193.5996344160185
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.2",
+        "Node name for S&R": "VideoTrim"
+      },
+      "widgets_values": [
+        {
+          "trim": {
+            "start_time": 0,
+            "duration": 0
+          }
+        },
+        false
+      ],
+      "widgets_values_named": {
+        "trim": {
+          "trim": {
+            "start_time": 0,
+            "duration": 0
+          }
+        },
+        "strict_duration": false
+      }
+    },
+    {
+      "id": 3,
+      "type": "SaveVideo",
+      "pos": [
+        666.6236133406542,
+        6115.134400074728
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.2"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "VIDEO"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.44356624691018987,
+      "offset": [
+        2320.2418154789034,
+        -5176.299073063427
+      ]
+    },
+    "frontendVersion": "1.53.6"
+  },
+  "version": 0.4
+}

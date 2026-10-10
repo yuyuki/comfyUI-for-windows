@@ -1,22 +1,22 @@
 {
-  "id": "e3f2b845-8f2c-4b5a-9caf-eac1029d3e7e",
+  "id": "1e221460-ae32-48b9-8bc1-4ebab522304f",
   "revision": 0,
-  "last_node_id": 174,
-  "last_link_id": 324,
+  "last_node_id": 219,
+  "last_link_id": 414,
   "nodes": [
     {
       "id": 92,
       "type": "SaveVideo",
       "pos": [
-        -96.38980614045909,
-        6782.253235637018
+        -41.18958088984937,
+        6965.811051006553
       ],
       "size": [
-        748.40625,
-        126
+        1414.875,
+        1128.75
       ],
       "flags": {},
-      "order": 36,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -47,7 +47,9 @@
         "format": "auto",
         "format.codec": "auto",
         "codec": "auto"
-      }
+      },
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 115,
@@ -64,14 +66,7 @@
       "order": 0,
       "mode": 0,
       "showAdvanced": false,
-      "inputs": [
-        {
-          "name": "preview",
-          "shape": 7,
-          "type": "RESOLUTION_PREVIEW",
-          "link": null
-        }
-      ],
+      "inputs": [],
       "outputs": [
         {
           "name": "width",
@@ -96,12 +91,12 @@
       },
       "widgets_values": [
         "16:9 (Widescreen)",
-        0.2,
+        0.3,
         32
       ],
       "widgets_values_named": {
         "aspect_ratio": "16:9 (Widescreen)",
-        "megapixels": 0.2,
+        "megapixels": 0.3,
         "multiple": 32
       },
       "color": "#322",
@@ -143,7 +138,7 @@
       ],
       "size": [
         440,
-        931.6875
+        957.75
       ],
       "flags": {},
       "order": 2,
@@ -170,7 +165,7 @@
       ],
       "size": [
         640,
-        70
+        86
       ],
       "flags": {},
       "order": 3,
@@ -215,7 +210,7 @@
       ],
       "size": [
         650,
-        70
+        86
       ],
       "flags": {},
       "order": 4,
@@ -260,12 +255,12 @@
       ],
       "size": [
         230,
-        60
+        78
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 34,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -303,12 +298,12 @@
       ],
       "size": [
         230,
-        60
+        78
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 33,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -346,7 +341,7 @@
       ],
       "size": [
         370,
-        70
+        86
       ],
       "flags": {},
       "order": 5,
@@ -377,15 +372,15 @@
       "id": 124,
       "type": "BasicScheduler",
       "pos": [
-        667.6626227907989,
-        5287.602593678746
+        674.4376366952774,
+        5325.543819080284
       ],
       "size": [
         370,
-        130
+        142
       ],
       "flags": {},
-      "order": 28,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -439,7 +434,7 @@
         140
       ],
       "flags": {},
-      "order": 32,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -498,10 +493,10 @@
       ],
       "size": [
         360,
-        60
+        78
       ],
       "flags": {},
-      "order": 31,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -539,7 +534,7 @@
       ],
       "size": [
         640,
-        90
+        110
       ],
       "flags": {},
       "order": 6,
@@ -586,7 +581,7 @@
       ],
       "size": [
         640,
-        120
+        138
       ],
       "flags": {},
       "order": 7,
@@ -654,11 +649,11 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        1041943299371886,
+        954111144494889,
         "randomize"
       ],
       "widgets_values_named": {
-        "noise_seed": 1041943299371886,
+        "noise_seed": 954111144494889,
         "control_after_generate": "randomize"
       }
     },
@@ -671,10 +666,10 @@
       ],
       "size": [
         270,
-        138
+        162
       ],
       "flags": {},
-      "order": 35,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -706,12 +701,14 @@
       "widgets_values": [
         24,
         8,
-        "sRGB"
+        "sRGB",
+        "none"
       ],
       "widgets_values_named": {
         "fps": 24,
         "bit_depth": 8,
-        "color_space": "sRGB"
+        "color_space": "sRGB",
+        "codec": "none"
       }
     },
     {
@@ -723,12 +720,12 @@
       ],
       "size": [
         225,
-        0
+        74
       ],
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -784,7 +781,7 @@
       ],
       "size": [
         270,
-        70
+        86
       ],
       "flags": {},
       "order": 9,
@@ -806,10 +803,10 @@
         "Node name for S&R": "PrimitiveFloat"
       },
       "widgets_values": [
-        5
+        10
       ],
       "widgets_values_named": {
-        "value": 5
+        "value": 10
       },
       "color": "#322",
       "bgcolor": "#533"
@@ -823,10 +820,10 @@
       ],
       "size": [
         400,
-        454
+        544
       ],
       "flags": {},
-      "order": 27,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -866,24 +863,6 @@
           "link": 292
         },
         {
-          "name": "ref_images.ref_image_3",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 293
-        },
-        {
-          "name": "ref_images.ref_image_4",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 294
-        },
-        {
-          "name": "ref_images.ref_image_5",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": null
-        },
-        {
           "label": "ref_video_0",
           "name": "ref_videos.ref_video_0",
           "shape": 7,
@@ -893,6 +872,18 @@
         {
           "label": "ref_video_audio_0",
           "name": "ref_video_audios.ref_video_audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_video_audios.ref_video_audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_video_audios.ref_video_audio_2",
           "shape": 7,
           "type": "AUDIO",
           "link": null
@@ -911,12 +902,18 @@
           "link": null
         },
         {
+          "name": "ref_audios.ref_audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
           "name": "prompt",
           "type": "STRING",
           "widget": {
             "name": "prompt"
           },
-          "link": 279
+          "link": 414
         },
         {
           "name": "width",
@@ -941,6 +938,36 @@
             "name": "length"
           },
           "link": 275
+        },
+        {
+          "name": "ref_images.ref_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 293
+        },
+        {
+          "name": "ref_images.ref_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 294
+        },
+        {
+          "name": "ref_images.ref_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 395
+        },
+        {
+          "name": "ref_images.ref_image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 399
+        },
+        {
+          "name": "ref_images.ref_image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
         }
       ],
       "outputs": [
@@ -988,8 +1015,8 @@
         6089.8768360089625
       ],
       "size": [
-        406.15625,
-        354.34375
+        406.125,
+        354.3125
       ],
       "flags": {},
       "order": 10,
@@ -1015,52 +1042,13 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "pic_loc_001_wide_establishing.png",
+        "tree 01.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "pic_loc_001_wide_establishing.png",
+        "image": "tree 01.png",
         "upload": "image"
       }
-    },
-    {
-      "id": 138,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1485.8363142638646,
-        6681.0475127334985
-      ],
-      "size": [
-        770.625,
-        695.125
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            279
-          ]
-        }
-      ],
-      "title": "Input Text (Prompt)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.33.0",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "subject_definitions :\n<Subject 1> The Crevasse (location) — defined by <Image 1> a wide establishing shot showing the scale of the deep rock fissure with vertical walls and a narrow opening at the top, creating an oppressive darkness punctuated only by a faint glow filtering down from above.\n<Subject 2> Indy (character) — defined by <Image 2> a full-body frontal shot showing his complete silhouette: backpack with side pocket, mallet, pickaxe, four-pronged torch holder, and—crucially—the rope passing under his armpits, causing visible bruising on his skin.\n\nsummary :\n[reference generation] A continuous long take establishes the setting of the Crevasse and then reveals Indy suspended by a rope wrapped around his chest and passing under his armpits; bruises are visible on his skin as he looks up into the darkness, where a faint light twinkles like a distant star above the crevasse opening.\n\npreservation_analysis :\n<Subject 1> fully_preserved — <Image 1> the wide establishing shot provides the complete environmental context (vertical rock walls and narrow top opening) throughout the shot.\n<Subject 2> partially_preserved — <Image 2> the full-body frontal shot anchors the arrangement of Indy's gear (backpack, mallet, pickaxe, torch holder), while the rope marks on his chest and armpits are highlighted as a newly visible detail not fully captured in the reference image. Detailed description:\n[Shot 1] The camera opens on a wide, sweeping shot of the Crevasse, <Image 1> revealing the full scale of the place: towering, vertical rock faces plunge into deep darkness—their surfaces rough and striated by time—while at the top, a narrow opening allows a faint, pale glimmer to filter through, resembling a distant star suspended in the abyss. Shadow dominates the frame; the crevasse walls recede into impenetrable blackness on either side, creating a sense of crushing isolation and vertical depth that underscores the smallness and vulnerability of any figure within it. Slowly, the camera tilts downward, following the trajectory of the rope; its taut line cuts through the darkness like a lifeline cast from above. As the camera movement concludes, Indy appears on screen <Image 2>, centered in a full-body shot: he is suspended by a thick hemp rope looped under his armpits; friction has left visible bruises on his skin where the fibers pressed against him. His backpack weighs heavily on his shoulders, its side pocket clearly visible; a mallet and pickaxe rest on either side of his body, their metal heads catching faint glimmers from above. A four-pronged torch holder hangs unused at his hip—a silent reminder of what he once brought into this place.\n\nIndy’s head is tilted upward, his eyes fixed on the narrow opening where a faint light flickers like a dying star; his expression betrays a bewildered stupor—he hears voices echoing from above but cannot grasp their meaning or their source. The rope sways gently in time with his breathing, creaking slightly against the rock walls, while distant, muffled sounds drift down through the stone like whispers trying to reach him. The camera remains fixed on this suspended moment, allowing the composition to breathe: Indy is centered in the lower third of the frame, the rope stretching upward out of shot toward that thin strip of light, surrounded on all sides by the vast darkness of the crevasse. The shot holds without a cut or movement—save for the initial tilt and the slight swaying—allowing the viewer to grasp the full weight of his predicament: trapped between the oppressive walls below and the unreachable light above, battered by the very thing keeping him from sinking further into the darkness.\n\noverall_soundscape:\nDeep cavern atmosphere with low, rumbling echoes; distant, muffled voices resonating from above like whispers through the stone; subtle sounds of dripping water; a faint gust of wind swirling in the narrow opening at the top. The rope creaks softly under the tension as Indy sways slightly.\n\nnon_diegetic_music:\nN/A"
-      ],
-      "widgets_values_named": {
-        "value": "subject_definitions :\n<Subject 1> The Crevasse (location) — defined by <Image 1> a wide establishing shot showing the scale of the deep rock fissure with vertical walls and a narrow opening at the top, creating an oppressive darkness punctuated only by a faint glow filtering down from above.\n<Subject 2> Indy (character) — defined by <Image 2> a full-body frontal shot showing his complete silhouette: backpack with side pocket, mallet, pickaxe, four-pronged torch holder, and—crucially—the rope passing under his armpits, causing visible bruising on his skin.\n\nsummary :\n[reference generation] A continuous long take establishes the setting of the Crevasse and then reveals Indy suspended by a rope wrapped around his chest and passing under his armpits; bruises are visible on his skin as he looks up into the darkness, where a faint light twinkles like a distant star above the crevasse opening.\n\npreservation_analysis :\n<Subject 1> fully_preserved — <Image 1> the wide establishing shot provides the complete environmental context (vertical rock walls and narrow top opening) throughout the shot.\n<Subject 2> partially_preserved — <Image 2> the full-body frontal shot anchors the arrangement of Indy's gear (backpack, mallet, pickaxe, torch holder), while the rope marks on his chest and armpits are highlighted as a newly visible detail not fully captured in the reference image. Detailed description:\n[Shot 1] The camera opens on a wide, sweeping shot of the Crevasse, <Image 1> revealing the full scale of the place: towering, vertical rock faces plunge into deep darkness—their surfaces rough and striated by time—while at the top, a narrow opening allows a faint, pale glimmer to filter through, resembling a distant star suspended in the abyss. Shadow dominates the frame; the crevasse walls recede into impenetrable blackness on either side, creating a sense of crushing isolation and vertical depth that underscores the smallness and vulnerability of any figure within it. Slowly, the camera tilts downward, following the trajectory of the rope; its taut line cuts through the darkness like a lifeline cast from above. As the camera movement concludes, Indy appears on screen <Image 2>, centered in a full-body shot: he is suspended by a thick hemp rope looped under his armpits; friction has left visible bruises on his skin where the fibers pressed against him. His backpack weighs heavily on his shoulders, its side pocket clearly visible; a mallet and pickaxe rest on either side of his body, their metal heads catching faint glimmers from above. A four-pronged torch holder hangs unused at his hip—a silent reminder of what he once brought into this place.\n\nIndy’s head is tilted upward, his eyes fixed on the narrow opening where a faint light flickers like a dying star; his expression betrays a bewildered stupor—he hears voices echoing from above but cannot grasp their meaning or their source. The rope sways gently in time with his breathing, creaking slightly against the rock walls, while distant, muffled sounds drift down through the stone like whispers trying to reach him. The camera remains fixed on this suspended moment, allowing the composition to breathe: Indy is centered in the lower third of the frame, the rope stretching upward out of shot toward that thin strip of light, surrounded on all sides by the vast darkness of the crevasse. The shot holds without a cut or movement—save for the initial tilt and the slight swaying—allowing the viewer to grasp the full weight of his predicament: trapped between the oppressive walls below and the unreachable light above, battered by the very thing keeping him from sinking further into the darkness.\n\noverall_soundscape:\nDeep cavern atmosphere with low, rumbling echoes; distant, muffled voices resonating from above like whispers through the stone; subtle sounds of dripping water; a faint gust of wind swirling in the narrow opening at the top. The rope creaks softly under the tension as Indy sways slightly.\n\nnon_diegetic_music:\nN/A"
-      },
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 139,
@@ -1074,7 +1062,7 @@
         370
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1097,11 +1085,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "pic_char_001_00_prologue_full_body_front.png",
+        "tree 02.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "pic_char_001_00_prologue_full_body_front.png",
+        "image": "tree 02.png",
         "upload": "image"
       }
     },
@@ -1117,7 +1105,7 @@
         520
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1144,7 +1132,7 @@
         110
       ],
       "flags": {},
-      "order": 26,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1202,7 +1190,7 @@
         110
       ],
       "flags": {},
-      "order": 24,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1260,7 +1248,7 @@
         90
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1299,7 +1287,7 @@
         90
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1318,11 +1306,11 @@
         "Node name for S&R": "PrimitiveInt"
       },
       "widgets_values": [
-        4,
+        8,
         "fixed"
       ],
       "widgets_values_named": {
-        "value": 4,
+        "value": 8,
         "fixed": "fixed"
       }
     },
@@ -1335,10 +1323,10 @@
       ],
       "size": [
         640,
-        90
+        114
       ],
       "flags": {},
-      "order": 22,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1386,10 +1374,10 @@
       ],
       "size": [
         270,
-        70
+        86
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1409,10 +1397,10 @@
         "Node name for S&R": "PrimitiveBoolean"
       },
       "widgets_values": [
-        false
+        true
       ],
       "widgets_values_named": {
-        "value": false
+        "value": true
       },
       "color": "#322",
       "bgcolor": "#533"
@@ -1421,16 +1409,16 @@
       "id": 147,
       "type": "LoadImage",
       "pos": [
-        -343.870397524543,
-        6093.74352162955
+        -333.68969390149823,
+        6095.594537789561
       ],
       "size": [
         337.75,
-        363.71875
+        363.6875
       ],
       "flags": {},
-      "order": 17,
-      "mode": 4,
+      "order": 16,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -1452,11 +1440,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "pic_loc_001_key_detail.png",
+        "tree 03.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "pic_loc_001_key_detail.png",
+        "image": "tree 03.png",
         "upload": "image"
       }
     },
@@ -1468,12 +1456,12 @@
         6102.923606491219
       ],
       "size": [
-        329.34375,
-        349.65625
+        329.3125,
+        349.625
       ],
       "flags": {},
-      "order": 18,
-      "mode": 4,
+      "order": 17,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -1495,11 +1483,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "pic_char_001_00_prologue_face_front.png",
+        "tree 04.jpg",
         "image"
       ],
       "widgets_values_named": {
-        "image": "pic_char_001_00_prologue_face_front.png",
+        "image": "tree 04.jpg",
         "upload": "image"
       }
     },
@@ -1512,11 +1500,11 @@
       ],
       "size": [
         330.25,
-        348.71875
+        348.6875
       ],
       "flags": {},
-      "order": 19,
-      "mode": 4,
+      "order": 18,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -1538,11 +1526,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "pic_char_002_full_body_front.png",
+        "tree 05.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "pic_char_002_full_body_front.png",
+        "image": "tree 05.png",
         "upload": "image"
       }
     },
@@ -1550,15 +1538,15 @@
       "id": 150,
       "type": "LoadAudio",
       "pos": [
-        26.68037546987849,
+        11.088130184207976,
         6509.200113853082
       ],
       "size": [
-        282.78125,
-        138
+        385.6875,
+        162
       ],
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 4,
       "inputs": [],
       "outputs": [
@@ -1577,7 +1565,6 @@
       },
       "widgets_values": [
         "Indy (Donald Reignoux).mp3",
-        null,
         null
       ],
       "widgets_values_named": {
@@ -1590,15 +1577,15 @@
       "type": "MiniMaxH3AddGuide",
       "pos": [
         1738.2587606743937,
-        6168.862000621163
+        6167.843932024135
       ],
       "size": [
         274.625,
-        162
+        186
       ],
       "flags": {},
-      "order": 30,
-      "mode": 0,
+      "order": 36,
+      "mode": 4,
       "inputs": [
         {
           "name": "positive",
@@ -1660,16 +1647,16 @@
       "id": 170,
       "type": "1f824d00-6ec5-41fd-81c0-b05a83d37823",
       "pos": [
-        825.7832228956104,
-        6338.385373060662
+        755.4757263779605,
+        6333.266034950945
       ],
       "size": [
-        225,
-        354
+        340.375,
+        413.75
       ],
       "flags": {},
-      "order": 21,
-      "mode": 0,
+      "order": 20,
+      "mode": 4,
       "inputs": [
         {
           "label": "Select from end",
@@ -1690,7 +1677,6 @@
           ]
         }
       ],
-      "title": "Get Frame",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.34.0",
@@ -1708,11 +1694,11 @@
         ]
       },
       "widgets_values": [
-        "MiniMax_H3_00001_.mp4",
+        "scene_001_Indy_Suspended_in_Darkness_prompt.mp4",
         4
       ],
       "widgets_values_named": {
-        "file": "MiniMax_H3_00001_.mp4",
+        "file": "scene_001_Indy_Suspended_in_Darkness_prompt.mp4",
         "value": 4
       },
       "color": "#223",
@@ -1723,15 +1709,15 @@
       "type": "PreviewImage",
       "pos": [
         1434.404629922768,
-        6359.848747251592
+        6358.830678654564
       ],
       "size": [
         225,
         266
       ],
       "flags": {},
-      "order": 29,
-      "mode": 0,
+      "order": 34,
+      "mode": 4,
       "inputs": [
         {
           "name": "images",
@@ -1759,15 +1745,15 @@
       "type": "ImageScaleBy",
       "pos": [
         1107.3936414277705,
-        6334.995883965818
+        6333.97781536879
       ],
       "size": [
         270,
-        90
+        114
       ],
       "flags": {},
-      "order": 25,
-      "mode": 0,
+      "order": 28,
+      "mode": 4,
       "inputs": [
         {
           "name": "image",
@@ -1791,11 +1777,381 @@
       },
       "widgets_values": [
         "nearest-exact",
-        2
+        1
       ],
       "widgets_values_named": {
         "upscale_method": "nearest-exact",
-        "scale_by": 2
+        "scale_by": 1
+      }
+    },
+    {
+      "id": 202,
+      "type": "LoadImage",
+      "pos": [
+        -97.19718570081886,
+        6517.425637792621
+      ],
+      "size": [
+        330.25,
+        348.6875
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            395
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "meteor.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "meteor.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 203,
+      "type": "LoadImage",
+      "pos": [
+        294.53004918737315,
+        6528.523305653425
+      ],
+      "size": [
+        330.25,
+        348.6875
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            399
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.33.0",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "moon.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "moon.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 204,
+      "type": "H3_Promptor",
+      "pos": [
+        -1997.0133427746496,
+        7192.422183520138
+      ],
+      "size": [
+        676.7283800297851,
+        591.9964710903547
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vision_context",
+          "shape": 7,
+          "type": "STRING",
+          "link": 400
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": [
+            410
+          ]
+        },
+        {
+          "name": "DURATION",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "LENGTH",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-MiniMax-H3-Promptor",
+        "ver": "bdbde80b0b7d4600696d2be7eca7eb2e3c10cf1f",
+        "Node name for S&R": "H3_Promptor"
+      },
+      "widgets_values": [
+        "Reference-to-Video-Audio (Ref2VA)",
+        "# MANIAC MANSION REIMAGINED — 10s CONTINUOUS 2D PANORAMIC SHOT\n\n## 1. VISUAL STYLE\n\nCreate one continuous 10-second cinematic shot in the exact visual style of the reference images.\n\nModernized 2D cartoon point-and-click adventure aesthetic, clean outlines, rich colors, soft shading, subtle gradients, detailed painted backgrounds and atmospheric nighttime lighting.\n\nPreserve the visual identity, geometry, proportions, colors and details of the reference environments throughout the entire sequence.\n\nAll landscape references represent different views of ONE continuous, pre-existing 2D panoramic environment.\n\nDo not treat reference images as separate scenes.\n\nDo not morph between reference images.\n\n## 2. REFERENCE IMAGES\n\n- `<Picture 1>` — Initial landscape: bare tree on the right, without meteor.\n- `<Picture 2>` — Initial landscape with meteor: reference for meteor scale, starting position and direction.\n- `<Picture 3>` — Grassy hill before meteor impact.\n- `<Picture 4>` — The exact same hill after impact, with the crater.\n- `<Picture 5>` — Final landscape containing the Victorian mansion.\n- `<Picture 6>` — Isolated meteor: reference for rocky body, flames and fiery tail.\n- `<Picture 7>` — Isolated turquoise moon: reference for appearance.\n\nPictures 1–5 define successive camera compositions within the SAME fixed environment.\n\nPictures 6–7 define isolated visual assets, NOT separate scenes.\n\n## 3. CORE WORLD RULE — FIXED 2D PANORAMA\n\nThe environment is one continuous, completely static 2D panoramic background.\n\nIt contains grassy hills, tall grass, stones, bare trees, stars, a turquoise moon and a distant Victorian mansion.\n\nEvery element already exists at its fixed position in the world.\n\nThe camera reveals different parts of this existing panorama through horizontal movement.\n\n**The background is a flat 2D illustration, not a three-dimensional environment.**\n\nAll landscape elements must retain their exact size, shape, position and proportions.\n\nNo geometry reconstruction, scaling, morphing or perspective transformation is allowed.\n\nThe meteor crater is the only permanent modification to the terrain.\n\n## 4. CAMERA — PURE HORIZONTAL TRANSLATION\n\nOne uninterrupted horizontal camera tracking movement toward the LEFT.\n\nThe fixed panoramic background scrolls horizontally toward the RIGHT.\n\nCamera movement is equivalent to moving a rectangular viewport horizontally across a large static 2D illustration.\n\nThe camera maintains:\n\n- Constant scale.\n- Constant height.\n- Constant orientation.\n- Constant focal length.\n- Constant perspective.\n- No zoom.\n- No dolly-in or dolly-out.\n- No push-in or pull-back.\n- No rotation.\n- No vertical movement.\n- No perspective shift.\n- No depth-based scaling.\n\n**No parallax between landscape layers.**\n\nEvery static background element scrolls horizontally at the same speed.\n\nThe camera begins stationary, gradually accelerates, maintains smooth horizontal movement and gently slows toward the final composition.\n\nObjects may enter or leave the frame only through the left or right edge as a consequence of this movement.\n\n## 5. TERRAIN GEOMETRY LOCK — CRITICAL\n\nAll hills belong to the same fixed 2D background illustration.\n\nTheir geometry is permanently locked.\n\nDuring the travelling, every hill must retain exactly the same:\n\n- Size and scale.\n- Silhouette.\n- Slope.\n- Height.\n- Crest shape.\n- Horizon position within the panorama.\n- Position relative to neighboring hills.\n- Surrounding stones and vegetation.\n\n**Hills are only allowed to translate horizontally across the screen.**\n\nNo hill may grow, shrink, stretch, compress, inflate, collapse or change perspective.\n\nNo hill may move toward or away from the camera.\n\nNever resize hills to connect reference images.\n\nNever create temporary terrain to fill gaps between references.\n\nNo additional hill, mound, ridge or slope may appear during the travelling.\n\nTerrain continuity must be achieved exclusively through horizontal scrolling of the fixed panorama.\n\n## 6. TREE AND VEGETATION STABILITY\n\nThe initial bare tree from `<Picture 1>` is already present on the right side of the frame.\n\nIt remains permanently rooted to its original hill.\n\nAs the camera moves LEFT, the tree moves toward the RIGHT edge of the screen and naturally exits the frame.\n\nThe tree never changes size, silhouette or proportions.\n\nIts trunk and roots remain fixed.\n\nOnly its thin branches may sway slightly in the wind.\n\nDo not generate new trees during the travelling.\n\nDo not generate temporary trees in the middle distance or background.\n\nOther vegetation may only appear if it already belongs to the referenced environment and enters naturally through the frame edge.\n\nTall grass may gently sway without altering the shape of the terrain.\n\n## 7. MOON — STRICT SCREEN-SPACE CONTINUITY\n\nThe moon uses the exact visual appearance of `<Picture 7>`.\n\nThe moon is a permanent, fixed element of the panoramic sky.\n\n**At the beginning of the sequence, the moon is completely OUTSIDE THE FRAME, to the LEFT.**\n\nThe moon is initially invisible.\n\nAs the camera travels LEFT, the moon enters the visible frame progressively through the LEFT edge.\n\nIts rightmost edge becomes visible first.\n\nThe rest of the moon gradually enters the frame as the camera continues moving.\n\nOnce visible, the moon moves horizontally toward the RIGHT side of the screen at the same scrolling speed as the fixed panoramic background.\n\nThe moon remains perfectly round, with constant size, colors and details.\n\nNever introduce the moon directly in the center of the frame.\n\nNever make the moon pop in, fade in, teleport or suddenly change position.\n\nNever regenerate the moon after it becomes visible.\n\nThe moon must remain continuously visible until it naturally exits the frame, if the camera travels far enough.\n\n## 8. CONTINUOUS TIMELINE\n\n### 00:00–00:02 — INITIAL LANDSCAPE AND METEOR\n\nBegin with the exact composition of `<Picture 1>`.\n\nThe bare tree stands on the right side of the grassy hill.\n\nThe camera is initially stationary.\n\nOnly the thin branches and tall grass sway gently in the nighttime wind.\n\nAt approximately 00:01, ONE small meteor enters the upper-right part of the sky.\n\nMatch its initial scale and position to `<Picture 2>`.\n\nMatch its detailed rocky appearance and fiery trail to `<Picture 6>`.\n\nThe meteor moves diagonally downward from RIGHT to LEFT.\n\nIts orange-red flames flicker naturally, producing a few small glowing particles.\n\nThe meteor is the only rapidly moving object independent of the camera.\n\n### 00:02–00:05 — CONTINUOUS LEFTWARD TRAVELLING\n\nThe camera begins a smooth horizontal translation toward the LEFT.\n\nThe entire fixed panoramic background scrolls toward the RIGHT at a uniform speed.\n\nThe initial tree gradually exits through the RIGHT edge.\n\nThe grassy landscape shown in `<Picture 3>` progressively enters from the LEFT.\n\nAll hills retain their original sizes and silhouettes.\n\nNo perspective change, zoom or parallax is allowed.\n\nDo not enlarge or shrink any hill.\n\nDo not introduce new hills, trees or background elements.\n\nThe meteor continues its diagonal descent toward the target hill.\n\nThe turquoise moon from `<Picture 7>` enters progressively from the LEFT edge when the travelling reaches its fixed position.\n\nIt must never appear suddenly in the middle of the screen.\n\n### 00:05–00:07 — METEOR IMPACT\n\nThe meteor strikes the grassy hill from `<Picture 3>`.\n\nA brief localized orange flash illuminates the immediate impact area.\n\nA small amount of soil and a few stones are displaced.\n\nA crater forms at the exact impact point.\n\nThe resulting crater matches `<Picture 4>` in shape, size and position.\n\n**CRITICAL POST-IMPACT GEOMETRY LOCK:**\n\nOnly the impact zone changes.\n\nThe hill's overall silhouette, slope, height and surrounding terrain remain unchanged.\n\nThe impact must not generate secondary hills, bumps, mounds or ridges.\n\nNo temporary hill may appear before, during or after the impact.\n\nOnce the crater is formed, the terrain becomes completely stable again.\n\nThe crater remains fixed, with faint smoke and a subtle residual orange glow.\n\nThe camera continues its uninterrupted leftward travelling.\n\nThe surrounding terrain moves exclusively through horizontal scrolling, with no change of scale.\n\n### 00:07–00:10 — MANSION REVEAL\n\nThe camera continues moving LEFT.\n\nThe Victorian mansion from `<Picture 5>` progressively enters the frame through the LEFT edge.\n\nThe mansion already exists in the panorama.\n\nIt is revealed by camera movement only.\n\nPreserve its exact architecture:\n\n- Number of floors.\n- Towers.\n- Roof structure.\n- Windows.\n- Building silhouette.\n- Proportions.\n- Surrounding vegetation.\n\nThe mansion must not change size during the travelling.\n\nNo reconstruction, morphing or architectural transformation.\n\n#### WINDOW LIGHTING — ONE BY ONE\n\nAs the mansion becomes visible, a few previously dark windows begin illuminating.\n\nWindows light up individually, **ONE AT A TIME**.\n\nUse an irregular and unpredictable order across different floors and different parts of the building.\n\nAvoid systematic left-to-right or bottom-to-top patterns.\n\nIntroduce unequal time intervals between each activation.\n\nNever illuminate multiple new windows simultaneously.\n\nEach illuminated window remains lit.\n\n#### WINDOW BRIGHTNESS\n\nThe window illumination must be approximately 50% dimmer than strong interior lighting.\n\nUse a soft, warm, muted yellow color.\n\nKeep illumination subtle, natural and atmospheric.\n\nMinimal bloom.\n\nMinimal light spill onto exterior walls.\n\nNo strong glow, flashes or overexposed windows.\n\nDo not illuminate every window.\n\nThe camera gradually slows and settles into the final composition of `<Picture 5>`.\n\nThe final image remains stable.\n\n## 9. ALLOWED ANIMATIONS — EXHAUSTIVE LIST\n\nOnly the following elements may animate independently of the camera:\n\n1. Thin tree branches gently swaying in the wind.\n2. Tall grass subtly moving in the wind.\n3. The meteor flying diagonally, with animated flames and glowing particles.\n4. Localized meteor impact, crater formation, small debris and faint residual smoke.\n5. Mansion window lights turning on individually, in an irregular sequence, with soft low-intensity illumination.\n\nAll other elements remain completely static.\n\nStars do not move or twinkle.\n\nClouds do not move independently.\n\nThe moon does not pulse, fade, deform or move independently.\n\nHills do not change size or shape.\n\nTree trunks remain fixed.\n\nMansion architecture remains unchanged.\n\nThe horizontal scrolling caused by camera movement is not an independent object animation.\n\n## 10. SOUNDTRACK AND SOUND EFFECTS\n\nCreate a mysterious cinematic soundtrack inspired by the retro-synth atmosphere of the original Maniac Mansion introduction, modernized with subtle orchestral textures.\n\n**00:00–00:02:** quiet mysterious synth atmosphere, faint nighttime wind.\n\n**00:02–00:05:** gradual musical crescendo, subtle meteor whoosh.\n\n**00:05–00:07:** short deep impact sound synchronized with the crash, followed by faint crackling embers.\n\n**00:07–00:10:** atmospheric mysterious musical theme accompanying the mansion reveal.\n\nAdd subtle wind and grass rustling throughout the sequence.\n\nNo dialogue, voiceover, narration or singing.\n\n## 11. NEGATIVE CONSTRAINTS\n\nNo cuts or scene transitions.\n\nNo zoom or perspective changes.\n\nNo parallax.\n\nNo depth-based scaling.\n\nNo hill resizing.\n\nNo temporary hills.\n\nNo new trees.\n\nNo temporary trees.\n\nNo scenery appearing suddenly in the center of the frame.\n\nNo sudden moon appearance or disappearance.\n\nNo landscape reconstruction.\n\nNo image morphing.\n\nNo second meteor.\n\nNo secondary impact.\n\nNo exaggerated explosion.\n\nNo simultaneous mansion window illumination.\n\nNo excessive window brightness or bloom.\n\nNo additional characters, buildings or objects.\n\nNo text, subtitles, logos or overlays.\n\nFull-frame 16:9 composition without black borders.\n\n## 12. FINAL PRIORITY\n\n**The sequence must behave exactly like a fixed, flat 2D panoramic illustration viewed through a horizontally scrolling camera.**\n\nEvery hill, tree, stone, cloud, star, moon and building maintains a constant size and fixed world position.\n\nThe camera only reveals existing scenery.\n\nThe moon must enter gradually from the LEFT edge.\n\nThe initial tree must exit naturally through the RIGHT edge.\n\nNo temporary tree or hill may appear.\n\nNo hill may grow or shrink during travelling.\n\nThe crater is the only permanent terrain modification.\n\nMansion windows illuminate ONE AT A TIME in an irregular sequence, using soft warm light at approximately half normal brightness.\n\n**Prioritize geometric stability, spatial continuity and consistent 2D scrolling over visual complexity.**\n\n\n**Background music:** A mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack, inspired by the atmosphere of Maniac Mansion.\n\nRetro cinematic horror-comedy music featuring vintage analog synthesizers, haunting melodies, deep atmospheric bass, subtle electronic percussion, and playful spooky motifs.\n\nBegin with a quiet, suspenseful atmosphere, gradually building tension as the camera travels across the moonlit landscape.\n\nAs the mansion comes into view, introduce a darker, more dramatic musical theme with ominous synthesizer chords and a memorable, slightly quirky melody.\n\nThe music should evoke mystery, supernatural adventure, dark humor, and nostalgic 1980s video game aesthetics.\n\n**Instrumental only. No vocals, no dialogue.** Avoid modern electronic dance music, epic orchestral scores, and aggressive horror sound effects.",
+        10,
+        "Auto",
+        "Auto",
+        "Auto",
+        "English",
+        "lmstudio",
+        0.7,
+        4096
+      ],
+      "widgets_values_named": {
+        "task_type": "Reference-to-Video-Audio (Ref2VA)",
+        "scene_direction": "# MANIAC MANSION REIMAGINED — 10s CONTINUOUS 2D PANORAMIC SHOT\n\n## 1. VISUAL STYLE\n\nCreate one continuous 10-second cinematic shot in the exact visual style of the reference images.\n\nModernized 2D cartoon point-and-click adventure aesthetic, clean outlines, rich colors, soft shading, subtle gradients, detailed painted backgrounds and atmospheric nighttime lighting.\n\nPreserve the visual identity, geometry, proportions, colors and details of the reference environments throughout the entire sequence.\n\nAll landscape references represent different views of ONE continuous, pre-existing 2D panoramic environment.\n\nDo not treat reference images as separate scenes.\n\nDo not morph between reference images.\n\n## 2. REFERENCE IMAGES\n\n- `<Picture 1>` — Initial landscape: bare tree on the right, without meteor.\n- `<Picture 2>` — Initial landscape with meteor: reference for meteor scale, starting position and direction.\n- `<Picture 3>` — Grassy hill before meteor impact.\n- `<Picture 4>` — The exact same hill after impact, with the crater.\n- `<Picture 5>` — Final landscape containing the Victorian mansion.\n- `<Picture 6>` — Isolated meteor: reference for rocky body, flames and fiery tail.\n- `<Picture 7>` — Isolated turquoise moon: reference for appearance.\n\nPictures 1–5 define successive camera compositions within the SAME fixed environment.\n\nPictures 6–7 define isolated visual assets, NOT separate scenes.\n\n## 3. CORE WORLD RULE — FIXED 2D PANORAMA\n\nThe environment is one continuous, completely static 2D panoramic background.\n\nIt contains grassy hills, tall grass, stones, bare trees, stars, a turquoise moon and a distant Victorian mansion.\n\nEvery element already exists at its fixed position in the world.\n\nThe camera reveals different parts of this existing panorama through horizontal movement.\n\n**The background is a flat 2D illustration, not a three-dimensional environment.**\n\nAll landscape elements must retain their exact size, shape, position and proportions.\n\nNo geometry reconstruction, scaling, morphing or perspective transformation is allowed.\n\nThe meteor crater is the only permanent modification to the terrain.\n\n## 4. CAMERA — PURE HORIZONTAL TRANSLATION\n\nOne uninterrupted horizontal camera tracking movement toward the LEFT.\n\nThe fixed panoramic background scrolls horizontally toward the RIGHT.\n\nCamera movement is equivalent to moving a rectangular viewport horizontally across a large static 2D illustration.\n\nThe camera maintains:\n\n- Constant scale.\n- Constant height.\n- Constant orientation.\n- Constant focal length.\n- Constant perspective.\n- No zoom.\n- No dolly-in or dolly-out.\n- No push-in or pull-back.\n- No rotation.\n- No vertical movement.\n- No perspective shift.\n- No depth-based scaling.\n\n**No parallax between landscape layers.**\n\nEvery static background element scrolls horizontally at the same speed.\n\nThe camera begins stationary, gradually accelerates, maintains smooth horizontal movement and gently slows toward the final composition.\n\nObjects may enter or leave the frame only through the left or right edge as a consequence of this movement.\n\n## 5. TERRAIN GEOMETRY LOCK — CRITICAL\n\nAll hills belong to the same fixed 2D background illustration.\n\nTheir geometry is permanently locked.\n\nDuring the travelling, every hill must retain exactly the same:\n\n- Size and scale.\n- Silhouette.\n- Slope.\n- Height.\n- Crest shape.\n- Horizon position within the panorama.\n- Position relative to neighboring hills.\n- Surrounding stones and vegetation.\n\n**Hills are only allowed to translate horizontally across the screen.**\n\nNo hill may grow, shrink, stretch, compress, inflate, collapse or change perspective.\n\nNo hill may move toward or away from the camera.\n\nNever resize hills to connect reference images.\n\nNever create temporary terrain to fill gaps between references.\n\nNo additional hill, mound, ridge or slope may appear during the travelling.\n\nTerrain continuity must be achieved exclusively through horizontal scrolling of the fixed panorama.\n\n## 6. TREE AND VEGETATION STABILITY\n\nThe initial bare tree from `<Picture 1>` is already present on the right side of the frame.\n\nIt remains permanently rooted to its original hill.\n\nAs the camera moves LEFT, the tree moves toward the RIGHT edge of the screen and naturally exits the frame.\n\nThe tree never changes size, silhouette or proportions.\n\nIts trunk and roots remain fixed.\n\nOnly its thin branches may sway slightly in the wind.\n\nDo not generate new trees during the travelling.\n\nDo not generate temporary trees in the middle distance or background.\n\nOther vegetation may only appear if it already belongs to the referenced environment and enters naturally through the frame edge.\n\nTall grass may gently sway without altering the shape of the terrain.\n\n## 7. MOON — STRICT SCREEN-SPACE CONTINUITY\n\nThe moon uses the exact visual appearance of `<Picture 7>`.\n\nThe moon is a permanent, fixed element of the panoramic sky.\n\n**At the beginning of the sequence, the moon is completely OUTSIDE THE FRAME, to the LEFT.**\n\nThe moon is initially invisible.\n\nAs the camera travels LEFT, the moon enters the visible frame progressively through the LEFT edge.\n\nIts rightmost edge becomes visible first.\n\nThe rest of the moon gradually enters the frame as the camera continues moving.\n\nOnce visible, the moon moves horizontally toward the RIGHT side of the screen at the same scrolling speed as the fixed panoramic background.\n\nThe moon remains perfectly round, with constant size, colors and details.\n\nNever introduce the moon directly in the center of the frame.\n\nNever make the moon pop in, fade in, teleport or suddenly change position.\n\nNever regenerate the moon after it becomes visible.\n\nThe moon must remain continuously visible until it naturally exits the frame, if the camera travels far enough.\n\n## 8. CONTINUOUS TIMELINE\n\n### 00:00–00:02 — INITIAL LANDSCAPE AND METEOR\n\nBegin with the exact composition of `<Picture 1>`.\n\nThe bare tree stands on the right side of the grassy hill.\n\nThe camera is initially stationary.\n\nOnly the thin branches and tall grass sway gently in the nighttime wind.\n\nAt approximately 00:01, ONE small meteor enters the upper-right part of the sky.\n\nMatch its initial scale and position to `<Picture 2>`.\n\nMatch its detailed rocky appearance and fiery trail to `<Picture 6>`.\n\nThe meteor moves diagonally downward from RIGHT to LEFT.\n\nIts orange-red flames flicker naturally, producing a few small glowing particles.\n\nThe meteor is the only rapidly moving object independent of the camera.\n\n### 00:02–00:05 — CONTINUOUS LEFTWARD TRAVELLING\n\nThe camera begins a smooth horizontal translation toward the LEFT.\n\nThe entire fixed panoramic background scrolls toward the RIGHT at a uniform speed.\n\nThe initial tree gradually exits through the RIGHT edge.\n\nThe grassy landscape shown in `<Picture 3>` progressively enters from the LEFT.\n\nAll hills retain their original sizes and silhouettes.\n\nNo perspective change, zoom or parallax is allowed.\n\nDo not enlarge or shrink any hill.\n\nDo not introduce new hills, trees or background elements.\n\nThe meteor continues its diagonal descent toward the target hill.\n\nThe turquoise moon from `<Picture 7>` enters progressively from the LEFT edge when the travelling reaches its fixed position.\n\nIt must never appear suddenly in the middle of the screen.\n\n### 00:05–00:07 — METEOR IMPACT\n\nThe meteor strikes the grassy hill from `<Picture 3>`.\n\nA brief localized orange flash illuminates the immediate impact area.\n\nA small amount of soil and a few stones are displaced.\n\nA crater forms at the exact impact point.\n\nThe resulting crater matches `<Picture 4>` in shape, size and position.\n\n**CRITICAL POST-IMPACT GEOMETRY LOCK:**\n\nOnly the impact zone changes.\n\nThe hill's overall silhouette, slope, height and surrounding terrain remain unchanged.\n\nThe impact must not generate secondary hills, bumps, mounds or ridges.\n\nNo temporary hill may appear before, during or after the impact.\n\nOnce the crater is formed, the terrain becomes completely stable again.\n\nThe crater remains fixed, with faint smoke and a subtle residual orange glow.\n\nThe camera continues its uninterrupted leftward travelling.\n\nThe surrounding terrain moves exclusively through horizontal scrolling, with no change of scale.\n\n### 00:07–00:10 — MANSION REVEAL\n\nThe camera continues moving LEFT.\n\nThe Victorian mansion from `<Picture 5>` progressively enters the frame through the LEFT edge.\n\nThe mansion already exists in the panorama.\n\nIt is revealed by camera movement only.\n\nPreserve its exact architecture:\n\n- Number of floors.\n- Towers.\n- Roof structure.\n- Windows.\n- Building silhouette.\n- Proportions.\n- Surrounding vegetation.\n\nThe mansion must not change size during the travelling.\n\nNo reconstruction, morphing or architectural transformation.\n\n#### WINDOW LIGHTING — ONE BY ONE\n\nAs the mansion becomes visible, a few previously dark windows begin illuminating.\n\nWindows light up individually, **ONE AT A TIME**.\n\nUse an irregular and unpredictable order across different floors and different parts of the building.\n\nAvoid systematic left-to-right or bottom-to-top patterns.\n\nIntroduce unequal time intervals between each activation.\n\nNever illuminate multiple new windows simultaneously.\n\nEach illuminated window remains lit.\n\n#### WINDOW BRIGHTNESS\n\nThe window illumination must be approximately 50% dimmer than strong interior lighting.\n\nUse a soft, warm, muted yellow color.\n\nKeep illumination subtle, natural and atmospheric.\n\nMinimal bloom.\n\nMinimal light spill onto exterior walls.\n\nNo strong glow, flashes or overexposed windows.\n\nDo not illuminate every window.\n\nThe camera gradually slows and settles into the final composition of `<Picture 5>`.\n\nThe final image remains stable.\n\n## 9. ALLOWED ANIMATIONS — EXHAUSTIVE LIST\n\nOnly the following elements may animate independently of the camera:\n\n1. Thin tree branches gently swaying in the wind.\n2. Tall grass subtly moving in the wind.\n3. The meteor flying diagonally, with animated flames and glowing particles.\n4. Localized meteor impact, crater formation, small debris and faint residual smoke.\n5. Mansion window lights turning on individually, in an irregular sequence, with soft low-intensity illumination.\n\nAll other elements remain completely static.\n\nStars do not move or twinkle.\n\nClouds do not move independently.\n\nThe moon does not pulse, fade, deform or move independently.\n\nHills do not change size or shape.\n\nTree trunks remain fixed.\n\nMansion architecture remains unchanged.\n\nThe horizontal scrolling caused by camera movement is not an independent object animation.\n\n## 10. SOUNDTRACK AND SOUND EFFECTS\n\nCreate a mysterious cinematic soundtrack inspired by the retro-synth atmosphere of the original Maniac Mansion introduction, modernized with subtle orchestral textures.\n\n**00:00–00:02:** quiet mysterious synth atmosphere, faint nighttime wind.\n\n**00:02–00:05:** gradual musical crescendo, subtle meteor whoosh.\n\n**00:05–00:07:** short deep impact sound synchronized with the crash, followed by faint crackling embers.\n\n**00:07–00:10:** atmospheric mysterious musical theme accompanying the mansion reveal.\n\nAdd subtle wind and grass rustling throughout the sequence.\n\nNo dialogue, voiceover, narration or singing.\n\n## 11. NEGATIVE CONSTRAINTS\n\nNo cuts or scene transitions.\n\nNo zoom or perspective changes.\n\nNo parallax.\n\nNo depth-based scaling.\n\nNo hill resizing.\n\nNo temporary hills.\n\nNo new trees.\n\nNo temporary trees.\n\nNo scenery appearing suddenly in the center of the frame.\n\nNo sudden moon appearance or disappearance.\n\nNo landscape reconstruction.\n\nNo image morphing.\n\nNo second meteor.\n\nNo secondary impact.\n\nNo exaggerated explosion.\n\nNo simultaneous mansion window illumination.\n\nNo excessive window brightness or bloom.\n\nNo additional characters, buildings or objects.\n\nNo text, subtitles, logos or overlays.\n\nFull-frame 16:9 composition without black borders.\n\n## 12. FINAL PRIORITY\n\n**The sequence must behave exactly like a fixed, flat 2D panoramic illustration viewed through a horizontally scrolling camera.**\n\nEvery hill, tree, stone, cloud, star, moon and building maintains a constant size and fixed world position.\n\nThe camera only reveals existing scenery.\n\nThe moon must enter gradually from the LEFT edge.\n\nThe initial tree must exit naturally through the RIGHT edge.\n\nNo temporary tree or hill may appear.\n\nNo hill may grow or shrink during travelling.\n\nThe crater is the only permanent terrain modification.\n\nMansion windows illuminate ONE AT A TIME in an irregular sequence, using soft warm light at approximately half normal brightness.\n\n**Prioritize geometric stability, spatial continuity and consistent 2D scrolling over visual complexity.**\n\n\n**Background music:** A mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack, inspired by the atmosphere of Maniac Mansion.\n\nRetro cinematic horror-comedy music featuring vintage analog synthesizers, haunting melodies, deep atmospheric bass, subtle electronic percussion, and playful spooky motifs.\n\nBegin with a quiet, suspenseful atmosphere, gradually building tension as the camera travels across the moonlit landscape.\n\nAs the mansion comes into view, introduce a darker, more dramatic musical theme with ominous synthesizer chords and a memorable, slightly quirky melody.\n\nThe music should evoke mystery, supernatural adventure, dark humor, and nostalgic 1980s video game aesthetics.\n\n**Instrumental only. No vocals, no dialogue.** Avoid modern electronic dance music, epic orchestral scores, and aggressive horror sound effects.",
+        "duration": 10,
+        "reference_images": "Auto",
+        "reference_videos": "Auto",
+        "reference_audios": "Auto",
+        "output_language": "English",
+        "provider": "lmstudio",
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "color": "#221f33ff",
+      "bgcolor": "#3b3850ff"
+    },
+    {
+      "id": 205,
+      "type": "H3_Vision",
+      "pos": [
+        -3723.152217945025,
+        7062.533591283712
+      ],
+      "size": [
+        667.5705130160595,
+        848.2213666526088
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ref_images.image_0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "ref_videos.video_0",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "ref_audios.audio_0",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VISION_CONTEXT",
+          "type": "STRING",
+          "links": [
+            400,
+            411
+          ]
+        },
+        {
+          "name": "REF_IMAGES",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-MiniMax-H3-Promptor",
+        "ver": "bdbde80b0b7d4600696d2be7eca7eb2e3c10cf1f",
+        "Node name for S&R": "H3_Vision"
+      },
+      "widgets_values": [
+        "Subject / Identity",
+        "Comprehensive",
+        "{\"media\":[[\"slot_1\",{\"name\":\"meteor.png\",\"kind\":\"image\"}],[\"slot_2\",{\"name\":\"moon.png\",\"kind\":\"image\"}],[\"slot_3\",{\"name\":\"tree 01.png\",\"kind\":\"image\"}],[\"slot_4\",{\"name\":\"tree 02.png\",\"kind\":\"image\"}],[\"slot_6\",{\"name\":\"tree 04.png\",\"kind\":\"image\"}],[\"slot_7\",{\"name\":\"tree 05.png\",\"kind\":\"image\"}],[\"slot_8\",{\"name\":\"tree 03.png\",\"kind\":\"image\"}]],\"order\":[\"upload:slot_1\",\"upload:slot_2\",\"upload:slot_3\",\"upload:slot_4\",\"upload:slot_6\",\"upload:slot_7\",\"upload:slot_8\"],\"user_reordered\":false,\"linked_state\":{}}",
+        "English",
+        "lmstudio",
+        0.2,
+        2048,
+        769977642003582,
+        "randomize",
+        "- `<Picture 1>` — Initial landscape: bare tree on the right, without meteor.\n- `<Picture 2>` — Initial landscape with meteor: reference for meteor scale, starting position and direction.\n- `<Picture 3>` — Grassy hill before meteor impact.\n- `<Picture 4>` — The exact same hill after impact, with the crater.\n- `<Picture 5>` — Final landscape containing the Victorian mansion.\n- `<Picture 6>` — Isolated meteor: reference for rocky body, flames and fiery tail.\n- `<Picture 7>` — Isolated turquoise moon: reference for appearance.",
+        ""
+      ],
+      "widgets_values_named": {
+        "global_image_mode": "Subject / Identity",
+        "global_video_mode": "Comprehensive",
+        "_media_state": "{\"media\":[[\"slot_1\",{\"name\":\"meteor.png\",\"kind\":\"image\"}],[\"slot_2\",{\"name\":\"moon.png\",\"kind\":\"image\"}],[\"slot_3\",{\"name\":\"tree 01.png\",\"kind\":\"image\"}],[\"slot_4\",{\"name\":\"tree 02.png\",\"kind\":\"image\"}],[\"slot_6\",{\"name\":\"tree 04.png\",\"kind\":\"image\"}],[\"slot_7\",{\"name\":\"tree 05.png\",\"kind\":\"image\"}],[\"slot_8\",{\"name\":\"tree 03.png\",\"kind\":\"image\"}]],\"order\":[\"upload:slot_1\",\"upload:slot_2\",\"upload:slot_3\",\"upload:slot_4\",\"upload:slot_6\",\"upload:slot_7\",\"upload:slot_8\"],\"user_reordered\":false,\"linked_state\":{}}",
+        "output_language": "English",
+        "provider": "lmstudio",
+        "temperature": 0.2,
+        "max_tokens": 2048,
+        "seed": 769977642003582,
+        "fixed": "randomize",
+        "custom_prompt_override": "- `<Picture 1>` — Initial landscape: bare tree on the right, without meteor.\n- `<Picture 2>` — Initial landscape with meteor: reference for meteor scale, starting position and direction.\n- `<Picture 3>` — Grassy hill before meteor impact.\n- `<Picture 4>` — The exact same hill after impact, with the crater.\n- `<Picture 5>` — Final landscape containing the Victorian mansion.\n- `<Picture 6>` — Isolated meteor: reference for rocky body, flames and fiery tail.\n- `<Picture 7>` — Isolated turquoise moon: reference for appearance.",
+        "gh_vision_panel": ""
+      },
+      "color": "#221f33ff",
+      "bgcolor": "#3b3850ff"
+    },
+    {
+      "id": 215,
+      "type": "H3_PromptEditor",
+      "pos": [
+        -1179.3889391375214,
+        7266.3127764787005
+      ],
+      "size": [
+        1025.70330192189,
+        668.5882851248971
+      ],
+      "flags": {
+        "min_width": 420,
+        "min_height": 200
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "shape": 7,
+          "type": "STRING",
+          "link": 410
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-MiniMax-H3-Promptor",
+        "ver": "bdbde80b0b7d4600696d2be7eca7eb2e3c10cf1f",
+        "Node name for S&R": "H3_PromptEditor"
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one.",
+        "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one."
+      ],
+      "widgets_values_named": {
+        "_stored_prompt": "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one.",
+        "_preview_panel": "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one."
+      }
+    },
+    {
+      "id": 216,
+      "type": "H3_PromptEditor",
+      "pos": [
+        -3008.3258180152725,
+        7185.173537812872
+      ],
+      "size": [
+        898.1736533771849,
+        874.4270400713203
+      ],
+      "flags": {
+        "min_width": 420,
+        "min_height": 200
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "shape": 7,
+          "type": "STRING",
+          "link": 411
+        }
+      ],
+      "outputs": [
+        {
+          "name": "PROMPT",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-MiniMax-H3-Promptor",
+        "ver": "bdbde80b0b7d4600696d2be7eca7eb2e3c10cf1f",
+        "Node name for S&R": "H3_PromptEditor"
+      },
+      "widgets_values": [
+        "{\n    \"<Picture 1>\": \"The main subject is a stylized tree with a thick, gnarled trunk displaying warm orange-brown bark and cool blue highlights. Its branches extend outward in a bare, skeletal configuration. The subject has no facial features or clothing.\",\n    \"<Picture 2>\": \"API Error: None\",\n    \"<Picture 3>\": \"The image contains no human or character subjects; it exclusively depicts a nocturnal landscape featuring a starry night sky, rolling green hills, and bare tree branches, with no facial features or clothing present to analyze.\",\n    \"<Picture 4>\": \"The image depicts a nocturnal landscape featuring a grassy hill with scattered rocks and a small fire burning in a crater-like depression under a starry night sky. There are no human subjects present, so appearance, facial features, and clothing cannot be described.\",\n    \"<Picture 5>\": \"No human subject is present in this image; therefore, there are no appearances, facial features, or clothing to describe. The scene exclusively depicts a Victorian-style house on a grassy hill under a starry night sky.\",\n    \"<Picture 6>\": \"API Error: None\",\n    \"<Picture 7>\": \"The main subject is a luminous, spherical celestial body rendered in gradients of pale cyan and azure. Its appearance consists of fluid, fractal-like swirling patterns and concentric starburst radiations across its surface. The image contains no facial features or clothing; instead, it relies entirely on abstract atmospheric texturing and luminous geometric motifs to establish form.\",\n    \"_media_keys\": [\n        \"<Picture 1>\",\n        \"<Picture 2>\",\n        \"<Picture 3>\",\n        \"<Picture 4>\",\n        \"<Picture 5>\",\n        \"<Picture 6>\",\n        \"<Picture 7>\"\n    ]\n}",
+        "{\n    \"<Picture 1>\": \"The main subject is a stylized tree with a thick, gnarled trunk displaying warm orange-brown bark and cool blue highlights. Its branches extend outward in a bare, skeletal configuration. The subject has no facial features or clothing.\",\n    \"<Picture 2>\": \"API Error: None\",\n    \"<Picture 3>\": \"The image contains no human or character subjects; it exclusively depicts a nocturnal landscape featuring a starry night sky, rolling green hills, and bare tree branches, with no facial features or clothing present to analyze.\",\n    \"<Picture 4>\": \"The image depicts a nocturnal landscape featuring a grassy hill with scattered rocks and a small fire burning in a crater-like depression under a starry night sky. There are no human subjects present, so appearance, facial features, and clothing cannot be described.\",\n    \"<Picture 5>\": \"No human subject is present in this image; therefore, there are no appearances, facial features, or clothing to describe. The scene exclusively depicts a Victorian-style house on a grassy hill under a starry night sky.\",\n    \"<Picture 6>\": \"API Error: None\",\n    \"<Picture 7>\": \"The main subject is a luminous, spherical celestial body rendered in gradients of pale cyan and azure. Its appearance consists of fluid, fractal-like swirling patterns and concentric starburst radiations across its surface. The image contains no facial features or clothing; instead, it relies entirely on abstract atmospheric texturing and luminous geometric motifs to establish form.\",\n    \"_media_keys\": [\n        \"<Picture 1>\",\n        \"<Picture 2>\",\n        \"<Picture 3>\",\n        \"<Picture 4>\",\n        \"<Picture 5>\",\n        \"<Picture 6>\",\n        \"<Picture 7>\"\n    ]\n}"
+      ],
+      "widgets_values_named": {
+        "_stored_prompt": "{\n    \"<Picture 1>\": \"The main subject is a stylized tree with a thick, gnarled trunk displaying warm orange-brown bark and cool blue highlights. Its branches extend outward in a bare, skeletal configuration. The subject has no facial features or clothing.\",\n    \"<Picture 2>\": \"API Error: None\",\n    \"<Picture 3>\": \"The image contains no human or character subjects; it exclusively depicts a nocturnal landscape featuring a starry night sky, rolling green hills, and bare tree branches, with no facial features or clothing present to analyze.\",\n    \"<Picture 4>\": \"The image depicts a nocturnal landscape featuring a grassy hill with scattered rocks and a small fire burning in a crater-like depression under a starry night sky. There are no human subjects present, so appearance, facial features, and clothing cannot be described.\",\n    \"<Picture 5>\": \"No human subject is present in this image; therefore, there are no appearances, facial features, or clothing to describe. The scene exclusively depicts a Victorian-style house on a grassy hill under a starry night sky.\",\n    \"<Picture 6>\": \"API Error: None\",\n    \"<Picture 7>\": \"The main subject is a luminous, spherical celestial body rendered in gradients of pale cyan and azure. Its appearance consists of fluid, fractal-like swirling patterns and concentric starburst radiations across its surface. The image contains no facial features or clothing; instead, it relies entirely on abstract atmospheric texturing and luminous geometric motifs to establish form.\",\n    \"_media_keys\": [\n        \"<Picture 1>\",\n        \"<Picture 2>\",\n        \"<Picture 3>\",\n        \"<Picture 4>\",\n        \"<Picture 5>\",\n        \"<Picture 6>\",\n        \"<Picture 7>\"\n    ]\n}",
+        "_preview_panel": "{\n    \"<Picture 1>\": \"The main subject is a stylized tree with a thick, gnarled trunk displaying warm orange-brown bark and cool blue highlights. Its branches extend outward in a bare, skeletal configuration. The subject has no facial features or clothing.\",\n    \"<Picture 2>\": \"API Error: None\",\n    \"<Picture 3>\": \"The image contains no human or character subjects; it exclusively depicts a nocturnal landscape featuring a starry night sky, rolling green hills, and bare tree branches, with no facial features or clothing present to analyze.\",\n    \"<Picture 4>\": \"The image depicts a nocturnal landscape featuring a grassy hill with scattered rocks and a small fire burning in a crater-like depression under a starry night sky. There are no human subjects present, so appearance, facial features, and clothing cannot be described.\",\n    \"<Picture 5>\": \"No human subject is present in this image; therefore, there are no appearances, facial features, or clothing to describe. The scene exclusively depicts a Victorian-style house on a grassy hill under a starry night sky.\",\n    \"<Picture 6>\": \"API Error: None\",\n    \"<Picture 7>\": \"The main subject is a luminous, spherical celestial body rendered in gradients of pale cyan and azure. Its appearance consists of fluid, fractal-like swirling patterns and concentric starburst radiations across its surface. The image contains no facial features or clothing; instead, it relies entirely on abstract atmospheric texturing and luminous geometric motifs to establish form.\",\n    \"_media_keys\": [\n        \"<Picture 1>\",\n        \"<Picture 2>\",\n        \"<Picture 3>\",\n        \"<Picture 4>\",\n        \"<Picture 5>\",\n        \"<Picture 6>\",\n        \"<Picture 7>\"\n    ]\n}"
+      }
+    },
+    {
+      "id": 219,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1149.2959613082926,
+        6569.347251676962
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            414
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.2",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one."
+      ],
+      "widgets_values_named": {
+        "value": "subject_definitions:\n<Subject 1> is the subject in <Picture 1>, with API Error: None.\n<Subject 2> is the subject in <Picture 2>, with frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background.\n<Subject 3> is the subject in <Picture 3>, with solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized.\n<Subject 4> is the character in <Picture 4>, with solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples.\n<Subject 5> is the subject in <Picture 5>, with API Error: None.\n<Subject 6> is the subject in <Picture 6>, with scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky.\n<Subject 7> is the landscape environment in <Picture 7>, with stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks.\n\nsummary:\n[reference generation] A 10.0-second live-action sequence executing the requested visual narrative across shots using the defined references.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - API Error: None maintained.\n<Subject 2> (appears in [Shot 1]): fully_preserved - frame presents a highly stylized, luminous celestial sphere rendered against a void-like black background maintained.\n<Subject 3> (appears in [Shot 1]): fully_preserved - solitary tree with a thick, textured brown trunk and numerous slender, branching limbs that exhibit a stylized maintained.\n<Subject 4> (appears in [Shot 2]): fully_preserved - solitary tree with a thick, twisted trunk and bare, sprawling branches colored in earthy browns and purples maintained.\n<Subject 5> (appears in [Shot 3]): fully_preserved - API Error: None maintained.\n<Subject 6> (appears in [Shot 1]): fully_preserved - scene depicts a classic Gothic Victorian mansion perched on a rolling green hill under a starlit night sky maintained.\n<Subject 7> (appears in [Shot 2]): fully_preserved - stylized nocturnal landscape featuring a gently sloping, vibrant green hill in the foreground dotted with small rocks maintained.\n\ndetailed_description:\n[Shot 1] At MM:00.000 – MM:04.000\nThe sequence opens in a cool, atmospheric night palette of deep navy skies and muted sage grasses, rendered with crisp vector outlines and soft painterly gradients that establish a nostalgic 1980s point-and-click aesthetic. The camera initially holds in a Static Shot on the foreground anchor <Picture 1>, where a bare tree stands permanently rooted to the right hill while its thin branches sway slightly in the nocturnal wind and surrounding tall grass ripples gently, providing subtle visual reactions to the stillness. At approximately MM:01.500, the midground kinetic catalyst enters from the upper-right sky: a small meteor matches scale and trajectory with <Picture 2> and displays the detailed rocky texture and flickering fiery tail specified by <Picture 6>, descending diagonally toward the horizon. The camera initiates a smooth Tracking Shot moving horizontally LEFT at a gradual acceleration, causing the flat 2D panorama to Pan Right without parallax or perspective distortion. As the view translates, the initial tree naturally drifts toward and exits through the right edge, while the grassy hill composition from <Picture 3> progressively enters from the left edge, maintaining strict geometric continuity and flat spatial staging across all planes.\n\n[Shot 2] At MM:04.000 – MM:07.500\nThe horizontal translation continues uninterrupted at a uniform speed, revealing the complete fixed landscape as the turquoise moon from <Picture 7> enters progressively through the left edge, its rightmost edge becoming visible first before seamlessly completing its frame entry without sudden pop-ins or regeneration. The meteor maintains its diagonal descent and strikes the target hill, triggering a brief localized orange flash that displaces soil and stones to instantly form a crater matching the exact shape, size, and position of <Picture 4>. Only this single impact zone undergoes modification; the surrounding terrain geometry remains permanently locked with no secondary hills, mounds, or perspective distortion, while faint smoke and residual glow settle over the newly created depression. The camera continues its leftward Tracking Shot, maintaining constant focal length, height, and orientation as the flat 2D environment scrolls seamlessly toward the final composition, preserving depth composition through consistent horizontal translation of all environmental layers.\n\n[Shot 3] At MM:07.500 – MM:10.000\nThe camera gently decelerates and settles into a stable leftward position, allowing the Victorian mansion from <Picture 5> to scroll into view through the left edge as its exact architecture—floors, towers, roof structure, and proportions—is gradually revealed without any morphing or scaling changes. As the building materializes in the frame, previously dark windows illuminate individually and irregularly across different floors and sections, each activating one at a time with soft warm muted yellow light at approximately 50% normal brightness to maintain subtle atmospheric realism. The window activations occur in unequal intervals across the structure, avoiding systematic patterns while preserving strict spatial continuity and flat 2D scrolling constraints. The camera movement completes its horizontal translation, leaving the final composition stable and perfectly aligned with the nostalgic aesthetic, as the environment rests in quiet equilibrium under the fixed night sky.\n\noverall_soundscape:\nSubtle nocturnal wind rustling through tall grass blends with a faint distant engine hum, followed by a sharp localized impact sound synchronized with the meteor crash, accompanied by scattered stone displacements and soft soil displacement, then transitioning into gentle ambient night sounds as the camera settles over the quiet mansion exterior.\n\nnon_diegetic_music:\nA mysterious, eerie, and slightly whimsical 1980s point-and-click adventure game soundtrack begins with quiet synth atmospheres, gradually building tension with subtle retro cinematic horror-comedy motifs, then resolving into a darker, more dramatic orchestral theme featuring vintage analog synthesizers and haunting melodies as the mansion windows illuminate one by one."
       }
     }
   ],
@@ -1873,92 +2229,12 @@
       "AUDIO"
     ],
     [
-      260,
-      130,
-      0,
-      92,
-      0,
-      "VIDEO"
-    ],
-    [
-      261,
-      132,
-      0,
-      131,
-      0,
-      "FLOAT"
-    ],
-    [
       271,
       136,
       1,
       125,
       4,
       "LATENT"
-    ],
-    [
-      272,
-      128,
-      0,
-      136,
-      0,
-      "CLIP"
-    ],
-    [
-      273,
-      119,
-      0,
-      136,
-      1,
-      "VAE"
-    ],
-    [
-      274,
-      120,
-      0,
-      136,
-      2,
-      "VAE"
-    ],
-    [
-      275,
-      131,
-      1,
-      136,
-      16,
-      "INT"
-    ],
-    [
-      276,
-      115,
-      0,
-      136,
-      14,
-      "INT"
-    ],
-    [
-      277,
-      115,
-      1,
-      136,
-      15,
-      "INT"
-    ],
-    [
-      278,
-      137,
-      0,
-      136,
-      3,
-      "IMAGE"
-    ],
-    [
-      279,
-      138,
-      0,
-      136,
-      13,
-      "STRING"
     ],
     [
       280,
@@ -1975,14 +2251,6 @@
       121,
       0,
       "LATENT"
-    ],
-    [
-      282,
-      139,
-      0,
-      136,
-      4,
-      "IMAGE"
     ],
     [
       283,
@@ -2057,38 +2325,6 @@
       "BOOLEAN"
     ],
     [
-      292,
-      147,
-      0,
-      136,
-      5,
-      "IMAGE"
-    ],
-    [
-      293,
-      148,
-      0,
-      136,
-      6,
-      "IMAGE"
-    ],
-    [
-      294,
-      149,
-      0,
-      136,
-      7,
-      "IMAGE"
-    ],
-    [
-      295,
-      150,
-      0,
-      136,
-      11,
-      "AUDIO"
-    ],
-    [
       296,
       136,
       0,
@@ -2151,6 +2387,166 @@
       171,
       0,
       "IMAGE"
+    ],
+    [
+      400,
+      205,
+      0,
+      204,
+      0,
+      "STRING"
+    ],
+    [
+      410,
+      204,
+      0,
+      215,
+      0,
+      "STRING"
+    ],
+    [
+      411,
+      205,
+      0,
+      216,
+      0,
+      "STRING"
+    ],
+    [
+      260,
+      130,
+      0,
+      92,
+      0,
+      "VIDEO"
+    ],
+    [
+      261,
+      132,
+      0,
+      131,
+      0,
+      "FLOAT"
+    ],
+    [
+      272,
+      128,
+      0,
+      136,
+      0,
+      "CLIP"
+    ],
+    [
+      273,
+      119,
+      0,
+      136,
+      1,
+      "VAE"
+    ],
+    [
+      274,
+      120,
+      0,
+      136,
+      2,
+      "VAE"
+    ],
+    [
+      278,
+      137,
+      0,
+      136,
+      3,
+      "IMAGE"
+    ],
+    [
+      282,
+      139,
+      0,
+      136,
+      4,
+      "IMAGE"
+    ],
+    [
+      292,
+      147,
+      0,
+      136,
+      5,
+      "IMAGE"
+    ],
+    [
+      295,
+      150,
+      0,
+      136,
+      10,
+      "AUDIO"
+    ],
+    [
+      276,
+      115,
+      0,
+      136,
+      14,
+      "INT"
+    ],
+    [
+      277,
+      115,
+      1,
+      136,
+      15,
+      "INT"
+    ],
+    [
+      275,
+      131,
+      1,
+      136,
+      16,
+      "INT"
+    ],
+    [
+      293,
+      148,
+      0,
+      136,
+      17,
+      "IMAGE"
+    ],
+    [
+      294,
+      149,
+      0,
+      136,
+      18,
+      "IMAGE"
+    ],
+    [
+      395,
+      202,
+      0,
+      136,
+      19,
+      "IMAGE"
+    ],
+    [
+      399,
+      203,
+      0,
+      136,
+      20,
+      "IMAGE"
+    ],
+    [
+      414,
+      219,
+      0,
+      136,
+      13,
+      "STRING"
     ]
   ],
   "groups": [
@@ -2208,8 +2604,8 @@
       "bounding": [
         -1513.3426966540605,
         5989.8768360089625,
-        2226.2520425249986,
-        1417.368055207403
+        2231.6627887907043,
+        906.9594956464807
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2231,9 +2627,21 @@
       "title": "Group",
       "bounding": [
         735.2105400882812,
-        5986.552929262886,
-        1508.3811183548944,
-        1131.9518278691876
+        5985.534860665858,
+        1537.1875651796686,
+        915.9029272426187
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Group",
+      "bounding": [
+        -3733.152217945025,
+        6992.533591283712,
+        3589.4665807293923,
+        1077.06698660048
       ],
       "color": "#3f789e",
       "flags": {}
@@ -2245,9 +2653,9 @@
         "id": "1f824d00-6ec5-41fd-81c0-b05a83d37823",
         "version": 1,
         "state": {
-          "lastGroupId": 8,
-          "lastNodeId": 174,
-          "lastLinkId": 324,
+          "lastGroupId": 11,
+          "lastNodeId": 219,
+          "lastLinkId": 414,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2277,7 +2685,7 @@
             "name": "file",
             "type": "COMBO",
             "linkIds": [
-              315
+              325
             ],
             "pos": [
               732.796040426615,
@@ -2323,8 +2731,8 @@
               12773.008376829284
             ],
             "size": [
-              282.78125,
-              302
+              282.75,
+              305.96875
             ],
             "flags": {},
             "order": 0,
@@ -2337,7 +2745,7 @@
                 "widget": {
                   "name": "file"
                 },
-                "link": 315
+                "link": 325
               }
             ],
             "outputs": [
@@ -2490,7 +2898,7 @@
             ],
             "size": [
               225,
-              142
+              148
             ],
             "flags": {
               "collapsed": false
@@ -2681,22 +3089,6 @@
             "type": "IMAGE"
           },
           {
-            "id": 310,
-            "origin_id": 167,
-            "origin_slot": 2,
-            "target_id": 168,
-            "target_slot": 0,
-            "type": "INT"
-          },
-          {
-            "id": 312,
-            "origin_id": 169,
-            "origin_slot": 0,
-            "target_id": 168,
-            "target_slot": 1,
-            "type": "INT"
-          },
-          {
             "id": 308,
             "origin_id": 164,
             "origin_slot": 0,
@@ -2713,14 +3105,6 @@
             "type": "INT"
           },
           {
-            "id": 315,
-            "origin_id": -10,
-            "origin_slot": 0,
-            "target_id": 163,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
             "id": 316,
             "origin_id": -10,
             "origin_slot": 1,
@@ -2735,6 +3119,30 @@
             "target_id": -20,
             "target_slot": 0,
             "type": "IMAGE"
+          },
+          {
+            "id": 325,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 163,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 310,
+            "origin_id": 167,
+            "origin_slot": 2,
+            "target_id": 168,
+            "target_slot": 0,
+            "type": "INT"
+          },
+          {
+            "id": 312,
+            "origin_id": 169,
+            "origin_slot": 0,
+            "target_id": 168,
+            "target_slot": 1,
+            "type": "INT"
           }
         ],
         "extra": {}
@@ -2743,18 +3151,18 @@
   },
   "config": {},
   "extra": {
-    "ds": {
-      "scale": 0.7760267862845923,
-      "offset": [
-        328.65206893499067,
-        -5846.717193338827
-      ]
-    },
-    "frontendVersion": "1.51.9",
+    "frontendVersion": "1.53.6",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "ds": {
+      "scale": 0.4435662469102015,
+      "offset": [
+        1562.8421801738307,
+        -5968.749024053136
+      ]
+    }
   },
   "version": 0.4
 }
