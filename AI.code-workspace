@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "Scripts"
+		},
+		{
+			"path": "ComfyUI/input"
+		},
+		{
+			"path": "ComfyUI/output"
+		},
+		{
+			"path": "ComfyUI/custom_nodes"
+		}
+	]
+}
