@@ -121,6 +121,7 @@ function Show-SetupMenu {
         Write-Host "6) Restore Custom Nodes"
         Write-Host "7) Update security level"
         Write-Host "8) Fix NVML DLL location (copy System32\nvml.dll to Program Files NVSMI)"
+        Write-Host "9) Install NVIDIA dependencies"
         Write-Host "b) Back to main menu`n"
 
         $subchoice = [System.Console]::ReadKey($true).KeyChar
@@ -134,6 +135,7 @@ function Show-SetupMenu {
             '6' { Restore-CustomNodes }
             '7' { Update-SecurityLevel }
             '8' { Invoke-Script (Join-Path 'Scripts' 'fix_nvml_path.ps1') }
+            '9' { Invoke-Script (Join-Path 'Scripts' 'install nvidia.ps1'); Wait-ForKey }
             'b' { return }
             default { Show-InvalidSelection }
         }

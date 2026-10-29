@@ -1,3 +1,7 @@
+param(
+    [switch]$ForceReinstall
+)
+
 $ErrorActionPreference = "Stop"
 
 . (Join-Path $PSScriptRoot "validate-environment.ps1")
@@ -26,7 +30,8 @@ $torchCurrent = Get-PackageVersion -PackageName "torch"
 $visionCurrent = Get-PackageVersion -PackageName "torchvision"
 $audioCurrent = Get-PackageVersion -PackageName "torchaudio"
 
-$shouldReinstallTorch = (-not (Test-IsVersionAtLeast -CurrentVersion $torchCurrent -TargetVersion $TorchTargetVersion)) -or
+$shouldReinstallTorch = $ForceReinstall -or
+    (-not (Test-IsVersionAtLeast -CurrentVersion $torchCurrent -TargetVersion $TorchTargetVersion)) -or
     (-not (Test-IsVersionAtLeast -CurrentVersion $visionCurrent -TargetVersion $TorchVisionTargetVersion)) -or
     (-not (Test-IsVersionAtLeast -CurrentVersion $audioCurrent -TargetVersion $TorchAudioTargetVersion))
 
