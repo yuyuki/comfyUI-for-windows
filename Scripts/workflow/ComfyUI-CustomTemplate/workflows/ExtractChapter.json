@@ -1,8 +1,8 @@
 {
   "id": "912cd687-a627-4693-9e89-c27b05b083d5",
   "revision": 0,
-  "last_node_id": 168,
-  "last_link_id": 242,
+  "last_node_id": 202,
+  "last_link_id": 275,
   "nodes": [
     {
       "id": 67,
@@ -15,7 +15,9 @@
         225,
         86
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 0,
       "mode": 0,
       "inputs": [],
@@ -24,7 +26,7 @@
           "name": "MINIMAX_LMSTUDIO_CONFIG",
           "type": "MINIMAX_LMSTUDIO_CONFIG",
           "links": [
-            236
+            273
           ]
         }
       ],
@@ -44,14 +46,16 @@
       "id": 68,
       "type": "GetNode",
       "pos": [
-        1045.0583853324888,
-        2031.1618936089806
+        1020.6862968528953,
+        2030.2245166050939
       ],
       "size": [
         225,
-        86
+        86.93737895015195
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 1,
       "mode": 0,
       "inputs": [],
@@ -87,7 +91,9 @@
         225,
         86
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 2,
       "mode": 0,
       "inputs": [],
@@ -124,7 +130,7 @@
         96
       ],
       "flags": {},
-      "order": 24,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -212,7 +218,7 @@
           "name": "chapter_catalogs",
           "type": "MINIMAX_CHAPTERS",
           "links": [
-            235
+            272
           ]
         },
         {
@@ -227,10 +233,10 @@
         "Node name for S&R": "LoadChapterCatalogsNode"
       },
       "widgets_values": [
-        "20261024134746\\chapter_catalogs"
+        "chapter_catalogs"
       ],
       "widgets_values_named": {
-        "catalog_path": "20261024134746\\chapter_catalogs"
+        "catalog_path": "chapter_catalogs"
       }
     },
     {
@@ -273,14 +279,16 @@
       "id": 119,
       "type": "GetNode",
       "pos": [
-        -2263.027040166144,
-        2020.65224523001
+        -2340.83051183329,
+        2015.0279116894094
       ],
       "size": [
         225,
-        86
+        86.00000194626531
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 6,
       "mode": 0,
       "inputs": [],
@@ -340,10 +348,10 @@
         "Node name for S&R": "LoadCinematicChaptersNode"
       },
       "widgets_values": [
-        "20261024121942\\cinematic_chapters"
+        "cinematic_chapters"
       ],
       "widgets_values_named": {
-        "cinematic_path": "20261024121942\\cinematic_chapters"
+        "cinematic_path": "cinematic_chapters"
       }
     },
     {
@@ -358,7 +366,7 @@
         98
       ],
       "flags": {},
-      "order": 23,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -402,14 +410,16 @@
       "id": 141,
       "type": "GetNode",
       "pos": [
-        174.95476927009332,
-        1754.354019346147
+        183.3912338223543,
+        1779.6635917961326
       ],
       "size": [
         213.2734375,
         58
       ],
-      "flags": {},
+      "flags": {
+        "collapsed": true
+      },
       "order": 8,
       "mode": 0,
       "inputs": [],
@@ -446,7 +456,7 @@
         93.9875114802932
       ],
       "flags": {},
-      "order": 18,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -515,8 +525,8 @@
       "id": 154,
       "type": "LoadConsolidatedReferencesNode",
       "pos": [
-        973.653833003663,
-        1890.620730590628
+        1008.3372827684367,
+        1855.9372450672138
       ],
       "size": [
         302.625,
@@ -691,8 +701,8 @@
         2419.600959017447
       ],
       "size": [
-        299.919921875,
-        198
+        359.49966759358483,
+        251.15788617117698
       ],
       "flags": {},
       "order": 16,
@@ -718,20 +728,18 @@
         "Node name for S&R": "LMStudioConfigurationNode"
       },
       "widgets_values": [
-        "http://127.0.0.1:1234/v1",
+        "LM Studio",
         2,
         20,
         0,
-        1.05,
-        "Qwen"
+        1.05
       ],
       "widgets_values_named": {
-        "api_url": "http://127.0.0.1:1234/v1",
+        "backend": "LM Studio",
         "qwen35_length_retries": 2,
         "qwen35_top_k": 20,
         "qwen35_min_p": 0,
-        "qwen35_repeat_penalty": 1.05,
-        "model_family": "Qwen"
+        "qwen35_repeat_penalty": 1.05
       }
     },
     {
@@ -742,11 +750,11 @@
         1962.8357531698794
       ],
       "size": [
-        314.98828125,
-        198
+        400,
+        300
       ],
       "flags": {},
-      "order": 20,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -806,7 +814,7 @@
         306
       ],
       "flags": {},
-      "order": 21,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -857,88 +865,6 @@
       }
     },
     {
-      "id": 164,
-      "type": "ConsolidateReferencesNode",
-      "pos": [
-        -285.54137873960553,
-        1754.9053047197747
-      ],
-      "size": [
-        400,
-        516
-      ],
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "chapter_catalogs",
-          "type": "MINIMAX_CHAPTERS",
-          "link": 235
-        },
-        {
-          "name": "lmstudio_config",
-          "type": "MINIMAX_LMSTUDIO_CONFIG",
-          "link": 236
-        }
-      ],
-      "outputs": [
-        {
-          "name": "consolidated_references",
-          "type": "MINIMAX_REGISTRY",
-          "links": null
-        },
-        {
-          "name": "registry_summary",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "minimax_h3_novel_pipeline",
-        "ver": "34348942731573286ca21dfe1ca99d40a0b97459",
-        "Node name for S&R": "ConsolidateReferencesNode"
-      },
-      "widgets_values": [
-        12,
-        35,
-        "recommended",
-        4,
-        3,
-        2,
-        4,
-        false,
-        120,
-        true,
-        0.12,
-        8500,
-        "references",
-        0.68,
-        24,
-        "cinematic photographic",
-        ""
-      ],
-      "widgets_values_named": {
-        "candidate_count": 12,
-        "include_all_below": 35,
-        "audio_threshold": "recommended",
-        "max_character_base_views": 4,
-        "max_location_base_views": 3,
-        "max_object_base_views": 2,
-        "asset_batch_size": 4,
-        "no_audit": false,
-        "audit_max_entities": 120,
-        "thinking": true,
-        "temperature": 0.12,
-        "max_tokens": 8500,
-        "out_dir": "references",
-        "audit_similarity": 0.68,
-        "audit_cluster_size": 24,
-        "image_style": "cinematic photographic",
-        "visual_designs_path": ""
-      }
-    },
-    {
       "id": 165,
       "type": "SpatialContinuityNode",
       "pos": [
@@ -950,7 +876,7 @@
         170
       ],
       "flags": {},
-      "order": 22,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1011,7 +937,7 @@
         508
       ],
       "flags": {},
-      "order": 25,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1121,6 +1047,569 @@
       },
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 170,
+      "type": "GetNode",
+      "pos": [
+        -1379.0858490018957,
+        2938.4510172626733
+      ],
+      "size": [
+        213.2734375,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_LMSTUDIO_CONFIG",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "links": [
+            255
+          ]
+        }
+      ],
+      "title": "Get_LmConfig",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "LmConfig"
+      ],
+      "widgets_values_named": {
+        "Constant": "LmConfig"
+      }
+    },
+    {
+      "id": 171,
+      "type": "SelectChaptersNode",
+      "pos": [
+        -1404.3953141759587,
+        3065.9362565164884
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": [
+            256
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "761980695923b058069e1be7cad48cb25f77c616",
+        "Node name for S&R": "SelectChaptersNode"
+      },
+      "widgets_values": [
+        "minimax_h3_novel/11_chapter 11.md\nminimax_h3_novel/13_chapter 13.md",
+        ""
+      ],
+      "widgets_values_named": {
+        "chapter_paths": "minimax_h3_novel/11_chapter 11.md\nminimax_h3_novel/13_chapter 13.md",
+        "saved_chapter": ""
+      }
+    },
+    {
+      "id": 176,
+      "type": "GetNode",
+      "pos": [
+        -504.29842909533136,
+        3097.531078170375
+      ],
+      "size": [
+        213.2734375,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_LMSTUDIO_CONFIG",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "links": [
+            275
+          ]
+        }
+      ],
+      "title": "Get_LmConfig",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "LmConfig"
+      ],
+      "widgets_values_named": {
+        "Constant": "LmConfig"
+      }
+    },
+    {
+      "id": 177,
+      "type": "LoadCharacterEvidenceNode",
+      "pos": [
+        -509.27568325846323,
+        2912.9963574017765
+      ],
+      "size": [
+        447.3519111331196,
+        113.98751395744591
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "character_evidence",
+          "type": "MINIMAX_CHARACTER_EVIDENCE",
+          "links": [
+            274
+          ]
+        },
+        {
+          "name": "saved_file",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "8ff3c1846ee606f66b149950df95986ef69811ed",
+        "Node name for S&R": "LoadCharacterEvidenceNode"
+      },
+      "widgets_values": [
+        "character_evidence_11_13.json"
+      ],
+      "widgets_values_named": {
+        "evidence_path": "character_evidence_11_13.json"
+      }
+    },
+    {
+      "id": 179,
+      "type": "GetNode",
+      "pos": [
+        648.3907088612802,
+        3216.651972068454
+      ],
+      "size": [
+        294.01902797498457,
+        86.00019716130822
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_LMSTUDIO_CONFIG",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "links": [
+            268
+          ]
+        }
+      ],
+      "title": "Get_LmConfig",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "LmConfig"
+      ],
+      "widgets_values_named": {
+        "Constant": "LmConfig"
+      }
+    },
+    {
+      "id": 186,
+      "type": "CharacterEvidenceExtractorNode",
+      "pos": [
+        -937.8041571611204,
+        2918.354134284681
+      ],
+      "size": [
+        386.82287709187,
+        378.6229697757384
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "link": 255
+        },
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "link": 256
+        }
+      ],
+      "outputs": [
+        {
+          "name": "character_evidence",
+          "type": "MINIMAX_CHARACTER_EVIDENCE",
+          "links": null
+        },
+        {
+          "name": "saved_file",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "7baa283a65c3c2e14d2b6c7dbfb82dd3c2a7ae90",
+        "Node name for S&R": "CharacterEvidenceExtractorNode"
+      },
+      "widgets_values": [
+        "character_evidence_11_13_gemma",
+        5500,
+        true,
+        0.3,
+        16384,
+        2,
+        false,
+        "proper_names",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "out_dir": "character_evidence_11_13_gemma",
+        "chunk_chars": 5500,
+        "thinking": true,
+        "temperature": 0.3,
+        "max_tokens": 16384,
+        "correction_attempts": 2,
+        "force": false,
+        "character_scope": "proper_names",
+        "audit_thinking": "",
+        "resume_run": ""
+      }
+    },
+    {
+      "id": 190,
+      "type": "LoadCharacterProfilesNode",
+      "pos": [
+        643.5709138787817,
+        2913.506460038407
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "character_profiles",
+          "type": "MINIMAX_CHARACTER_PROFILES",
+          "links": [
+            267
+          ]
+        },
+        {
+          "name": "saved_file",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "7f107df92649de36195c5d7e5b58d81654003756",
+        "Node name for S&R": "LoadCharacterProfilesNode"
+      },
+      "widgets_values": [
+        "character_profiles"
+      ],
+      "widgets_values_named": {
+        "profiles_path": "character_profiles"
+      }
+    },
+    {
+      "id": 193,
+      "type": "CharacterVisualProfileGeneratorNode",
+      "pos": [
+        1055.7612416911095,
+        2929.8504950439956
+      ],
+      "size": [
+        417.867964379662,
+        345.6445516895577
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "character_profiles",
+          "type": "MINIMAX_CHARACTER_PROFILES",
+          "link": 267
+        },
+        {
+          "name": "chapter_selection",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "link": 269
+        },
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "link": 268
+        }
+      ],
+      "outputs": [
+        {
+          "name": "character_visual_profiles",
+          "type": "MINIMAX_CHARACTER_VISUAL_PROFILES",
+          "links": null
+        },
+        {
+          "name": "saved_file",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "b88fc7cac25eec406b479806a2d1d47a38829ca2",
+        "Node name for S&R": "CharacterVisualProfileGeneratorNode"
+      },
+      "widgets_values": [
+        "character_visual_profiles_test_classifications",
+        "",
+        false,
+        0.12,
+        8192,
+        65536,
+        2,
+        false
+      ],
+      "widgets_values_named": {
+        "out_dir": "character_visual_profiles_test_classifications",
+        "visual_designs_path": "",
+        "thinking": false,
+        "temperature": 0.12,
+        "max_tokens": 8192,
+        "context_tokens": 65536,
+        "correction_attempts": 2,
+        "force": false
+      }
+    },
+    {
+      "id": 195,
+      "type": "GetNode",
+      "pos": [
+        644.0559574816419,
+        3078.650627406394
+      ],
+      "size": [
+        292.7601545711669,
+        86.00002253233474
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MINIMAX_CHAPTER_SELECTION",
+          "type": "MINIMAX_CHAPTER_SELECTION",
+          "links": [
+            269
+          ]
+        }
+      ],
+      "title": "Get_chapterSelection",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "chapterSelection"
+      ],
+      "widgets_values_named": {
+        "Constant": "chapterSelection"
+      }
+    },
+    {
+      "id": 198,
+      "type": "ConsolidateReferencesNode",
+      "pos": [
+        -290.10132989442195,
+        1754.03741720294
+      ],
+      "size": [
+        400,
+        560
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "chapter_catalogs",
+          "type": "MINIMAX_CHAPTERS",
+          "link": 272
+        },
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "link": 273
+        },
+        {
+          "name": "character_visual_profiles",
+          "shape": 7,
+          "type": "MINIMAX_CHARACTER_VISUAL_PROFILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "consolidated_references",
+          "type": "MINIMAX_REGISTRY",
+          "links": null
+        },
+        {
+          "name": "registry_summary",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "7b7c233a6ab2e845b92cfb3c789b2df3f45aabb0",
+        "Node name for S&R": "ConsolidateReferencesNode"
+      },
+      "widgets_values": [
+        12,
+        35,
+        "recommended",
+        4,
+        3,
+        2,
+        1,
+        false,
+        120,
+        true,
+        0.12,
+        8500,
+        "references",
+        0.68,
+        24,
+        1,
+        "cinematic photographic",
+        "character_visual_profiles\\visual_designs.json"
+      ],
+      "widgets_values_named": {
+        "candidate_count": 12,
+        "include_all_below": 35,
+        "audio_threshold": "recommended",
+        "max_character_base_views": 4,
+        "max_location_base_views": 3,
+        "max_object_base_views": 2,
+        "asset_batch_size": 1,
+        "no_audit": false,
+        "audit_max_entities": 120,
+        "thinking": true,
+        "temperature": 0.12,
+        "max_tokens": 8500,
+        "out_dir": "references",
+        "audit_similarity": 0.68,
+        "audit_cluster_size": 24,
+        "max_attempts": 1,
+        "image_style": "cinematic photographic",
+        "visual_designs_path": "character_visual_profiles\\visual_designs.json"
+      }
+    },
+    {
+      "id": 199,
+      "type": "ConsolidateCharacterProfilesNode",
+      "pos": [
+        6.0474154138481016,
+        2912.6780124929755
+      ],
+      "size": [
+        419.7759059817477,
+        386.18073225889873
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "character_evidence",
+          "type": "MINIMAX_CHARACTER_EVIDENCE",
+          "link": 274
+        },
+        {
+          "name": "lmstudio_config",
+          "type": "MINIMAX_LMSTUDIO_CONFIG",
+          "link": 275
+        }
+      ],
+      "outputs": [
+        {
+          "name": "character_profiles",
+          "type": "MINIMAX_CHARACTER_PROFILES",
+          "links": null
+        },
+        {
+          "name": "saved_file",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "minimax_h3_novel_pipeline",
+        "ver": "e1817e5fdca9ef9fc841120d54430b9774c9f0ff",
+        "Node name for S&R": "ConsolidateCharacterProfilesNode"
+      },
+      "widgets_values": [
+        "character_profiles_test_11_13_gemma",
+        true,
+        0.12,
+        16384,
+        65536,
+        2,
+        false,
+        "persistent",
+        ""
+      ],
+      "widgets_values_named": {
+        "out_dir": "character_profiles_test_11_13_gemma",
+        "thinking": true,
+        "temperature": 0.12,
+        "max_tokens": 16384,
+        "context_tokens": 65536,
+        "correction_attempts": 2,
+        "force": false,
+        "persistence_filter": "persistent",
+        "resume_run": ""
+      }
     }
   ],
   "links": [
@@ -1181,22 +1670,6 @@
       "MINIMAX_CINEMATIC_CHAPTERS"
     ],
     [
-      235,
-      91,
-      0,
-      164,
-      0,
-      "MINIMAX_CHAPTERS"
-    ],
-    [
-      236,
-      67,
-      0,
-      164,
-      1,
-      "MINIMAX_LMSTUDIO_CONFIG"
-    ],
-    [
       237,
       141,
       0,
@@ -1243,6 +1716,78 @@
       166,
       3,
       "MINIMAX_SPATIAL_CONTINUITY"
+    ],
+    [
+      255,
+      170,
+      0,
+      186,
+      0,
+      "MINIMAX_LMSTUDIO_CONFIG"
+    ],
+    [
+      256,
+      171,
+      0,
+      186,
+      1,
+      "MINIMAX_CHAPTER_SELECTION"
+    ],
+    [
+      267,
+      190,
+      0,
+      193,
+      0,
+      "MINIMAX_CHARACTER_PROFILES"
+    ],
+    [
+      268,
+      179,
+      0,
+      193,
+      2,
+      "MINIMAX_LMSTUDIO_CONFIG"
+    ],
+    [
+      269,
+      195,
+      0,
+      193,
+      1,
+      "MINIMAX_CHAPTER_SELECTION"
+    ],
+    [
+      272,
+      91,
+      0,
+      198,
+      0,
+      "MINIMAX_CHAPTERS"
+    ],
+    [
+      273,
+      67,
+      0,
+      198,
+      1,
+      "MINIMAX_LMSTUDIO_CONFIG"
+    ],
+    [
+      274,
+      177,
+      0,
+      199,
+      0,
+      "MINIMAX_CHARACTER_EVIDENCE"
+    ],
+    [
+      275,
+      176,
+      0,
+      199,
+      1,
+      "MINIMAX_LMSTUDIO_CONFIG"
     ]
   ],
   "groups": [
@@ -1252,8 +1797,8 @@
       "bounding": [
         -660.7944537858515,
         1682.2762560902395,
-        785.253075046246,
-        720.5977986295354
+        798.6578022088528,
+        796.0577845671799
       ],
       "color": "#3f789e",
       "flags": {}
@@ -1317,18 +1862,66 @@
       ],
       "color": "#3f789e",
       "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Character Extraction",
+      "bounding": [
+        -1424.3953141759587,
+        2798.4544882759733,
+        2940.962708747528,
+        550.0534578507813
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Extraction",
+      "bounding": [
+        -1414.3953141759587,
+        2838.4544882759733,
+        881.1663419625279,
+        484.78542758608455
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "Consolidation",
+      "bounding": [
+        -519.2756832584632,
+        2842.9963574017765,
+        986.1212716487232,
+        481.4741433740137
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Generator",
+      "bounding": [
+        620.9661904831092,
+        2843.506460038407,
+        863.94755929165,
+        486.7524111161265
+      ],
+      "color": "#3f789e",
+      "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5299142999900159,
+      "scale": 0.7053159332867156,
       "offset": [
-        1562.9131447519628,
-        -964.7405993217624
+        2661.5413573018204,
+        -1549.6013700324145
       ]
     },
-    "frontendVersion": "1.55.18"
+    "frontendVersion": "1.57.6"
   },
   "version": 0.4
 }
