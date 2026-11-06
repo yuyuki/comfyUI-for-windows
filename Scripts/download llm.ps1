@@ -81,6 +81,10 @@ Download-File -Url "https://huggingface.co/ggml-org/gpt-oss-20b-GGUF/resolve/mai
 
 Download-File -Url "https://huggingface.co/google/gemma-4-26B-A4B-it-qat-q4_0-gguf/resolve/main/gemma-4-26B_q4_0-it.gguf" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/Qwen3.8-27B-UD-Q4_K_S.gguf" -OutDir $outDir
+
+Download-File -Url "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/Qwen3.8-27B-UD-Q4_K_M.gguf" -OutDir $outDir
+
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/gemma-4/resolve/main/text_encoders/gemma4_e4b_it_fp8_scaled.safetensors" -OutDir $outDir
@@ -152,10 +156,17 @@ $sourceParent = Resolve-Path "$PSScriptRoot\.."
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Qwen3.8-9B-Distill-Heretic-Uncensored-Q8_0.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
 
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Qwen3.8-27B-UD-Q4_K_S.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Qwen3.8-27B-UD-Q4_K_M.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Qwen"
+
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\gpt-oss-20b-MXFP4.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "GPT-OSS"
 
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\gemma-4-26B_q4_0-it.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Gemma"
+
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green
