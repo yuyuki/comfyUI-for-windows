@@ -14,6 +14,12 @@
 		},
 		{
 			"path": "ComfyUI/custom_nodes"
+		},
+		{
+			"path": "ComfyUI/custom_nodes/ComfyUI-Minimax_H3_Novel_Pipeline"
 		}
-	]
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
