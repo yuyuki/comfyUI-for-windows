@@ -8,8 +8,8 @@ $ErrorActionPreference = "Stop"
 
 Write-Host "=== NVIDIA install (Cu130, Torch, torchvision, torchaudio) ===" -ForegroundColor Cyan
 
-$TorchTargetVersion = "2.14.0"
-$TorchVisionTargetVersion = "0.29.0"
+$TorchTargetVersion = "2.14.1"
+$TorchVisionTargetVersion = "0.29.1"
 $TorchAudioTargetVersion = "2.11.0"
 
 $ParentDir = Resolve-Path "$PSScriptRoot\.."
