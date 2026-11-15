@@ -85,6 +85,8 @@ Download-File -Url "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main
 
 Download-File -Url "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/Qwen3.8-27B-UD-Q4_K_M.gguf" -OutDir $outDir
 
+Download-File -Url "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf/resolve/main/Ternary-Bonsai-2-27B-Q2_0.gguf" -OutDir $outDir
+
 Download-File -Url "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors" -OutDir $outDir
 
 Download-File -Url "https://huggingface.co/Comfy-Org/gemma-4/resolve/main/text_encoders/gemma4_e4b_it_fp8_scaled.safetensors" -OutDir $outDir
@@ -168,5 +170,7 @@ Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "GPT-OSS"
 $sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\gemma-4-26B_q4_0-it.gguf"
 Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Gemma"
 
+$sourceFile = Join-Path $sourceParent "ComfyUI\models\text_encoders\Ternary-Bonsai-2-27B-Q2_0.gguf"
+Copy-ModelToLMStudio -SourceFile $sourceFile -FolderName "Bonsai"
 
 Write-Host "=== Finished downloading and copying models ===" -ForegroundColor Green
